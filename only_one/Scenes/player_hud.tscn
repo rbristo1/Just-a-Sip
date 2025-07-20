@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bkkc4sk736q4q"]
+
+[node name="player_hud" type="Control"]
+custom_minimum_size = Vector2(0, 168)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PHudMainBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PHudSpacing1" type="HSeparator" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="TextBoxRow" type="HBoxContainer" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextBoxSpacing1" type="VSeparator" parent="PHudMainBox/TextBoxRow"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="TextBoxBackground" type="PanelContainer" parent="PHudMainBox/TextBoxRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextBoxMargins" type="MarginContainer" parent="PHudMainBox/TextBoxRow/TextBoxBackground"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="TextBox" type="RichTextLabel" parent="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxMargins"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "This is a test of the font and size of the text.
+This is the second row of text, again for testing."
+
+[node name="TextBoxSpacing2" type="VSeparator" parent="PHudMainBox/TextBoxRow"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="PHudSpacing2" type="HSeparator" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2

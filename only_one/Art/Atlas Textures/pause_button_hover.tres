@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cesgp1bk2po5r"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mmch7"]
+load_path = "res://.godot/imported/pause_button.png-13673074248e9a1ef34a06af3257e7dc.ctex"
+
+[resource]
+atlas = SubResource("CompressedTexture2D_mmch7")
+region = Rect2(16, 0, 16, 0)
