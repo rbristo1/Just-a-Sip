@@ -1,0 +1,9 @@
+res://Scenes/Battle.tscn
+res://Art/Atlas Textures/pause_button_hover.tres
+res://Scenes/battle_hud.tscn
+res://Scenes/enemy.tscn
+res://Scenes/pause_button.tscn
+res://Scenes/player_hud.tscn
+res://player.gd
+res://Scenes/player.tscn
+res://Scripts/player.gd
