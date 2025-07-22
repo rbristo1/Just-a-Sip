@@ -1,7 +1,0 @@
-[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c41k5fpn6hlxm"]
-
-[ext_resource type="Texture2D" uid="uid://duwhs7nwa6hr4" path="res://Art/Items/blue_potion.png" id="1_mrqnm"]
-
-[resource]
-atlas = ExtResource("1_mrqnm")
-region = Rect2(0, 0, 16, 0)
