@@ -1,21 +1,25 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1753048102
-::res://Art/::1753049637
-background.png::CompressedTexture2D::8914758076143089302::1753047473::1753047648::1::::<><><>0<>0<>db542bc0c597a4900212f564c084e788<>res://.godot/imported/background.png-a03655cdb9c7980d756b35ecf60c4ef1.ctex::
-item_slot.png::CompressedTexture2D::6424741013338101692::1753047473::1753047648::1::::<><><>0<>0<>65be7afd6762addf7a472a43de087ec8<>res://.godot/imported/item_slot.png-c60afbbed5ee6f8eda8cfb18f04cda6b.ctex::
-pause_button.png::CompressedTexture2D::5024408531247578734::1753047473::1753047648::1::::<><><>0<>0<>c7444256ee62ec449ce85997e2eae6a9<>res://.godot/imported/pause_button.png-e11b70494be1fcc0fea8cdb280cc51f0.ctex::
-Potion.png::CompressedTexture2D::5641356120389079573::1746229590::1753049642::1::::<><><>0<>0<>6e3c1deaa70498bfb2330fada74c7fde<>res://.godot/imported/Potion.png-80f1bdefcc49e0355a11db5cc2c71e97.ctex::
-slime.png::CompressedTexture2D::8485464464068591086::1753047473::1753047648::1::::<><><>0<>0<>5a245a9769efad16bf7acc0f89b6a575<>res://.godot/imported/slime.png-71b264e0bc354eb8174b1369262e9d36.ctex::
-::res://Art/Atlas Textures/::1753047860
-pause_button_hover.tres::AtlasTexture::5091147998019530093::1753047860::0::1::::<><><>0<>0<><>::
-pause_button_normal.tres::AtlasTexture::1208006574843520899::1753047473::0::1::::<><><>0<>0<><>::uid://cdt4jlimsfilq::::res://Art/pause_button.png
-pause_button_pressed.tres::AtlasTexture::6829498174153446734::1753047473::0::1::::<><><>0<>0<><>::uid://cdt4jlimsfilq::::res://Art/pause_button.png
-::res://Scenes/::1753049464
-Battle.tscn::PackedScene::3379514146984060196::1753049464::0::1::::<><><>0<>0<><>::uid://cwfclbs2vm06u::::res://Scenes/player.tscn<>uid://lk3u43141ady::::res://Scenes/battle_hud.tscn
-battle_hud.tscn::PackedScene::794458416887287518::1753049464::0::1::::<><><>0<>0<><>::uid://bg8per6ea7hkt::::res://Scenes/pause_button.tscn<>uid://ds5omieyavyks::::res://Art/slime.png<>uid://cxsgss8bjwogy::::res://Art/item_slot.png<>uid://bkkc4sk736q4q::::res://Scenes/player_hud.tscn
-enemy.tscn::PackedScene::5147811592271626264::1753049464::0::1::::<><><>0<>0<><>::
-pause_button.tscn::PackedScene::2876597050441281731::1753049464::0::1::::<><><>0<>0<><>::uid://rhfxrylrdufb::::res://Art/Atlas Textures/pause_button_normal.tres<>uid://c4ki3pyn17pny::::res://Art/Atlas Textures/pause_button_pressed.tres<>uid://cesgp1bk2po5r::::res://Art/Atlas Textures/pause_button_hover.tres
-player_hud.tscn::PackedScene::3109127081983733218::1753049464::0::1::::<><><>0<>0<><>::
-player.tscn::PackedScene::6327458975496850982::1753049464::0::1::::<><><>0<>0<><>::uid://bvowwc5ncwf3s::::res://Scripts/player.gd
-::res://Scripts/::1753049464
-player.gd::GDScript::3890662901940425294::1753049464::0::1::::<>Node2D<><>0<>0<><>::
+::res://::1753153303
+::res://Art/::1753153294
+background.png::CompressedTexture2D/CompressedTexture2D::8914758076143089302::1753152535::1753153304::1::::<><><>0<>0<>db542bc0c597a4900212f564c084e788<>res://.godot/imported/background.png-a03655cdb9c7980d756b35ecf60c4ef1.ctex::
+item_slot.png::CompressedTexture2D/CompressedTexture2D::6424741013338101692::1753152535::1753153304::1::::<><><>0<>0<>65be7afd6762addf7a472a43de087ec8<>res://.godot/imported/item_slot.png-c60afbbed5ee6f8eda8cfb18f04cda6b.ctex::
+pause_button.png::CompressedTexture2D/CompressedTexture2D::5024408531247578734::1753152535::1753153304::1::::<><><>0<>0<>c7444256ee62ec449ce85997e2eae6a9<>res://.godot/imported/pause_button.png-e11b70494be1fcc0fea8cdb280cc51f0.ctex::
+Potion.png::CompressedTexture2D/CompressedTexture2D::5641356120389079573::1753152535::1753153304::1::::<><><>0<>0<>6e3c1deaa70498bfb2330fada74c7fde<>res://.godot/imported/Potion.png-80f1bdefcc49e0355a11db5cc2c71e97.ctex::
+slime.png::CompressedTexture2D/CompressedTexture2D::8485464464068591086::1753152535::1753153304::1::::<><><>0<>0<>5a245a9769efad16bf7acc0f89b6a575<>res://.godot/imported/slime.png-71b264e0bc354eb8174b1369262e9d36.ctex::
+::res://Art/Atlas Textures/::1753153294
+pause_button_hover.tres::AtlasTexture::5091147998019530093::1753153294::0::1::::<><><>0<>0<><>::
+pause_button_normal.tres::AtlasTexture::1208006574843520899::1753153294::0::1::::<><><>0<>0<><>::uid://cdt4jlimsfilq::::res://Art/pause_button.png
+pause_button_pressed.tres::AtlasTexture::6829498174153446734::1753153294::0::1::::<><><>0<>0<><>::uid://cdt4jlimsfilq::::res://Art/pause_button.png
+::res://JSONS/::1753153294
+enemies.JSON::JSON::-1::1753153294::0::1::::<><><>0<>0<><>::
+player.JSON::JSON::-1::1753153294::0::1::::<><><>0<>0<><>::
+potions.JSON::JSON::-1::1753153294::0::1::::<><><>0<>0<><>::
+::res://Scenes/::1753153294
+Battle.tscn::PackedScene::3379514146984060196::1753153294::0::1::::<><><>0<>0<><>::uid://cwfclbs2vm06u::::res://Scenes/player.tscn<>uid://lk3u43141ady::::res://Scenes/battle_hud.tscn
+battle_hud.tscn::PackedScene::794458416887287518::1753153294::0::1::::<><><>0<>0<><>::uid://bg8per6ea7hkt::::res://Scenes/pause_button.tscn<>uid://ds5omieyavyks::::res://Art/slime.png<>uid://cxsgss8bjwogy::::res://Art/item_slot.png<>uid://bkkc4sk736q4q::::res://Scenes/player_hud.tscn
+enemy.tscn::PackedScene::5147811592271626264::1753153294::0::1::::<><><>0<>0<><>::
+pause_button.tscn::PackedScene::2876597050441281731::1753153294::0::1::::<><><>0<>0<><>::uid://rhfxrylrdufb::::res://Art/Atlas Textures/pause_button_normal.tres<>uid://c4ki3pyn17pny::::res://Art/Atlas Textures/pause_button_pressed.tres<>uid://cesgp1bk2po5r::::res://Art/Atlas Textures/pause_button_hover.tres
+player.tscn::PackedScene::6327458975496850982::1753153294::0::1::::<><><>0<>0<><>::uid://bvowwc5ncwf3s::::res://Scripts/player.gd
+player_hud.tscn::PackedScene::3109127081983733218::1753153294::0::1::::<><><>0<>0<><>::
+::res://Scripts/::1753153294
+player.gd::GDScript::3890662901940425294::1753153294::0::1::::<>Node2D<><>0<>0<><>::
