@@ -1,1 +1,1 @@
-{"potionImage":["res://Art/Potion.png","res://Art/Potion.png"],"potionMagnitude":[100,-100],"potionNames":["Healing","Explosive"],"potionSplash":[false,true],"potionStat":["hp","hp"]}
+{"potionEffect":[1,1],"potionImage":["res://Art/Potion.png","res://Art/Potion.png"],"potionNames":["Healing","Explosive"],"potionPower":[100,100],"potionSplash":[false,true]}

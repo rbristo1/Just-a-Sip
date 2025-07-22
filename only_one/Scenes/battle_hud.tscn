@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://1gty8vgbmm86" path="res://Art/Atlas Textures/UI/item_slot/item_slot_normal.tres" id="3_786vc"]
 [ext_resource type="Texture2D" uid="uid://h31cliy5ink8" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed0.tres" id="3_ps4wy"]
 [ext_resource type="Texture2D" uid="uid://bmcrva5mj2ilv" path="res://Art/Atlas Textures/UI/run_button/run_button_normal.tres" id="3_w80bc"]
-[ext_resource type="PackedScene" uid="uid://bkkc4sk736q4q" path="res://Scenes/player_hud.tscn" id="4_ps4wy"]
+[ext_resource type="PackedScene" uid="uid://bqo13isbnspjk" path="res://Scenes/player_hud.tscn" id="4_ps4wy"]
 [ext_resource type="Script" uid="uid://c28o8e3akqrll" path="res://Scripts/run_button.gd" id="5_024dg"]
 [ext_resource type="Texture2D" uid="uid://bqgn7m8p47ojy" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed1.tres" id="5_akdr0"]
 [ext_resource type="Texture2D" uid="uid://dlvnxqsw38u5i" path="res://Art/Atlas Textures/UI/run_button/rune_button_hover.tres" id="5_gn6mn"]

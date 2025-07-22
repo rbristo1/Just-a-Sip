@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0s75y")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="ItemDisplay" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

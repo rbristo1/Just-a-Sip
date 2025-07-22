@@ -1,7 +1,6 @@
-[gd_scene load_steps=29 format=3 uid="uid://bkkc4sk736q4q"]
+[gd_scene load_steps=28 format=3 uid="uid://bqo13isbnspjk"]
 
 [ext_resource type="FontFile" uid="uid://c0iqxm04l5108" path="res://m5x7.ttf" id="1_8rgen"]
-[ext_resource type="Script" uid="uid://decwe7vo2edr1" path="res://Scripts/player_hud.gd" id="1_i2evl"]
 [ext_resource type="Texture2D" uid="uid://e0mal755m8kr" path="res://Art/UI/text_box.png" id="1_kt5xe"]
 [ext_resource type="Texture2D" uid="uid://bvcppv87p0kbu" path="res://Art/UI/inventory_background.png" id="1_o8xso"]
 [ext_resource type="Texture2D" uid="uid://ddxuujta7cc7q" path="res://Art/Atlas Textures/UI/next_button/next_button_normal.tres" id="1_uc0x4"]
@@ -86,7 +85,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-script = ExtResource("1_i2evl")
 
 [node name="PHudMainBox" type="VBoxContainer" parent="."]
 layout_mode = 1

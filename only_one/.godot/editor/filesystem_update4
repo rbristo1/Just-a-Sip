@@ -1,1 +1,9 @@
+res://Scenes/player_hud.tscn
 res://Scenes/Battle.tscn
+res://Scripts/player.gd
+res://Scenes/battle_hud.tscn
+res://Scenes/enemy.tscn
+res://Scenes/pause_button.tscn
+res://Scenes/player.tscn
+res://Scripts/inventory_item.gd
+res://Scenes/inventory_item.tscn

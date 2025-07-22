@@ -9,14 +9,18 @@ extends Node2D
 @export var atk = 100
 @export var inventoryid: Array
 
-#potion lookup caching, for retrieval as indexes in constant time
-var potionNames: Array
-var potionMagnitude: Array
-var potionStat: Array
-var potionImage: Array
-var potionSplash: Array
+#item lookup caching, for retrieval as indexes in constant time
+var itemIDs: Array
+var itemNames: Array
+var itemPower: Array
+var itemEffect: Array
+var itemImage: Array
+var itemSplash: Array
+enum ItemTypes {HEALING, EXPLOSIVE}
+enum EType {DAMAGING, HEALING, STUNNING, BUFF_ATK, BUFF_DEF, BUFF_SPD}
 
 #enemy 
+var enemyIDs: Array
 var enemyNames: Array
 var enemyMaxHP: Array
 var enemyHP: Array
@@ -26,10 +30,11 @@ var enemyDEF: Array
 var enemyImage: Array
 var enemySplash: Array
 var enemyUndead: Array
+enum EnemyTypes {SLIME, ZOMBIE}
 
 
 #filename
-@export var potionsFile = "res://JSONS/potions.JSON"
+@export var itemsFile = "res://JSONS/items.JSON"
 @export var playerFile = "res://JSONS/player.JSON"
 @export var enemiesFile = "res://JSONS/enemies.JSON"
 
@@ -37,12 +42,12 @@ var enemyUndead: Array
 
 
 func _ready() -> void:
-	buildPotionJSON()
+	builditemJSON()
 	buildEnemyJSON()
-	#TODO remove createSave and buildPotionJSON at completion
+	#TODO remove createSave and builditemJSON at completion
 	#createSave()
 	loadPlayer()
-	loadPotions()
+	loaditems()
 	statLog()
 	
 	
@@ -60,35 +65,38 @@ func _physics_process(delta: float) -> void:
 
 
 
-
-func buildPotionJSON() -> void:
-	#TODO add more potions
-	#create new potions by appending its stats here using this format of 5 lines
+# A comprehensive list of all types of items are in this function
+func builditemJSON() -> void:
+	#TODO add more items
+	#create new items by appending its stats here using this format of 5 lines
 	#will be removed in the final product, this is for ease of adding items.
-	#please number potions as you add more so indexes can be tracked
+	#please number items as you add more so indexes can be tracked
 	
 	#0
-	potionNames.append("Healing")
-	potionMagnitude.append(100)
-	potionStat.append("hp")
-	potionImage.append("res://Art/Potion.png")
-	potionSplash.append(false)
+	itemIDs.append(ItemTypes.HEALING)
+	itemNames.append("Healing")
+	itemPower.append(100)
+	itemEffect.append(EType.HEALING)
+	itemImage.append("res://Art/blue_potion.png")
+	itemSplash.append(false)
 	
 	#1
-	potionNames.append("Explosive")
-	potionMagnitude.append(-100)
-	potionStat.append("hp")
-	potionImage.append("res://Art/Potion.png")
-	potionSplash.append(true)
+	itemIDs.append(ItemTypes.EXPLOSIVE)
+	itemNames.append("Explosive")
+	itemPower.append(100)
+	itemEffect.append(EType.HEALING)
+	itemImage.append("res://Art/blue_potion.png")
+	itemSplash.append(true)
 	
 	var save_dict = {
-		"potionNames" : potionNames,
-		"potionMagnitude" : potionMagnitude,
-		"potionStat" : potionStat,
-		"potionImage": potionImage,
-		"potionSplash": potionSplash
+		"itemIDs" :itemIDs,
+		"itemNames" : itemNames,
+		"itemPower" : itemPower,
+		"itemEffect" : itemEffect,
+		"itemImage": itemImage,
+		"itemSplash": itemSplash
 	}
-	var saveFile = FileAccess.open(potionsFile, FileAccess.WRITE)
+	var saveFile = FileAccess.open(itemsFile, FileAccess.WRITE)
 	var json_string = JSON.stringify(save_dict)
 	saveFile.store_line(json_string)
 
@@ -97,36 +105,39 @@ func buildPotionJSON() -> void:
 
 
 
-#builds enemy json like potions
+#builds enemy json like items
 func buildEnemyJSON() -> void:
 	#TODO add more enemies
 	#create new enemies by appending its stats here using this format
 	#will be removed in the final product, this is for ease of adding enemies.
-	#please number potions as you add more so indexes can be tracked
+	#please number items as you add more so indexes can be tracked
 	
 	#0
+	enemyIDs.append(EnemyTypes.SLIME)
 	enemyNames.append("Slime")
 	enemyATK.append(100)
 	enemyDEF.append(100)
 	enemySPD.append(100)
 	enemyMaxHP.append(100)
 	enemyHP.append(100)
-	enemyImage.append("res://Art/Potion.png")
+	enemyImage.append("res://Art/item.png")
 	enemySplash.append(false)
 	enemyUndead.append(false)
 	
 	#1
+	enemyIDs.append(EnemyTypes.ZOMBIE)
 	enemyNames.append("Zombie")
 	enemyATK.append(100)
 	enemyDEF.append(100)
 	enemySPD.append(100)
 	enemyMaxHP.append(100)
 	enemyHP.append(100)
-	enemyImage.append("res://Art/Potion.png")
+	enemyImage.append("res://Art/item.png")
 	enemySplash.append(false)
 	enemyUndead.append(true)
 	
 	var save_dict = {
+		"enemyIDs" : enemyIDs,
 		"enemyNames" : enemyNames,
 		"enemyATK" : enemyATK,
 		"enemyDEF" : enemyDEF,
@@ -204,22 +215,27 @@ func loadPlayer() -> void:
 
 
 
-#loads potions into arrays so that they can quickly and easily be retrived by index
-func loadPotions() -> void:
-	if not FileAccess.file_exists("res://Items/potions.txt"):
+#loads items into arrays so that they can quickly and easily be retrived by index
+func loaditems() -> void:
+	if not FileAccess.file_exists(itemsFile):
 		return
 	else:
-		var save_file = FileAccess.open("res://Items/potions.txt", FileAccess.READ)
+		var save_file = FileAccess.open(itemsFile, FileAccess.READ)
 		while save_file.get_position() < save_file.get_length():
 			var json_string = save_file.get_line()
 			var json = JSON.new()
-			var parse_result = json.parse(json_string)
+			var parse_result = json.parse(json_string)	
 			if not parse_result == OK:
 				print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
 				continue
 			var node_data = json.data
 			for i in node_data.keys():
 				set(i, node_data[i])
+				
+
+func createItem(id: int) -> void:
+	pass
+
 
 
 
@@ -239,8 +255,8 @@ func statLog() -> void:
 	print(atk)
 	print("inv: ")
 	print(inventoryid)
-	print(potionNames)
-	print(potionMagnitude)
-	print(potionStat)
-	print(potionImage)
-	print(potionSplash)
+	print(itemNames)
+	print(itemPower)
+	print(itemEffect)
+	print(itemImage)
+	print(itemSplash)

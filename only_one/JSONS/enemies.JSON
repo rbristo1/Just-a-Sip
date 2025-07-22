@@ -1,1 +1,1 @@
-{"enemyATK":[100,100],"enemyDEF":[100,100],"enemyHP":[100,100],"enemyImage":["res://Art/Potion.png","res://Art/Potion.png"],"enemyMaxHP":[100,100],"enemyNames":["Slime","Zombie"],"enemySPD":[100,100],"enemySplash":[false,false],"enemyUndead":[false,true]}
+{"enemyATK":[100,100],"enemyDEF":[100,100],"enemyHP":[100,100],"enemyIDs":[0,1],"enemyImage":["res://Art/item.png","res://Art/item.png"],"enemyMaxHP":[100,100],"enemyNames":["Slime","Zombie"],"enemySPD":[100,100],"enemySplash":[false,false],"enemyUndead":[false,true]}
