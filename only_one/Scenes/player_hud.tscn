@@ -24,7 +24,6 @@
 texture = ExtResource("1_kt5xe")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_15ks0"]
-load_path = "res://.godot/imported/text_box_next.png-0d32273d87d2813d1e6a6fe050ba19e1.ctex"
 
 [sub_resource type="Animation" id="Animation_o5fke"]
 length = 0.001
