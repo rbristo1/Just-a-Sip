@@ -1,9 +1,30 @@
-[gd_scene load_steps=7 format=3 uid="uid://lk3u43141ady"]
+[gd_scene load_steps=32 format=3 uid="uid://lk3u43141ady"]
 
 [ext_resource type="PackedScene" uid="uid://bg8per6ea7hkt" path="res://Scenes/pause_button.tscn" id="1_w5k1x"]
-[ext_resource type="Texture2D" uid="uid://ds5omieyavyks" path="res://Art/slime.png" id="2_ps4wy"]
-[ext_resource type="Texture2D" uid="uid://cxsgss8bjwogy" path="res://Art/item_slot.png" id="3_qi63e"]
+[ext_resource type="Theme" uid="uid://cwtqdnra1go4t" path="res://testTheme.tres" id="1_xebxw"]
+[ext_resource type="Texture2D" uid="uid://ds5omieyavyks" path="res://Art/Enemies/slime.png" id="2_ps4wy"]
+[ext_resource type="Texture2D" uid="uid://1gty8vgbmm86" path="res://Art/Atlas Textures/UI/item_slot/item_slot_normal.tres" id="3_786vc"]
+[ext_resource type="Texture2D" uid="uid://h31cliy5ink8" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed0.tres" id="3_ps4wy"]
+[ext_resource type="Texture2D" uid="uid://bmcrva5mj2ilv" path="res://Art/Atlas Textures/UI/run_button/run_button_normal.tres" id="3_w80bc"]
 [ext_resource type="PackedScene" uid="uid://bkkc4sk736q4q" path="res://Scenes/player_hud.tscn" id="4_ps4wy"]
+[ext_resource type="Script" uid="uid://c28o8e3akqrll" path="res://Scripts/run_button.gd" id="5_024dg"]
+[ext_resource type="Texture2D" uid="uid://bqgn7m8p47ojy" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed1.tres" id="5_akdr0"]
+[ext_resource type="Texture2D" uid="uid://dlvnxqsw38u5i" path="res://Art/Atlas Textures/UI/run_button/rune_button_hover.tres" id="5_gn6mn"]
+[ext_resource type="Texture2D" uid="uid://bd4lrilbnposx" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed2.tres" id="7_hw3xs"]
+[ext_resource type="Texture2D" uid="uid://b2virft0eo4aj" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed3.tres" id="8_ejxwv"]
+[ext_resource type="Texture2D" uid="uid://v8ahow1mkmp" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed4.tres" id="9_786vc"]
+[ext_resource type="Texture2D" uid="uid://cu0fkjf14dwk8" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed5.tres" id="10_xebxw"]
+[ext_resource type="Texture2D" uid="uid://cu61o7qwq24st" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed6.tres" id="11_hvdyc"]
+[ext_resource type="Texture2D" uid="uid://dj0cl2trd7heo" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed7.tres" id="12_2q6hh"]
+[ext_resource type="Texture2D" uid="uid://dsn2hw1nq2mgv" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed8.tres" id="13_42y4d"]
+[ext_resource type="Texture2D" uid="uid://cjihnq0p6fh6f" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed9.tres" id="14_6pt0n"]
+[ext_resource type="Texture2D" uid="uid://c4juopga2vdla" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed10.tres" id="15_qbuxk"]
+[ext_resource type="Texture2D" uid="uid://dxypds7nf0lel" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed11.tres" id="16_vsgm6"]
+[ext_resource type="Texture2D" uid="uid://dkvff8rym2o8x" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed12.tres" id="17_hkd4t"]
+[ext_resource type="Texture2D" uid="uid://2xuoym36h0w0" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed13.tres" id="18_13nug"]
+[ext_resource type="Texture2D" uid="uid://diinnhx6qfjjx" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed14.tres" id="19_pnkev"]
+[ext_resource type="Texture2D" uid="uid://cd3hsyk01h270" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed15.tres" id="20_qgn8v"]
+[ext_resource type="Texture2D" uid="uid://cynpmfmvi7r82" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed16.tres" id="21_f0dkq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvl2i"]
 bg_color = Color(0.25098, 0, 0, 1)
@@ -13,6 +34,49 @@ corner_detail = 1
 bg_color = Color(1, 0, 0, 1)
 corner_detail = 1
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_w80bc"]
+frames = 2
+frame_0/texture = ExtResource("3_ps4wy")
+frame_1/texture = ExtResource("5_akdr0")
+frame_1/duration = 1.0
+
+[sub_resource type="Animation" id="Animation_5601e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_pressed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("AnimatedTexture_w80bc")]
+}
+
+[sub_resource type="Animation" id="Animation_ivmuh"]
+resource_name = "run_button_pressed"
+step = 0.0625
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_pressed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0625, 0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.6875, 0.75, 0.8125, 0.875, 0.9375, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_ps4wy"), ExtResource("5_akdr0"), ExtResource("7_hw3xs"), ExtResource("8_ejxwv"), ExtResource("9_786vc"), ExtResource("10_xebxw"), ExtResource("11_hvdyc"), ExtResource("12_2q6hh"), ExtResource("13_42y4d"), ExtResource("14_6pt0n"), ExtResource("15_qbuxk"), ExtResource("16_vsgm6"), ExtResource("17_hkd4t"), ExtResource("18_13nug"), ExtResource("19_pnkev"), ExtResource("20_qgn8v"), ExtResource("21_f0dkq")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ngp3r"]
+_data = {
+&"RESET": SubResource("Animation_5601e"),
+&"run_button_pressed": SubResource("Animation_ivmuh")
+}
+
 [node name="BattleHud" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -21,6 +85,7 @@ offset_top = -180.0
 offset_right = 320.0
 offset_bottom = 180.0
 size_flags_horizontal = 0
+theme = ExtResource("1_xebxw")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -40,6 +105,7 @@ theme_override_constants/separation = 0
 [node name="MainSpacing1" type="HSeparator" parent="BHudMainBox"]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
+theme = ExtResource("1_xebxw")
 
 [node name="EnemyInfoRow" type="HBoxContainer" parent="BHudMainBox"]
 custom_minimum_size = Vector2(0, 16)
@@ -49,6 +115,7 @@ theme_override_constants/separation = 0
 [node name="EInfoSpacing1" type="VSeparator" parent="BHudMainBox/EnemyInfoRow"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
+theme = ExtResource("1_xebxw")
 
 [node name="HealthBar1" type="ProgressBar" parent="BHudMainBox/EnemyInfoRow"]
 custom_minimum_size = Vector2(0, 16)
@@ -134,12 +201,34 @@ layout_mode = 2
 texture = ExtResource("2_ps4wy")
 
 [node name="EImageSpacing4" type="VSeparator" parent="BHudMainBox/EnemyImageRow"]
-custom_minimum_size = Vector2(96, 0)
+custom_minimum_size = Vector2(48, 0)
 layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BHudMainBox/EnemyImageRow"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="BHudMainBox/EnemyImageRow/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="RunButton" type="TextureButton" parent="BHudMainBox/EnemyImageRow/VBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("3_w80bc")
+texture_pressed = SubResource("AnimatedTexture_w80bc")
+texture_hover = ExtResource("5_gn6mn")
+stretch_mode = 5
+script = ExtResource("5_024dg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton"]
+libraries = {
+&"": SubResource("AnimationLibrary_ngp3r")
+}
 
 [node name="MainSpacing2" type="HSeparator" parent="BHudMainBox"]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
+theme = ExtResource("1_xebxw")
 
 [node name="ItemSlotRow" type="HBoxContainer" parent="BHudMainBox"]
 custom_minimum_size = Vector2(0, 32)
@@ -153,7 +242,8 @@ layout_mode = 2
 [node name="ItemSlot1" type="TextureRect" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
-texture = ExtResource("3_qi63e")
+texture = ExtResource("3_786vc")
+expand_mode = 3
 
 [node name="ISlotSpacing2" type="VSeparator" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(144, 0)
@@ -162,7 +252,7 @@ layout_mode = 2
 [node name="ItemSlot2" type="TextureRect" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
-texture = ExtResource("3_qi63e")
+texture = ExtResource("3_786vc")
 expand_mode = 3
 
 [node name="ISlotSpacing3" type="VSeparator" parent="BHudMainBox/ItemSlotRow"]
@@ -172,8 +262,8 @@ layout_mode = 2
 [node name="ItemSlot3" type="TextureRect" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
-texture = ExtResource("3_qi63e")
-expand_mode = 5
+texture = ExtResource("3_786vc")
+expand_mode = 3
 
 [node name="ISlotSpacing4" type="VSeparator" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(128, 0)
@@ -181,3 +271,6 @@ layout_mode = 2
 
 [node name="PlayerHud" parent="BHudMainBox" instance=ExtResource("4_ps4wy")]
 layout_mode = 2
+
+[connection signal="button_down" from="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton" to="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton" method="_on_button_down"]
+[connection signal="button_up" from="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton" to="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton" method="_on_button_up"]
