@@ -1,23 +1,8 @@
+res://Scenes/item_display.tscn
+res://Scripts/item_display.gd
 res://Scenes/player_hud.tscn
 res://Scenes/Battle.tscn
-res://Scripts/player.gd
 res://Scenes/battle_hud.tscn
 res://Scenes/enemy.tscn
 res://Scenes/pause_button.tscn
-res://Scenes/player.tscn
-res://Scripts/inventory_item.gd
 res://Scenes/inventory_item.tscn
-res://Scenes/next_button.gd
-res://Art/Atlas Textures/Items/health_potion/health_potion_normal.tres
-res://Art/Atlas Textures/Items/health_potion/health_potion_highlighted.tres
-res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_normal.tres
-res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_hover.tres
-res://Art/Atlas Textures/Items/fire_flask/fire_flask_normal.tres
-res://Art/Atlas Textures/Items/fire_flask/fire_flask_hover.tres
-res://Art/Atlas Textures/Items/ice_flask/ice_flask_normal.tres
-res://Art/Atlas Textures/Items/ice_flask/ice_flask_hover.tres
-res://Art/Atlas Textures/Items/poison_flask/poison_flask_normal.tres
-res://Art/Atlas Textures/Items/poison_flask/poison_flask_hover.tres
-res://Scripts/item_display.gd
-res://Art/Atlas Textures/Items/poison_flask/item_display.tscn
-res://Scenes/item_display.tscn

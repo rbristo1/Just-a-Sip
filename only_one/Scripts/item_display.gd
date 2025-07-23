@@ -8,6 +8,7 @@ enum EType {HEALING, EXPLODING, FIRE, ICE, POISON}
 @export var itemImage: AtlasTexture = null
 @export var itemHoverImage: AtlasTexture = null
 @export var itemSplash = false
+signal item_dropped(data)
 
 func link(ID: int, Name: String, Effect: int, Power: int, iImage: AtlasTexture,
 					 iHImage: AtlasTexture, Splash: bool):
@@ -20,6 +21,16 @@ func link(ID: int, Name: String, Effect: int, Power: int, iImage: AtlasTexture,
 	itemSplash = Splash
 	texture = itemImage
 	
+func linkDict(info: Dictionary):
+	itemID = info["iID"]
+	itemName = info["iName"]
+	itemEffect = info["iEffect"]
+	itemPower = info["iPower"]
+	itemImage = info["iImage"]
+	itemHoverImage = info["iHImage"]
+	itemSplash = info["iSplash"]
+	texture = itemImage
+	
 func unlink() -> void:
 	itemID = -1
 	itemName = ""
@@ -27,21 +38,37 @@ func unlink() -> void:
 	itemImage = null
 	itemHoverImage = null
 	itemSplash = false
+	texture = null
 
 func _on_mouse_entered() -> void:
 	if itemHoverImage != null:
 		texture = itemHoverImage
-	print("hi")
 
 func _on_mouse_exited() -> void:
 	if texture != itemImage:
 		texture = itemImage
 
-func _get_drag_data(at_position: Vector2) -> Variant:
-	return
+func _get_drag_data(_at_position: Vector2) -> Variant:
+	var preview = self.duplicate(Node.DUPLICATE_USE_INSTANTIATION)
+	preview.modulate = Color(1, 1, 1, 0.5) # Half opacity
+	preview.mouse_filter = Control.MOUSE_FILTER_IGNORE # Just in case
+	set_drag_preview(preview)
 	
-func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
-	return true
+	return {"iID": itemID,
+			"iName": itemName,
+			"iEffect": itemEffect,
+			"iPower": itemPower,
+			"iImage": itemImage,
+			"iHImage": itemHoverImage,
+			"iSplash": itemSplash,
+			"droppedFrom": self}
 	
-func _drop_data(at_position: Vector2, data: Variant) -> void:
-	pass
+func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
+	return typeof(data) == TYPE_DICTIONARY and data.has("iID")
+	
+func _drop_data(_at_position: Vector2, data: Variant) -> void:
+	linkDict(data)
+	data["droppedFrom"].unlink()
+	
+	
+	

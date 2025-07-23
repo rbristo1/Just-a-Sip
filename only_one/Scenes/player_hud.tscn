@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bqo13isbnspjk"]
+[gd_scene load_steps=30 format=3 uid="uid://bqo13isbnspjk"]
 
 [ext_resource type="FontFile" uid="uid://c0iqxm04l5108" path="res://m5x7.ttf" id="1_8rgen"]
 [ext_resource type="Script" uid="uid://bvowwc5ncwf3s" path="res://Scripts/player.gd" id="1_i2evl"]
@@ -71,12 +71,8 @@ texture = ExtResource("6_o5fke")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3jtpm"]
 texture = ExtResource("1_o8xso")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_46pop"]
-atlas = ExtResource("2_vfwc5")
-region = Rect2(0, 0, 32, 0)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ykso4"]
-texture = SubResource("AtlasTexture_46pop")
+texture = ExtResource("2_vfwc5")
 region_rect = Rect2(0, 0, 16, 16)
 
 [node name="player_hud" type="Control"]
