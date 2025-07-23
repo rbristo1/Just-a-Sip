@@ -237,6 +237,16 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 [node name="InventoryDisplay1" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot1" instance=ExtResource("10_46pop")]
 layout_mode = 2
 
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot1/InventoryDisplay1"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
 [node name="InventoryItemSlot2" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -244,6 +254,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
 [node name="InventoryDisplay2" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot2" instance=ExtResource("10_46pop")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot2/InventoryDisplay2"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
 
 [node name="InventoryItemSlot3" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -253,6 +272,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 [node name="InventoryDisplay3" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot3" instance=ExtResource("10_46pop")]
 layout_mode = 2
 
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot3/InventoryDisplay3"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
 [node name="InventoryItemSlot4" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -260,6 +288,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
 [node name="InventoryDisplay4" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot4" instance=ExtResource("10_46pop")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot4/InventoryDisplay4"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
 
 [node name="InventoryItemSlot5" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -269,6 +306,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 [node name="InventoryDisplay5" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot5" instance=ExtResource("10_46pop")]
 layout_mode = 2
 
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot5/InventoryDisplay5"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
 [node name="InventoryItemSlot6" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -276,6 +322,14 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
 [node name="InventoryDisplay6" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot6" instance=ExtResource("10_46pop")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot6/InventoryDisplay6"]
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
 
 [node name="InventoryItemSlot7" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -285,6 +339,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 [node name="InventoryDisplay7" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot7" instance=ExtResource("10_46pop")]
 layout_mode = 2
 
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot7/InventoryDisplay7"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
 [node name="InventoryItemSlot8" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -292,6 +355,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
 [node name="InventoryDisplay8" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot8" instance=ExtResource("10_46pop")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot8/InventoryDisplay8"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
 
 [node name="UpButton" type="TextureButton" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -309,6 +381,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 [node name="InventoryDisplay9" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot9" instance=ExtResource("10_46pop")]
 layout_mode = 2
 
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot9/InventoryDisplay9"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
 [node name="InventoryItemSlot10" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -316,6 +397,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
 [node name="InventoryDisplay10" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot10" instance=ExtResource("10_46pop")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot10/InventoryDisplay10"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
 
 [node name="InventoryItemSlot11" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -325,6 +415,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 [node name="InventoryDisplay11" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot11" instance=ExtResource("10_46pop")]
 layout_mode = 2
 
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot11/InventoryDisplay11"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
 [node name="InventoryItemSlot12" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -332,6 +431,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
 [node name="InventoryDisplay12" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot12" instance=ExtResource("10_46pop")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot12/InventoryDisplay12"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
 
 [node name="InventoryItemSlot13" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -341,6 +449,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 [node name="InventoryDisplay13" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot13" instance=ExtResource("10_46pop")]
 layout_mode = 2
 
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot13/InventoryDisplay13"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
 [node name="InventoryItemSlot14" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -348,6 +465,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
 [node name="InventoryDisplay14" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot14" instance=ExtResource("10_46pop")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot14/InventoryDisplay14"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
 
 [node name="InventoryItemSlot15" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -357,6 +483,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 [node name="InventoryDisplay15" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot15" instance=ExtResource("10_46pop")]
 layout_mode = 2
 
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot15/InventoryDisplay15"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
 [node name="InventoryItemSlot16" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -364,6 +499,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
 [node name="InventoryDisplay16" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot16" instance=ExtResource("10_46pop")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot16/InventoryDisplay16"]
+visible = false
+top_level = true
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
 
 [node name="DownButton" type="TextureButton" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)

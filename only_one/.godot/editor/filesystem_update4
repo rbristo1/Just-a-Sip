@@ -1,8 +1,8 @@
-res://Scenes/item_display.tscn
-res://Scripts/item_display.gd
-res://Scenes/player_hud.tscn
 res://Scenes/Battle.tscn
 res://Scenes/battle_hud.tscn
 res://Scenes/enemy.tscn
 res://Scenes/pause_button.tscn
+res://Scenes/player_hud.tscn
 res://Scenes/inventory_item.tscn
+res://Scenes/item_display.tscn
+res://Scripts/item_display.gd
