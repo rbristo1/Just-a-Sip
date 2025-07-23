@@ -78,7 +78,7 @@ region = Rect2(0, 0, 32, 0)
 texture = SubResource("AtlasTexture_46pop")
 region_rect = Rect2(0, 0, 16, 16)
 
-[node name="player_hud" type="Control"]
+[node name="player_hud" type="Control" groups=["Inventory Item Displays"]]
 custom_minimum_size = Vector2(0, 168)
 layout_mode = 3
 anchors_preset = 12
@@ -88,6 +88,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_i2evl")
+inventoryid = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+INVENTORY_ITEM_DISPLAYS = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="PHudMainBox" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -237,41 +239,104 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot2" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay1" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot1" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot2" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot3" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay2" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot2" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot3" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot4" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay3" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot3" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot4" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot5" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay4" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot4" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot5" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot6" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay5" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot5" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot6" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot7" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay6" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot6" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot7" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot8" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay7" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot7" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot8" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
+=======
+[node name="InventoryDisplay8" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot8" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+>>>>>>> Stashed changes
 [node name="UpButton" type="TextureButton" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
@@ -285,41 +350,104 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot10" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay9" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot9" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot10" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot11" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay10" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot10" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot11" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot12" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay11" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot11" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot12" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot13" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay12" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot12" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot13" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot14" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay13" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot13" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot14" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot15" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay14" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot14" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot15" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
 [node name="ItemSlot16" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+=======
+[node name="InventoryDisplay15" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot15" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+[node name="InventoryItemSlot16" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+>>>>>>> Stashed changes
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
 
+<<<<<<< Updated upstream
+=======
+[node name="InventoryDisplay16" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot16" groups=["Inventory Item Displays"] instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+
+>>>>>>> Stashed changes
 [node name="DownButton" type="TextureButton" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
