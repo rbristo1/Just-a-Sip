@@ -1,5 +1,5 @@
 #holds player stats and data
-extends Node2D
+extends Control
 
 #stats
 @export var maxhp = 100
@@ -7,7 +7,21 @@ extends Node2D
 @export var spd = 100
 @export var def = 100
 @export var atk = 100
-@export var inventoryid: Array
+@export var inventoryid: Array # This is ONLY USED FOR SAVING. This is not used for storing items in game
+
+@export var ITEM_INVENTORY_CAPCITY = 32
+
+# Inventory Stuff
+# Item Inventory
+var itemInventory: Array
+var itemInventoryNum = 0 # The number of items currently in the inventory, max 32
+# Material Inventory
+var materialInventory: Array
+var materialInventoryNum = 0
+# General Inventory
+var inventoryMode = 0 # 0 for item, 1 for materials
+var inventoryPage = 0 # 16 slots per page, it IS 0 indexed in the code, even though it is not in display
+
 
 #item lookup caching, for retrieval as indexes in constant time
 var itemIDs: Array
@@ -15,9 +29,11 @@ var itemNames: Array
 var itemPower: Array
 var itemEffect: Array
 var itemImage: Array
+var itemHImage: Array
 var itemSplash: Array
-enum ItemTypes {HEALING, EXPLOSIVE}
-enum EType {DAMAGING, HEALING, STUNNING, BUFF_ATK, BUFF_DEF, BUFF_SPD}
+enum ItemTypes {D_HEALING, HEALING, P_HEALING, D_EXPLOSIVE, EXPLOSIVE, P_EXPLOSIVE,
+				D_FIRE, FIRE, P_FIRE, D_ICE, ICE, P_ICE, D_POISON, POISON, P_POISON}
+enum EType {HEAL, EXPLODE, FIRE, ICE, POISON}
 
 #enemy 
 var enemyIDs: Array
@@ -42,24 +58,26 @@ enum EnemyTypes {SLIME, ZOMBIE}
 
 
 func _ready() -> void:
+	# Create inventory
+	itemInventory.resize(32)
+	materialInventory.resize(32)
+	
+	var itemScene = preload("res://Scenes/inventory_item.tscn")
+	
+	for i in itemInventory.size(): 
+		var instance = itemScene.instantiate()
+		itemInventory[i] = instance
+		
 	builditemJSON()
 	buildEnemyJSON()
 	#TODO remove createSave and builditemJSON at completion
 	#createSave()
 	loadPlayer()
 	loaditems()
-	statLog()
 	
+	#TEST
+	#statLog()
 	
-
-
-
-
-
-func _physics_process(delta: float) -> void:
-	if (hp <= 0):
-		print("died!")
-		#TODO add game over here
 	
 
 
@@ -73,20 +91,141 @@ func builditemJSON() -> void:
 	#please number items as you add more so indexes can be tracked
 	
 	#0
-	itemIDs.append(ItemTypes.HEALING)
-	itemNames.append("Healing")
-	itemPower.append(100)
-	itemEffect.append(EType.HEALING)
-	itemImage.append("res://Art/blue_potion.png")
+	itemIDs.append(ItemTypes.D_HEALING)
+	itemNames.append("Diluted Healing Potion")
+	itemPower.append(50)
+	itemEffect.append(EType.HEAL)
+	itemImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_highlighted.tres")
 	itemSplash.append(false)
 	
 	#1
-	itemIDs.append(ItemTypes.EXPLOSIVE)
-	itemNames.append("Explosive")
+	itemIDs.append(ItemTypes.HEALING)
+	itemNames.append("Healing Potion")
 	itemPower.append(100)
-	itemEffect.append(EType.HEALING)
-	itemImage.append("res://Art/blue_potion.png")
-	itemSplash.append(true)
+	itemEffect.append(EType.HEAL)
+	itemImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_highlighted.tres")
+	itemSplash.append(false)
+	
+	#2
+	itemIDs.append(ItemTypes.P_HEALING)
+	itemNames.append("Potent Healing Potion")
+	itemPower.append(150)
+	itemEffect.append(EType.HEAL)
+	itemImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_highlighted.tres")
+	itemSplash.append(false)
+	
+	#3
+	itemIDs.append(ItemTypes.D_EXPLOSIVE)
+	itemNames.append("Diluted Explosive Flask")
+	itemPower.append(50)
+	itemEffect.append(EType.EXPLODE)
+	itemImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_hover.tres")
+	itemSplash.append(false)
+
+	#4
+	itemIDs.append(ItemTypes.EXPLOSIVE)
+	itemNames.append("Explosive Flask")
+	itemPower.append(100)
+	itemEffect.append(EType.EXPLODE)
+	itemImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_hover.tres")
+	itemSplash.append(false)
+
+	#5
+	itemIDs.append(ItemTypes.P_EXPLOSIVE)
+	itemNames.append("Potent Explosive Flask")
+	itemPower.append(150)
+	itemEffect.append(EType.EXPLODE)
+	itemImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_hover.tres")
+	itemSplash.append(false)
+	
+	#6
+	itemIDs.append(ItemTypes.D_FIRE)
+	itemNames.append("Diluted Fire Flask")
+	itemPower.append(50)
+	itemEffect.append(EType.FIRE)
+	itemImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_hover.tres")
+	itemSplash.append(false)
+
+	#7
+	itemIDs.append(ItemTypes.FIRE)
+	itemNames.append("Fire Flask")
+	itemPower.append(100)
+	itemEffect.append(EType.FIRE)
+	itemImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_hover.tres")
+	itemSplash.append(false)
+	
+	#8
+	itemIDs.append(ItemTypes.P_FIRE)
+	itemNames.append("Potent Fire Flask")
+	itemPower.append(150)
+	itemEffect.append(EType.FIRE)
+	itemImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_hover.tres")
+	itemSplash.append(false)
+	
+	#9
+	itemIDs.append(ItemTypes.D_ICE)
+	itemNames.append("Diluted Ice Flask")
+	itemPower.append(50)
+	itemEffect.append(EType.ICE)
+	itemImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_hover.tres")
+	itemSplash.append(false)
+	
+	#10
+	itemIDs.append(ItemTypes.ICE)
+	itemNames.append("Ice Flask")
+	itemPower.append(100)
+	itemEffect.append(EType.ICE)
+	itemImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_hover.tres")
+	itemSplash.append(false)
+	
+	#11
+	itemIDs.append(ItemTypes.P_ICE)
+	itemNames.append("Potent Ice Flask")
+	itemPower.append(150)
+	itemEffect.append(EType.ICE)
+	itemImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_hover.tres")
+	itemSplash.append(false)
+	
+	#12
+	itemIDs.append(ItemTypes.D_POISON)
+	itemNames.append("Diluted Poison Flask")
+	itemPower.append(50)
+	itemEffect.append(EType.POISON)
+	itemImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_hover.tres")
+	itemSplash.append(false)
+	
+	#13
+	itemIDs.append(ItemTypes.POISON)
+	itemNames.append("Poison Flask")
+	itemPower.append(100)
+	itemEffect.append(EType.POISON)
+	itemImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_hover.tres")
+	itemSplash.append(false)
+
+	#14
+	itemIDs.append(ItemTypes.P_POISON)
+	itemNames.append("Potent Poison Flask")
+	itemPower.append(150)
+	itemEffect.append(EType.POISON)
+	itemImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_normal.tres")
+	itemHImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_hover.tres")
+	itemSplash.append(false)
+
+
 	
 	var save_dict = {
 		"itemIDs" :itemIDs,
@@ -94,6 +233,7 @@ func builditemJSON() -> void:
 		"itemPower" : itemPower,
 		"itemEffect" : itemEffect,
 		"itemImage": itemImage,
+		"itemHImage": itemHImage,
 		"itemSplash": itemSplash
 	}
 	var saveFile = FileAccess.open(itemsFile, FileAccess.WRITE)
@@ -234,10 +374,52 @@ func loaditems() -> void:
 				
 
 func createItem(id: int) -> void:
-	pass
+	var iName = itemNames[id]
+	var iPower = itemPower[id]
+	var iEffect = itemEffect[id]
+	var iImage = load(itemImage[id])
+	var iHImage = load(itemHImage[id])
+	var iSplash = itemSplash[id]
+	# Deferred to ensure the item exists completely before messing with its attributes
+	itemInventory[itemInventoryNum].initialize(id, iName, iPower, iEffect, iImage, iHImage, iSplash)
+	itemInventoryNum += 1
+	updateInventoryDisplay(-1, -1)
+	
 
-
-
+func updateInventoryDisplay(mode: int, page: int) -> void:
+	var inventoryD
+	
+	if (mode == -1 and page == -1): 
+		mode = inventoryMode
+		page = inventoryPage
+	
+	if (mode == 1):
+		inventoryD = materialInventory
+	else:
+		inventoryD = itemInventory
+		
+	for i in 16:
+		linkItemtoInventoryDisplay(i * (page + 1), mode, i)
+	
+func linkItemtoInventoryDisplay(item: int, mode: int, space: int) -> void:
+	var inventory
+	
+	if (mode == 1):
+		inventory = materialInventory
+	else:
+		inventory = itemInventory
+		
+	var toLink = inventory[item]
+		
+	# We need to link the thing from the itemInventory into the itemDisplay
+	# Start by finding the item display we need
+	var slot = find_child("InventoryItemSlot{0}".format([space + 1]), true)
+	
+	# Now we can replace any information in that spot by linking it
+	slot.get_child(0).link(toLink.itemID, toLink.itemName, toLink.itemEffect, 
+							toLink.itemPower, toLink.itemImage, toLink.itemHoverImage, 
+							toLink.itemSplash)
+	
 
 
 

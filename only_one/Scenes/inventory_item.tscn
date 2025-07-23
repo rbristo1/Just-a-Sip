@@ -3,15 +3,11 @@
 [ext_resource type="Script" uid="uid://crwayajb36xqm" path="res://Scripts/inventory_item.gd" id="1_0s75y"]
 
 [node name="InventoryItem" type="Control"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.05
+anchor_bottom = 0.089
+offset_bottom = -0.0400009
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0s75y")
-
-[node name="ItemDisplay" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0

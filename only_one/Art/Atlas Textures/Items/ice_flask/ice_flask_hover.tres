@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bdqruds2egg8t"]
+
+[ext_resource type="Texture2D" uid="uid://cga2pfe10uujt" path="res://Art/Items/ice_flask.png" id="1_808pw"]
+
+[resource]
+atlas = ExtResource("1_808pw")
+region = Rect2(16, 0, 16, 0)
