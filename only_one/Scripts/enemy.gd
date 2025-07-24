@@ -12,7 +12,7 @@ var enemyUndead
 var area
 @export var enemiesFile = "res://JSONS/enemies.JSON"
 
-
+#holds generated enemy ids and their health
 var enemies
 var enemiesHP: Array
 
@@ -59,7 +59,7 @@ func initEnemies():
 		$ItemSlotRow/BattleItemSlot3.z_index = -100
 
 func generateEnemies():
-	
+	#-1 denotes no enemy
 	enemies = [-1,0,0]
 
 func loadEnemyCache() -> void:
