@@ -47,6 +47,7 @@ var enemyDEF: Array
 var enemyImage: Array
 var enemySplash: Array
 var enemyUndead: Array
+var area: Array
 enum EnemyTypes {SLIME, ZOMBIE}
 
 
@@ -264,9 +265,10 @@ func buildEnemyJSON() -> void:
 	enemySPD.append(100)
 	enemyMaxHP.append(100)
 	enemyHP.append(100)
-	enemyImage.append("res://Art/item.png")
+	enemyImage.append("res://Art/Enemies/slime.png")
 	enemySplash.append(false)
 	enemyUndead.append(false)
+	area.append(0)
 	
 	#1
 	enemyIDs.append(EnemyTypes.ZOMBIE)
@@ -276,9 +278,10 @@ func buildEnemyJSON() -> void:
 	enemySPD.append(100)
 	enemyMaxHP.append(100)
 	enemyHP.append(100)
-	enemyImage.append("res://Art/item.png")
+	enemyImage.append("res://Art/Enemies/Zombie Idle.png")
 	enemySplash.append(false)
 	enemyUndead.append(true)
+	area.append(0)
 	
 	var save_dict = {
 		"enemyIDs" : enemyIDs,

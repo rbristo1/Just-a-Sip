@@ -5,3 +5,6 @@ res://Scenes/item_display.tscn
 res://Scenes/inventory_item.tscn
 res://Scripts/inventory_item.gd
 res://Scripts/player.gd
+res://Scenes/enemy.tscn
+res://Scenes/pause_button.tscn
+res://Scripts/enemy.gd
