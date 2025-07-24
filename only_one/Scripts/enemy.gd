@@ -59,8 +59,12 @@ func initEnemies():
 		$ItemSlotRow/BattleItemSlot3.z_index = -100
 
 func generateEnemies():
+	enemies = [-1,-1,-1]
 	#-1 denotes no enemy
-	enemies = [-1,0,0]
+	var numEnemies = randi()%3+1
+	for i in numEnemies:
+		enemies[(1+i)%3] = randi()%2
+	
 
 func loadEnemyCache() -> void:
 	if not FileAccess.file_exists(enemiesFile):
