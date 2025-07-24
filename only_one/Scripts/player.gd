@@ -387,10 +387,11 @@ func AddItemToInventory(id: int) -> void:
 	var iSlotNum = 0
 	
 	# Deferred to ensure the item exists completely before messing with its attributes
-	itemInventory[itemInventoryNum].initialize(id, itemInventoryNum, iName, iPower, iEffect, iImage, iHImage, iSplash)
-	itemInventoryNum += 1
-	ShiftInventoryLeft(0)
-	updateInventoryDisplay(-1, -1)
+	if (itemInventoryNum != 32):
+		itemInventory[itemInventoryNum].initialize(id, itemInventoryNum, iName, iPower, iEffect, iImage, iHImage, iSplash)
+		itemInventoryNum += 1
+		ShiftInventoryLeft(0)
+		updateInventoryDisplay(-1, -1)
 	
 func RemoveItemFromInventory(slotNumber: int, mode: int) -> void:
 	if (mode == 1):

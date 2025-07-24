@@ -90,7 +90,7 @@ region_rect = Rect2(0, 0, 16, 16)
 texture = ExtResource("24_xebxw")
 region_rect = Rect2(0, 0, 16, 16)
 
-[node name="BattleHud" type="Control"]
+[node name="BattleHud" type="Control" groups=["Inventory Item Displays"]]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -320.0

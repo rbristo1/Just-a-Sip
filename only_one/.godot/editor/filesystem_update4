@@ -4,3 +4,4 @@ res://Scenes/player_hud.tscn
 res://Scenes/item_display.tscn
 res://Scenes/inventory_item.tscn
 res://Scripts/inventory_item.gd
+res://Scripts/player.gd
