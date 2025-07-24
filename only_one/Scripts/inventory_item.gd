@@ -2,13 +2,19 @@ extends Control
 
 enum EType {HEALING, EXPLODING, FIRE, ICE, POISON}
 @export var itemID = -1
+@export var inventorySlot = -1
 @export var itemName = ""
 @export var itemEffect = -1
 @export var itemPower = -1
 @export var itemImage: AtlasTexture = null
 @export var itemHoverImage: AtlasTexture = null
 @export var itemSplash = false
+@export var inventoryDisplaySpotNumber = 0
 
+func initialize(ID: int, InvSlot: int, Name: String, Effect: int, Power: int, iImage: AtlasTexture,
+					 iHImage: AtlasTexture, Splash: bool):
+	itemID = ID
+	inventorySlot = InvSlot
 func initialize(ID: int, Name: String, Effect: int, Power: int, iImage: AtlasTexture,
 					 iHImage: AtlasTexture, Splash: bool):
 	itemID = ID

@@ -9,6 +9,7 @@ extends Control
 @export var atk = 100
 @export var inventoryid: Array # This is ONLY USED FOR SAVING. This is not used for storing items in game
 
+@export var INVENTORY_ITEM_DISPLAYS: Array
 @export var ITEM_INVENTORY_CAPCITY = 32
 
 # Inventory Stuff
@@ -58,6 +59,9 @@ enum EnemyTypes {SLIME, ZOMBIE}
 
 
 func _ready() -> void:
+	
+	INVENTORY_ITEM_DISPLAYS = get_tree().get_nodes_in_group("Inventory Item Displays")
+	
 	# Create inventory
 	itemInventory.resize(32)
 	materialInventory.resize(32)
@@ -373,31 +377,73 @@ func loaditems() -> void:
 				set(i, node_data[i])
 				
 
-func createItem(id: int) -> void:
+func AddItemToInventory(id: int) -> void:
 	var iName = itemNames[id]
 	var iPower = itemPower[id]
 	var iEffect = itemEffect[id]
 	var iImage = load(itemImage[id])
 	var iHImage = load(itemHImage[id])
 	var iSplash = itemSplash[id]
+	var iSlotNum = 0
+	
 	# Deferred to ensure the item exists completely before messing with its attributes
-	itemInventory[itemInventoryNum].initialize(id, iName, iPower, iEffect, iImage, iHImage, iSplash)
+	itemInventory[itemInventoryNum].initialize(id, itemInventoryNum, iName, iPower, iEffect, iImage, iHImage, iSplash)
 	itemInventoryNum += 1
+	ShiftInventoryLeft(0)
 	updateInventoryDisplay(-1, -1)
+	
+func RemoveItemFromInventory(slotNumber: int, mode: int) -> void:
+	if (mode == 1):
+		materialInventory[slotNumber].uninitialize()
+	else:
+		itemInventory[slotNumber].uninitialize()
+		
+	if (isCurrentlyDisplayed(slotNumber, mode)):
+		@warning_ignore("integer_division")
+		INVENTORY_ITEM_DISPLAYS[slotNumber/16].unlink()
+	
+	ShiftInventoryLeft(mode)
+	updateInventoryDisplay(-1, -1)
+	
+func isCurrentlyDisplayed(itemSlotNumber:int, mode: bool) -> bool:
+	@warning_ignore("integer_division")
+	if (inventoryMode != mode or itemSlotNumber/16 != inventoryPage):
+		return false
+	return true
+
+func ShiftInventoryLeft(mode: int):
+	var inventory
+	if (mode == 1):
+		inventory = materialInventory
+	else:
+		inventory = itemInventory
+	
+	var itemScene = preload("res://Scenes/inventory_item.tscn")
+	
+	var count = 0
+	var tempArray: Array
+	tempArray.resize(32)
+	for i in inventory.size():
+		if (inventory[i].itemID != -1):
+			tempArray[count] = inventory[i]
+			count += 1
+			
+	for c in range(count, tempArray.size()):
+		tempArray[c] = itemScene.instantiate()
+	if (mode == 1):
+		materialInventory = tempArray
+	else:
+		itemInventory = tempArray
+
 	
 
 func updateInventoryDisplay(mode: int, page: int) -> void:
-	var inventoryD
-	
-	if (mode == -1 and page == -1): 
+	if (mode == -1):
 		mode = inventoryMode
+	if (page == -1):
 		page = inventoryPage
-	
-	if (mode == 1):
-		inventoryD = materialInventory
-	else:
-		inventoryD = itemInventory
 		
+	inventoryMode = mode
 	for i in 16:
 		linkItemtoInventoryDisplay(i * (page + 1), mode, i)
 	
@@ -410,13 +456,14 @@ func linkItemtoInventoryDisplay(item: int, mode: int, space: int) -> void:
 		inventory = itemInventory
 		
 	var toLink = inventory[item]
-		
-	# We need to link the thing from the itemInventory into the itemDisplay
-	# Start by finding the item display we need
-	var slot = find_child("InventoryItemSlot{0}".format([space + 1]), true)
 	
-	# Now we can replace any information in that spot by linking it
-	slot.get_child(0).link(toLink.itemID, toLink.itemName, toLink.itemEffect, 
+	if (toLink.itemID != null):
+		# We need to link the thing from the itemInventory into the itemDisplay
+		# Start by finding the item display we need
+		var slot = find_child("InventoryItemSlot{0}".format([space + 1]), true)
+	
+		# Now we can replace any information in that spot by linking it
+		slot.get_child(0).link(toLink.itemID, toLink.itemName, toLink.itemEffect, 
 							toLink.itemPower, toLink.itemImage, toLink.itemHoverImage, 
 							toLink.itemSplash)
 	

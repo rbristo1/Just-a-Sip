@@ -8,9 +8,8 @@ enum EType {HEALING, EXPLODING, FIRE, ICE, POISON}
 @export var itemImage: AtlasTexture = null
 @export var itemHoverImage: AtlasTexture = null
 @export var itemSplash = false
+@export var INVENTORY: bool = false
 signal item_dropped(data)
-
-
 func link(ID: int, Name: String, Effect: int, Power: int, iImage: AtlasTexture,
 					 iHImage: AtlasTexture, Splash: bool):
 	itemID = ID
@@ -71,11 +70,16 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 			"droppedFrom": self}
 	
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
-	return typeof(data) == TYPE_DICTIONARY and data.has("iID")
+	# Only allow the item to be dropped here if the inventory is empty
+	return typeof(data) == TYPE_DICTIONARY and data.has("iID") and itemID == -1
 	
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	linkDict(data)
 	data["droppedFrom"].unlink()
+	# If the item was dragged from the inventory, clear the inventory slot
+	
+	
+	# If the item was dragged to the inventory, add it to the inventory slot
 	
 	
 	

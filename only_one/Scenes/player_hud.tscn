@@ -75,7 +75,7 @@ texture = ExtResource("1_o8xso")
 texture = ExtResource("2_vfwc5")
 region_rect = Rect2(0, 0, 16, 16)
 
-[node name="player_hud" type="Control"]
+[node name="player_hud" type="Control" groups=["Inventory Item Displays"]]
 custom_minimum_size = Vector2(0, 168)
 layout_mode = 3
 anchors_preset = 12
@@ -85,6 +85,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_i2evl")
+inventoryid = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+INVENTORY_ITEM_DISPLAYS = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="PHudMainBox" type="VBoxContainer" parent="."]
 layout_mode = 1
