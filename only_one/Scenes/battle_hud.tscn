@@ -1,12 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://lk3u43141ady"]
+[gd_scene load_steps=36 format=3 uid="uid://lk3u43141ady"]
 
 [ext_resource type="PackedScene" uid="uid://bg8per6ea7hkt" path="res://Scenes/pause_button.tscn" id="1_w5k1x"]
 [ext_resource type="Theme" uid="uid://cwtqdnra1go4t" path="res://testTheme.tres" id="1_xebxw"]
 [ext_resource type="Texture2D" uid="uid://ds5omieyavyks" path="res://Art/Enemies/slime.png" id="2_ps4wy"]
-[ext_resource type="Texture2D" uid="uid://1gty8vgbmm86" path="res://Art/Atlas Textures/UI/item_slot/item_slot_normal.tres" id="3_786vc"]
 [ext_resource type="Texture2D" uid="uid://h31cliy5ink8" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed0.tres" id="3_ps4wy"]
 [ext_resource type="Texture2D" uid="uid://bmcrva5mj2ilv" path="res://Art/Atlas Textures/UI/run_button/run_button_normal.tres" id="3_w80bc"]
-[ext_resource type="PackedScene" uid="uid://bkkc4sk736q4q" path="res://Scenes/player_hud.tscn" id="4_ps4wy"]
+[ext_resource type="PackedScene" uid="uid://bqo13isbnspjk" path="res://Scenes/player_hud.tscn" id="4_ps4wy"]
 [ext_resource type="Script" uid="uid://c28o8e3akqrll" path="res://Scripts/run_button.gd" id="5_024dg"]
 [ext_resource type="Texture2D" uid="uid://bqgn7m8p47ojy" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed1.tres" id="5_akdr0"]
 [ext_resource type="Texture2D" uid="uid://dlvnxqsw38u5i" path="res://Art/Atlas Textures/UI/run_button/rune_button_hover.tres" id="5_gn6mn"]
@@ -25,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://diinnhx6qfjjx" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed14.tres" id="19_pnkev"]
 [ext_resource type="Texture2D" uid="uid://cd3hsyk01h270" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed15.tres" id="20_qgn8v"]
 [ext_resource type="Texture2D" uid="uid://cynpmfmvi7r82" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed16.tres" id="21_f0dkq"]
+[ext_resource type="Texture2D" uid="uid://433dga1o4twv" path="res://Art/UI/item_slot.png" id="24_xebxw"]
+[ext_resource type="PackedScene" uid="uid://b8lpi8rnpiq5q" path="res://Scenes/item_display.tscn" id="25_hvdyc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvl2i"]
 bg_color = Color(0.25098, 0, 0, 1)
@@ -76,6 +77,18 @@ _data = {
 &"RESET": SubResource("Animation_5601e"),
 &"run_button_pressed": SubResource("Animation_ivmuh")
 }
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvdyc"]
+texture = ExtResource("24_xebxw")
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2q6hh"]
+texture = ExtResource("24_xebxw")
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42y4d"]
+texture = ExtResource("24_xebxw")
+region_rect = Rect2(0, 0, 16, 16)
 
 [node name="BattleHud" type="Control"]
 layout_mode = 3
@@ -239,31 +252,37 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 
-[node name="ItemSlot1" type="TextureRect" parent="BHudMainBox/ItemSlotRow"]
+[node name="BattleItemSlot1" type="PanelContainer" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
-texture = ExtResource("3_786vc")
-expand_mode = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_hvdyc")
+
+[node name="BattleItemDisplay1" parent="BHudMainBox/ItemSlotRow/BattleItemSlot1" instance=ExtResource("25_hvdyc")]
+layout_mode = 2
 
 [node name="ISlotSpacing2" type="VSeparator" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(144, 0)
 layout_mode = 2
 
-[node name="ItemSlot2" type="TextureRect" parent="BHudMainBox/ItemSlotRow"]
+[node name="BattleItemSlot2" type="PanelContainer" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
-texture = ExtResource("3_786vc")
-expand_mode = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_2q6hh")
+
+[node name="BattleItemDisplay2" parent="BHudMainBox/ItemSlotRow/BattleItemSlot2" instance=ExtResource("25_hvdyc")]
+layout_mode = 2
 
 [node name="ISlotSpacing3" type="VSeparator" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(144, 0)
 layout_mode = 2
 
-[node name="ItemSlot3" type="TextureRect" parent="BHudMainBox/ItemSlotRow"]
+[node name="BattleItemSlot3" type="PanelContainer" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
-texture = ExtResource("3_786vc")
-expand_mode = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_42y4d")
+
+[node name="BattleItemDisplay3" parent="BHudMainBox/ItemSlotRow/BattleItemSlot3" instance=ExtResource("25_hvdyc")]
+layout_mode = 2
 
 [node name="ISlotSpacing4" type="VSeparator" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(128, 0)

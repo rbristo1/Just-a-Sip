@@ -10,7 +10,6 @@ enum EType {HEALING, EXPLODING, FIRE, ICE, POISON}
 @export var itemSplash = false
 @export var INVENTORY: bool = false
 signal item_dropped(data)
-
 func link(ID: int, Name: String, Effect: int, Power: int, iImage: AtlasTexture,
 					 iHImage: AtlasTexture, Splash: bool):
 	itemID = ID
@@ -44,10 +43,16 @@ func unlink() -> void:
 func _on_mouse_entered() -> void:
 	if itemHoverImage != null:
 		texture = itemHoverImage
+	if $Label != null:
+		$Label.text = itemName
+		$Label.visible = true
+	
 
 func _on_mouse_exited() -> void:
 	if texture != itemImage:
 		texture = itemImage
+	if $Label != null:
+		$Label.set_deferred("visible", false)
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	var preview = self.duplicate(Node.DUPLICATE_USE_INSTANTIATION)
@@ -71,7 +76,6 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	linkDict(data)
 	data["droppedFrom"].unlink()
-	
 	# If the item was dragged from the inventory, clear the inventory slot
 	
 	

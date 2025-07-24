@@ -1,7 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cflvx71im1513"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ne65n"]
-load_path = "res://.godot/imported/slime.png-71b264e0bc354eb8174b1369262e9d36.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4gyqm"]
 animations = [{
