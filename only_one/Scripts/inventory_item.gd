@@ -15,9 +15,6 @@ func initialize(ID: int, InvSlot: int, Name: String, Effect: int, Power: int, iI
 					 iHImage: AtlasTexture, Splash: bool):
 	itemID = ID
 	inventorySlot = InvSlot
-func initialize(ID: int, Name: String, Effect: int, Power: int, iImage: AtlasTexture,
-					 iHImage: AtlasTexture, Splash: bool):
-	itemID = ID
 	itemName = Name
 	itemEffect = Effect
 	itemPower = Power

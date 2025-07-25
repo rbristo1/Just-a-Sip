@@ -1,7 +1,8 @@
-[gd_scene load_steps=36 format=3 uid="uid://lk3u43141ady"]
+[gd_scene load_steps=37 format=3 uid="uid://lk3u43141ady"]
 
 [ext_resource type="PackedScene" uid="uid://bg8per6ea7hkt" path="res://Scenes/pause_button.tscn" id="1_w5k1x"]
 [ext_resource type="Theme" uid="uid://cwtqdnra1go4t" path="res://testTheme.tres" id="1_xebxw"]
+[ext_resource type="Script" uid="uid://bwv0qsntxrsho" path="res://Scripts/enemy.gd" id="2_2q6hh"]
 [ext_resource type="Texture2D" uid="uid://ds5omieyavyks" path="res://Art/Enemies/slime.png" id="2_ps4wy"]
 [ext_resource type="Texture2D" uid="uid://h31cliy5ink8" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed0.tres" id="3_ps4wy"]
 [ext_resource type="Texture2D" uid="uid://bmcrva5mj2ilv" path="res://Art/Atlas Textures/UI/run_button/run_button_normal.tres" id="3_w80bc"]
@@ -90,7 +91,7 @@ region_rect = Rect2(0, 0, 16, 16)
 texture = ExtResource("24_xebxw")
 region_rect = Rect2(0, 0, 16, 16)
 
-[node name="BattleHud" type="Control"]
+[node name="BattleHud" type="Control" groups=["Inventory Item Displays"]]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -320.0
@@ -114,6 +115,7 @@ layout_mode = 2
 offset_right = 640.0
 offset_bottom = 360.0
 theme_override_constants/separation = 0
+script = ExtResource("2_2q6hh")
 
 [node name="MainSpacing1" type="HSeparator" parent="BHudMainBox"]
 custom_minimum_size = Vector2(0, 16)
@@ -144,7 +146,7 @@ show_percentage = false
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
 
-[node name="HealthBar4" type="ProgressBar" parent="BHudMainBox/EnemyInfoRow"]
+[node name="HealthBar2" type="ProgressBar" parent="BHudMainBox/EnemyInfoRow"]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 size_flags_horizontal = 3

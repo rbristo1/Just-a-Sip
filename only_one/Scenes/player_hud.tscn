@@ -260,6 +260,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot2/InventoryDisplay2"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -277,6 +278,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot3/InventoryDisplay3"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -294,6 +296,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot4/InventoryDisplay4"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -311,6 +314,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot5/InventoryDisplay5"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -327,6 +331,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot6/InventoryDisplay6"]
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -344,6 +349,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot7/InventoryDisplay7"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -361,6 +367,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot8/InventoryDisplay8"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -386,6 +393,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot9/InventoryDisplay9"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -403,6 +411,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot10/InventoryDisplay10"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -420,6 +429,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot11/InventoryDisplay11"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -437,6 +447,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot12/InventoryDisplay12"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -454,6 +465,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot13/InventoryDisplay13"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -471,6 +483,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot14/InventoryDisplay14"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -488,6 +501,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot15/InventoryDisplay15"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
@@ -505,6 +519,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot16/InventoryDisplay16"]
 visible = false
 top_level = true
+layout_mode = 0
 offset_left = -87.0
 offset_top = 162.0
 offset_right = 87.0
