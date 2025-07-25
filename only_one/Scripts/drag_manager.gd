@@ -13,7 +13,6 @@ func _ready() -> void:
 func OnDragStateChanged(value: bool):
 	if (value == false):
 		var hovered = get_viewport().gui_get_hovered_control()
-		
 		if (hovered is ItemDisplay and hovered.itemID != -1):
 			hovered.displayText()
 		else:
