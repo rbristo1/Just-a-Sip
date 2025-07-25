@@ -8,3 +8,6 @@ res://Scripts/player.gd
 res://Scenes/enemy.tscn
 res://Scenes/pause_button.tscn
 res://Scripts/enemy.gd
+res://Scripts/map.gd
+res://Scenes/map.tscn
+res://Scripts/locationButton.gd
