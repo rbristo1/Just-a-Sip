@@ -22,6 +22,16 @@ func initialize(ID: int, InvSlot: int, Name: String, Effect: int, Power: int, iI
 	itemHoverImage = iHImage
 	itemSplash = Splash
 	
+func initializeDict(info: Dictionary):
+	itemID = info["iID"]
+	inventorySlot = info["iSlot"]
+	itemName = info["iName"]
+	itemEffect = info["iEffect"]
+	itemPower = info["iPower"]
+	itemImage = info["iImage"]
+	itemHoverImage = info["iHImage"]
+	itemSplash = info["iSplash"]
+	
 func deinitialize() -> void:
 	itemID = -1
 	itemName = ""

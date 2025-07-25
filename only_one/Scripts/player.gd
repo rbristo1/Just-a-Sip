@@ -10,7 +10,8 @@ extends Control
 @export var inventoryid: Array # This is ONLY USED FOR SAVING. This is not used for storing items in game
 
 @export var INVENTORY_ITEM_DISPLAYS: Array
-@export var ITEM_INVENTORY_CAPCITY = 32
+@export var ITEM_INVENTORY_CAPACITY = 32
+@export var MATERIAL_INVENTORY_CAPACITY = 32
 
 # Inventory Stuff
 # Item Inventory
@@ -22,7 +23,6 @@ var materialInventoryNum = 0
 # General Inventory
 var inventoryMode = 0 # 0 for item, 1 for materials
 var inventoryPage = 0 # 16 slots per page, it IS 0 indexed in the code, even though it is not in display
-
 
 #item lookup caching, for retrieval as indexes in constant time
 var itemIDs: Array
@@ -50,12 +50,10 @@ var enemyUndead: Array
 var area: Array
 enum EnemyTypes {SLIME, ZOMBIE}
 
-
 #filename
 @export var itemsFile = "res://JSONS/items.JSON"
 @export var playerFile = "res://JSONS/player.JSON"
 @export var enemiesFile = "res://JSONS/enemies.JSON"
-
 
 
 
@@ -82,11 +80,6 @@ func _ready() -> void:
 	
 	#TEST
 	#statLog()
-	
-	
-
-
-
 
 # A comprehensive list of all types of items are in this function
 func builditemJSON() -> void:
@@ -245,11 +238,6 @@ func builditemJSON() -> void:
 	var json_string = JSON.stringify(save_dict)
 	saveFile.store_line(json_string)
 
-
-
-
-
-
 #builds enemy json like items
 func buildEnemyJSON() -> void:
 	#TODO add more enemies
@@ -299,10 +287,6 @@ func buildEnemyJSON() -> void:
 	var json_string = JSON.stringify(save_dict)
 	saveFile.store_line(json_string)
 
-
-
-
-
 #for manually creating or altering player savedata.
 func createSave() -> void:
 	inventoryid = [0, 0, 1]
@@ -319,10 +303,6 @@ func createSave() -> void:
 	var json_string = JSON.stringify(save_dict)
 	saveFile.store_line(json_string)
 
-
-
-
-
 #saves player data
 func savePlayer() -> void:
 	var save_dict = {
@@ -336,10 +316,6 @@ func savePlayer() -> void:
 	var saveFile = FileAccess.open(playerFile, FileAccess.WRITE)
 	var json_string = JSON.stringify(save_dict)
 	saveFile.store_line(json_string)
-
-
-
-
 
 #loads player stats at initialization
 func loadPlayer() -> void:
@@ -358,10 +334,6 @@ func loadPlayer() -> void:
 			for i in node_data.keys():
 				set(i, node_data[i])
 
-
-
-
-
 #loads items into arrays so that they can quickly and easily be retrived by index
 func loaditems() -> void:
 	if not FileAccess.file_exists(itemsFile):
@@ -378,8 +350,8 @@ func loaditems() -> void:
 			var node_data = json.data
 			for i in node_data.keys():
 				set(i, node_data[i])
-				
 
+# Adds an item to the inventory array using the itemID
 func AddItemToInventory(id: int) -> void:
 	var iName = itemNames[id]
 	var iPower = itemPower[id]
@@ -408,15 +380,19 @@ func RemoveItemFromInventory(slotNumber: int, mode: int) -> void:
 	
 	ShiftInventoryLeft(mode)
 	updateInventoryDisplay(-1, -1)
-	
+
+# Checks if the item in the given item slot number is currently being displayed
 func isCurrentlyDisplayed(itemSlotNumber:int, mode: bool) -> bool:
 	@warning_ignore("integer_division")
 	if (inventoryMode != mode or itemSlotNumber/16 != inventoryPage):
 		return false
 	return true
 
+# Shifts all items to the far left of the inventory to remove gaps
 func ShiftInventoryLeft(mode: int):
 	var inventory
+	if (mode == -1):
+		mode = inventoryMode
 	if (mode == 1):
 		inventory = materialInventory
 	else:
@@ -434,12 +410,11 @@ func ShiftInventoryLeft(mode: int):
 			
 	for c in range(count, tempArray.size()):
 		tempArray[c] = itemScene.instantiate()
+		tempArray[c]
 	if (mode == 1):
 		materialInventory = tempArray
 	else:
 		itemInventory = tempArray
-
-	
 
 func updateInventoryDisplay(mode: int, page: int) -> void:
 	if (mode == -1):
@@ -449,8 +424,8 @@ func updateInventoryDisplay(mode: int, page: int) -> void:
 		
 	inventoryMode = mode
 	for i in 16:
-		linkItemtoInventoryDisplay(i * (page + 1), mode, i)
-	
+		linkItemtoInventoryDisplay(i + (page * 16), mode, i)
+
 func linkItemtoInventoryDisplay(item: int, mode: int, space: int) -> void:
 	var inventory
 	
@@ -470,9 +445,28 @@ func linkItemtoInventoryDisplay(item: int, mode: int, space: int) -> void:
 		slot.get_child(0).link(toLink.itemID, toLink.itemName, toLink.itemEffect, 
 							toLink.itemPower, toLink.itemImage, toLink.itemHoverImage, 
 							toLink.itemSplash)
-	
 
+func findAndRemoveFromInventory(displayNum: int) -> void:
+	# The index should be (displayNum - 1) * inventoryPage
+	var inventory
+	if (inventoryMode == 1):
+		inventory = materialInventory
+	else:
+		inventory = itemInventory
+	inventory[(displayNum - 1) * (inventoryPage + 1)].deinitialize()
+	itemInventoryNum -= 1
+	ShiftInventoryLeft(-1)
+	updateInventoryDisplay(-1, -1)
 
+func findAndAddToInventory(toAdd: Dictionary, displayNum: int) -> void:
+	if (inventoryMode == 1):
+		pass # TODO add functionality when inventory_material is created
+	else:
+		toAdd["iSlot"] = (displayNum - 1) * (inventoryPage + 1)
+		itemInventory[toAdd["iSlot"]].initializeDict(toAdd)
+		itemInventoryNum += 1
+	ShiftInventoryLeft(-1)
+	updateInventoryDisplay(-1, -1)
 
 #for debugging file imports
 func statLog() -> void:
