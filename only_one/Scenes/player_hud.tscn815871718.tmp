@@ -1,0 +1,600 @@
+[gd_scene load_steps=33 format=3 uid="uid://bqo13isbnspjk"]
+
+[ext_resource type="FontFile" uid="uid://c0iqxm04l5108" path="res://m5x7.ttf" id="1_8rgen"]
+[ext_resource type="Script" uid="uid://bvowwc5ncwf3s" path="res://Scripts/player.gd" id="1_i2evl"]
+[ext_resource type="Texture2D" uid="uid://e0mal755m8kr" path="res://Art/UI/text_box.png" id="1_kt5xe"]
+[ext_resource type="Texture2D" uid="uid://bvcppv87p0kbu" path="res://Art/UI/inventory_background.png" id="1_o8xso"]
+[ext_resource type="Texture2D" uid="uid://ddxuujta7cc7q" path="res://Art/Atlas Textures/UI/next_button/next_button_normal.tres" id="1_uc0x4"]
+[ext_resource type="Texture2D" uid="uid://c58dyvxuj6e3" path="res://Art/Atlas Textures/UI/next_button/hover_button_pressed.tres" id="2_54pr6"]
+[ext_resource type="Texture2D" uid="uid://433dga1o4twv" path="res://Art/UI/item_slot.png" id="2_vfwc5"]
+[ext_resource type="Texture2D" uid="uid://cvf4sng342o1d" path="res://Art/Atlas Textures/UI/up_arrow/up_arrow_normal.tres" id="3_8rgen"]
+[ext_resource type="Texture2D" uid="uid://dv1688cie4wmw" path="res://Art/Atlas Textures/UI/next_button/next_button_hover.tres" id="3_188kt"]
+[ext_resource type="Texture2D" uid="uid://bn7l205lejkpd" path="res://Art/UI/text_box_next.png" id="3_kt5xe"]
+[ext_resource type="Script" uid="uid://wxnyy3mnkgh7" path="res://Scripts/text_box_button.gd" id="4_4o4ls"]
+[ext_resource type="Texture2D" uid="uid://cbt2x36a1008d" path="res://Art/UI/text_box_next_blank.png" id="4_15ks0"]
+[ext_resource type="Texture2D" uid="uid://obay0hijq51s" path="res://Art/Atlas Textures/UI/next_button/next_button_disabled.tres" id="4_imajn"]
+[ext_resource type="Texture2D" uid="uid://ddicqt5327ahk" path="res://Art/Atlas Textures/UI/up_arrow/up_arrow_pressed.tres" id="4_kt5xe"]
+[ext_resource type="Texture2D" uid="uid://00ofmcos6uj8" path="res://Art/Atlas Textures/UI/up_arrow/up_arrow_hover.tres" id="5_15ks0"]
+[ext_resource type="Texture2D" uid="uid://ms7fvbuk8brm" path="res://Art/Atlas Textures/UI/down_arrow/down_arrow_normal.tres" id="6_4o4ls"]
+[ext_resource type="Texture2D" uid="uid://bydl2u7uvbiu7" path="res://Art/UI/stats_box.png" id="6_o5fke"]
+[ext_resource type="Texture2D" uid="uid://d1gr0v0gp8iw4" path="res://Art/Atlas Textures/UI/down_arrow/down_arrow_pressed.tres" id="7_o5fke"]
+[ext_resource type="Texture2D" uid="uid://cbjevcsoxkncv" path="res://Art/Atlas Textures/UI/down_arrow/down_arrow_hover.tres" id="8_i2evl"]
+[ext_resource type="PackedScene" uid="uid://b8lpi8rnpiq5q" path="res://Scenes/item_display.tscn" id="10_46pop"]
+[ext_resource type="Texture2D" uid="uid://d2hie4bvuw5n4" path="res://Art/Atlas Textures/UI/up_arrow/up_arrows_disabled.tres" id="14_4fqb3"]
+[ext_resource type="Script" uid="uid://d15qve8s6syt1" path="res://Scripts/up_inventory_button.gd" id="14_vkhck"]
+[ext_resource type="Script" uid="uid://dkpumvhe2ywbw" path="res://Scripts/down_inventory_button.gd" id="18_4fqb3"]
+[ext_resource type="Script" uid="uid://w8eh5fytkg6e" path="res://Scripts/next_button.gd" id="20_3jtpm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15ks0"]
+texture = ExtResource("1_kt5xe")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_15ks0"]
+
+[sub_resource type="Animation" id="Animation_o5fke"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_hover")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_15ks0")]
+}
+
+[sub_resource type="Animation" id="Animation_4o4ls"]
+resource_name = "text_button_flash"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_hover")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_kt5xe"), ExtResource("4_15ks0")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i2evl"]
+_data = {
+&"RESET": SubResource("Animation_o5fke"),
+&"text_button_flash": SubResource("Animation_4o4ls")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i2evl"]
+texture = ExtResource("6_o5fke")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3jtpm"]
+texture = ExtResource("1_o8xso")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ykso4"]
+texture = ExtResource("2_vfwc5")
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="player_hud" type="Control" groups=["Player Hud"]]
+custom_minimum_size = Vector2(0, 168)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_i2evl")
+inventoryid = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+INVENTORY_ITEM_DISPLAYS = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+
+[node name="PHudMainBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PHudSpacing1" type="HSeparator" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="TextBoxRow" type="HBoxContainer" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TextBoxSpacing1" type="VSeparator" parent="PHudMainBox/TextBoxRow"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="TextBoxBackground" type="PanelContainer" parent="PHudMainBox/TextBoxRow"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_15ks0")
+
+[node name="TextBoxMargins" type="MarginContainer" parent="PHudMainBox/TextBoxRow/TextBoxBackground"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="TextBox" type="RichTextLabel" parent="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxMargins"]
+layout_mode = 2
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("1_8rgen")
+theme_override_fonts/mono_font = ExtResource("1_8rgen")
+theme_override_fonts/italics_font = ExtResource("1_8rgen")
+theme_override_fonts/bold_italics_font = ExtResource("1_8rgen")
+theme_override_fonts/bold_font = ExtResource("1_8rgen")
+theme_override_font_sizes/normal_font_size = 16
+text = "This is a test of the font and size of the text. It can keep going this long. We can about 100 charsl per line. This is more and more text for testing purposes. I really want to make sure that the 
+"
+
+[node name="TextBoxButton" type="TextureButton" parent="PHudMainBox/TextBoxRow/TextBoxBackground"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_hover = SubResource("CompressedTexture2D_15ks0")
+stretch_mode = 5
+script = ExtResource("4_4o4ls")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton"]
+libraries = {
+&"": SubResource("AnimationLibrary_i2evl")
+}
+
+[node name="TextBoxSpacing2" type="VSeparator" parent="PHudMainBox/TextBoxRow"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="PHudSpacing2" type="HSeparator" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="PlayerRow" type="HBoxContainer" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PlayerRowSpacing1" type="VSeparator" parent="PHudMainBox/PlayerRow"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="StatsInfo" type="PanelContainer" parent="PHudMainBox/PlayerRow"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i2evl")
+
+[node name="MarginContainer" type="MarginContainer" parent="PHudMainBox/PlayerRow/StatsInfo"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PHudMainBox/PlayerRow/StatsInfo/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="StatsTextLeft" type="RichTextLabel" parent="PHudMainBox/PlayerRow/StatsInfo/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("1_8rgen")
+theme_override_fonts/mono_font = ExtResource("1_8rgen")
+theme_override_fonts/italics_font = ExtResource("1_8rgen")
+theme_override_fonts/bold_italics_font = ExtResource("1_8rgen")
+theme_override_fonts/bold_font = ExtResource("1_8rgen")
+theme_override_font_sizes/normal_font_size = 16
+text = "HP:123/123
+ATK:973
+DEF:132
+SPD:125	"
+
+[node name="StatsTextRight" type="RichTextLabel" parent="PHudMainBox/PlayerRow/StatsInfo/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("1_8rgen")
+theme_override_font_sizes/normal_font_size = 16
+text = "INVENTORY:
+19/32
+RESOURCES:
+26/32
+"
+
+[node name="PlayerRowSpacing2" type="VSeparator" parent="PHudMainBox/PlayerRow"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="InventoryContainer" type="PanelContainer" parent="PHudMainBox/PlayerRow"]
+custom_minimum_size = Vector2(332, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3jtpm")
+
+[node name="MarginContainer" type="MarginContainer" parent="PHudMainBox/PlayerRow/InventoryContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 9
+
+[node name="InventoryItemSlot1" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay1" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot1" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 1
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot1/InventoryDisplay1"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot2" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay2" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot2" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 2
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot2/InventoryDisplay2"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot3" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay3" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot3" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 3
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot3/InventoryDisplay3"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot4" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay4" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot4" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 4
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot4/InventoryDisplay4"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot5" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay5" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot5" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 5
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot5/InventoryDisplay5"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot6" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay6" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot6" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 6
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot6/InventoryDisplay6"]
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot7" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay7" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot7" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 7
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot7/InventoryDisplay7"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot8" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay8" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot8" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 8
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot8/InventoryDisplay8"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="UpInventoryButton" type="TextureButton" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("3_8rgen")
+texture_pressed = ExtResource("4_kt5xe")
+texture_hover = ExtResource("5_15ks0")
+texture_disabled = ExtResource("14_4fqb3")
+stretch_mode = 5
+script = ExtResource("14_vkhck")
+
+[node name="InventoryItemSlot9" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay9" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot9" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 9
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot9/InventoryDisplay9"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot10" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay10" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot10" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 10
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot10/InventoryDisplay10"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot11" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay11" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot11" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 11
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot11/InventoryDisplay11"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot12" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay12" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot12" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 12
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot12/InventoryDisplay12"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot13" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay13" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot13" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 13
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot13/InventoryDisplay13"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot14" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay14" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot14" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 14
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot14/InventoryDisplay14"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot15" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay15" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot15" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 15
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot15/InventoryDisplay15"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="InventoryItemSlot16" type="PanelContainer" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ykso4")
+
+[node name="InventoryDisplay16" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot16" instance=ExtResource("10_46pop")]
+layout_mode = 2
+INVENTORY = true
+INVENTORY_NUM = 16
+
+[node name="Label" type="Label" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/InventoryItemSlot16/InventoryDisplay16"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = -87.0
+offset_top = 162.0
+offset_right = 87.0
+offset_bottom = 195.0
+horizontal_alignment = 1
+
+[node name="DownInventoryButton" type="TextureButton" parent="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture_normal = ExtResource("6_4o4ls")
+texture_pressed = ExtResource("7_o5fke")
+texture_hover = ExtResource("8_i2evl")
+stretch_mode = 5
+script = ExtResource("18_4fqb3")
+
+[node name="PlayerRowSpacing3" type="VSeparator" parent="PHudMainBox/PlayerRow"]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+
+[node name="NextButton" type="TextureButton" parent="PHudMainBox/PlayerRow"]
+custom_minimum_size = Vector2(72, 0)
+layout_mode = 2
+texture_normal = ExtResource("1_uc0x4")
+texture_pressed = ExtResource("2_54pr6")
+texture_hover = ExtResource("3_188kt")
+texture_disabled = ExtResource("4_imajn")
+stretch_mode = 5
+script = ExtResource("20_3jtpm")
+
+[node name="PlayerRowSpacing4" type="VSeparator" parent="PHudMainBox/PlayerRow"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="PHudSpacing3" type="HSeparator" parent="PHudMainBox"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[connection signal="mouse_entered" from="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton" to="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton" to="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton" method="_on_mouse_exited"]
+[connection signal="button_up" from="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/UpInventoryButton" to="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/UpInventoryButton" method="_on_button_up"]
+[connection signal="button_up" from="PHudMainBox/PlayerRow/NextButton" to="PHudMainBox/PlayerRow/NextButton" method="_on_button_up"]
