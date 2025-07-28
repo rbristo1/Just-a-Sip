@@ -1,11 +1,10 @@
-[gd_scene load_steps=37 format=3 uid="uid://lk3u43141ady"]
+[gd_scene load_steps=36 format=3 uid="uid://lk3u43141ady"]
 
 [ext_resource type="PackedScene" uid="uid://bg8per6ea7hkt" path="res://Scenes/pause_button.tscn" id="1_w5k1x"]
 [ext_resource type="Theme" uid="uid://cwtqdnra1go4t" path="res://testTheme.tres" id="1_xebxw"]
-[ext_resource type="Script" uid="uid://bwv0qsntxrsho" path="res://Scripts/enemy.gd" id="2_2q6hh"]
-[ext_resource type="Texture2D" uid="uid://ds5omieyavyks" path="res://Art/Enemies/slime.png" id="2_ps4wy"]
 [ext_resource type="Texture2D" uid="uid://h31cliy5ink8" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed0.tres" id="3_ps4wy"]
 [ext_resource type="Texture2D" uid="uid://bmcrva5mj2ilv" path="res://Art/Atlas Textures/UI/run_button/run_button_normal.tres" id="3_w80bc"]
+[ext_resource type="PackedScene" uid="uid://5ksslj7ls40q" path="res://Scenes/enemy_display.tscn" id="4_2q6hh"]
 [ext_resource type="PackedScene" uid="uid://bqo13isbnspjk" path="res://Scenes/player_hud.tscn" id="4_ps4wy"]
 [ext_resource type="Script" uid="uid://c28o8e3akqrll" path="res://Scripts/run_button.gd" id="5_024dg"]
 [ext_resource type="Texture2D" uid="uid://bqgn7m8p47ojy" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed1.tres" id="5_akdr0"]
@@ -115,7 +114,6 @@ layout_mode = 2
 offset_right = 640.0
 offset_bottom = 360.0
 theme_override_constants/separation = 0
-script = ExtResource("2_2q6hh")
 
 [node name="MainSpacing1" type="HSeparator" parent="BHudMainBox"]
 custom_minimum_size = Vector2(0, 16)
@@ -132,7 +130,7 @@ custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 theme = ExtResource("1_xebxw")
 
-[node name="HealthBar1" type="ProgressBar" parent="BHudMainBox/EnemyInfoRow"]
+[node name="HealthBar1" type="ProgressBar" parent="BHudMainBox/EnemyInfoRow" groups=["Enemy Health Bars"]]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -146,7 +144,7 @@ show_percentage = false
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
 
-[node name="HealthBar2" type="ProgressBar" parent="BHudMainBox/EnemyInfoRow"]
+[node name="HealthBar2" type="ProgressBar" parent="BHudMainBox/EnemyInfoRow" groups=["Enemy Health Bars"]]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -160,7 +158,7 @@ show_percentage = false
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
 
-[node name="HealthBar3" type="ProgressBar" parent="BHudMainBox/EnemyInfoRow"]
+[node name="HealthBar3" type="ProgressBar" parent="BHudMainBox/EnemyInfoRow" groups=["Enemy Health Bars"]]
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -192,28 +190,22 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
 
-[node name="EnemyImage1" type="TextureRect" parent="BHudMainBox/EnemyImageRow"]
-custom_minimum_size = Vector2(96, 96)
+[node name="EnemyDisplay1" parent="BHudMainBox/EnemyImageRow" instance=ExtResource("4_2q6hh")]
 layout_mode = 2
-texture = ExtResource("2_ps4wy")
 
 [node name="EImageSpacing2" type="VSeparator" parent="BHudMainBox/EnemyImageRow"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 
-[node name="EnemyImage2" type="TextureRect" parent="BHudMainBox/EnemyImageRow"]
-custom_minimum_size = Vector2(96, 96)
+[node name="EnemyDisplay2" parent="BHudMainBox/EnemyImageRow" instance=ExtResource("4_2q6hh")]
 layout_mode = 2
-texture = ExtResource("2_ps4wy")
 
 [node name="EImageSpacing3" type="VSeparator" parent="BHudMainBox/EnemyImageRow"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 
-[node name="EnemyImage3" type="TextureRect" parent="BHudMainBox/EnemyImageRow"]
-custom_minimum_size = Vector2(96, 96)
+[node name="EnemyDisplay3" parent="BHudMainBox/EnemyImageRow" instance=ExtResource("4_2q6hh")]
 layout_mode = 2
-texture = ExtResource("2_ps4wy")
 
 [node name="EImageSpacing4" type="VSeparator" parent="BHudMainBox/EnemyImageRow"]
 custom_minimum_size = Vector2(48, 0)
@@ -259,8 +251,9 @@ custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_hvdyc")
 
-[node name="BattleItemDisplay1" parent="BHudMainBox/ItemSlotRow/BattleItemSlot1" instance=ExtResource("25_hvdyc")]
+[node name="BattleItemDisplay1" parent="BHudMainBox/ItemSlotRow/BattleItemSlot1" groups=["Attack Item Displays"] instance=ExtResource("25_hvdyc")]
 layout_mode = 2
+ATTACK_SLOT_NUM = 1
 
 [node name="ISlotSpacing2" type="VSeparator" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(144, 0)
@@ -271,8 +264,9 @@ custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2q6hh")
 
-[node name="BattleItemDisplay2" parent="BHudMainBox/ItemSlotRow/BattleItemSlot2" instance=ExtResource("25_hvdyc")]
+[node name="BattleItemDisplay2" parent="BHudMainBox/ItemSlotRow/BattleItemSlot2" groups=["Attack Item Displays"] instance=ExtResource("25_hvdyc")]
 layout_mode = 2
+ATTACK_SLOT_NUM = 2
 
 [node name="ISlotSpacing3" type="VSeparator" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(144, 0)
@@ -283,8 +277,9 @@ custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_42y4d")
 
-[node name="BattleItemDisplay3" parent="BHudMainBox/ItemSlotRow/BattleItemSlot3" instance=ExtResource("25_hvdyc")]
+[node name="BattleItemDisplay3" parent="BHudMainBox/ItemSlotRow/BattleItemSlot3" groups=["Attack Item Displays"] instance=ExtResource("25_hvdyc")]
 layout_mode = 2
+ATTACK_SLOT_NUM = 3
 
 [node name="ISlotSpacing4" type="VSeparator" parent="BHudMainBox/ItemSlotRow"]
 custom_minimum_size = Vector2(128, 0)

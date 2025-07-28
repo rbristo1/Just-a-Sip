@@ -2,11 +2,12 @@
 extends Control
 
 #stats
-@export var maxhp = 100
-@export var hp = 100
-@export var spd = 100
-@export var def = 100
-@export var atk = 100
+@export var playerName: String
+@export var maxHP = 20
+@export var HP = 20
+@export var attack = 10
+@export var speed = 10
+@export var defense = 10
 @export var inventoryid: Array # This is ONLY USED FOR SAVING. This is not used for storing items in game
 
 @export var INVENTORY_ITEM_DISPLAYS: Array
@@ -31,24 +32,36 @@ var itemPower: Array
 var itemEffect: Array
 var itemImage: Array
 var itemHImage: Array
-var itemSplash: Array
+var itemArea: Array
 enum ItemTypes {D_HEALING, HEALING, P_HEALING, D_EXPLOSIVE, EXPLOSIVE, P_EXPLOSIVE,
 				D_FIRE, FIRE, P_FIRE, D_ICE, ICE, P_ICE, D_POISON, POISON, P_POISON}
-enum EType {HEAL, EXPLODE, FIRE, ICE, POISON}
+enum {NORMAL, EXPLOSION, FIRE, ICE, ELECTRIC, AIR, POISON, ACID, HEAL, ATK_BUFF,
+		DEF_BUFF, SPD_BUFF, ATK_DROP, DEF_DROP, SPD_DROP, BURN, FREEZE, STATIC, KNOCKBACK}
 
 #enemy 
 var enemyIDs: Array
 var enemyNames: Array
-var enemyMaxHP: Array
-var enemyHP: Array
-var enemyATK: Array
-var enemySPD: Array
-var enemyDEF: Array
-var enemyImage: Array
-var enemySplash: Array
-var enemyUndead: Array
-var area: Array
-enum EnemyTypes {SLIME, ZOMBIE}
+
+var enemyMaxHPs: Array
+var enemyATKs: Array
+var enemyDEFs: Array
+var enemySPDs: Array
+
+var enemyImagesNormal: Array
+var enemyImagesCharging: Array
+var enemyImagesAttacking: Array
+
+var enemyWeaknesses: Array
+var enemyResistances: Array
+var enemySpecials: Array
+
+var enemyAttackTexts: Array
+var enemyAttackPowers: Array
+var enemyAttackTypes: Array
+
+var enemyBosses: Array
+var enemyAreas: Array
+
 
 #filename
 @export var itemsFile = "res://JSONS/items.JSON"
@@ -80,6 +93,7 @@ func _ready() -> void:
 	
 	#TEST
 	#statLog()
+	giveFreeItems()
 
 # A comprehensive list of all types of items are in this function
 func builditemJSON() -> void:
@@ -91,137 +105,137 @@ func builditemJSON() -> void:
 	#0
 	itemIDs.append(ItemTypes.D_HEALING)
 	itemNames.append("Diluted Healing Potion")
-	itemPower.append(50)
-	itemEffect.append(EType.HEAL)
+	itemPower.append(5)
+	itemEffect.append(HEAL)
 	itemImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_highlighted.tres")
-	itemSplash.append(false)
+	itemArea.append([0, 1])
 	
 	#1
 	itemIDs.append(ItemTypes.HEALING)
 	itemNames.append("Healing Potion")
-	itemPower.append(100)
-	itemEffect.append(EType.HEAL)
+	itemPower.append(10)
+	itemEffect.append(HEAL)
 	itemImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_highlighted.tres")
-	itemSplash.append(false)
+	itemArea.append([1, 2])
 	
 	#2
 	itemIDs.append(ItemTypes.P_HEALING)
 	itemNames.append("Potent Healing Potion")
-	itemPower.append(150)
-	itemEffect.append(EType.HEAL)
+	itemPower.append(15)
+	itemEffect.append(HEAL)
 	itemImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/health_potion/health_potion_highlighted.tres")
-	itemSplash.append(false)
+	itemArea.append([2, 3])
 	
 	#3
 	itemIDs.append(ItemTypes.D_EXPLOSIVE)
 	itemNames.append("Diluted Explosive Flask")
-	itemPower.append(50)
-	itemEffect.append(EType.EXPLODE)
+	itemPower.append(5)
+	itemEffect.append(EXPLOSION)
 	itemImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([0, 1])
 
 	#4
 	itemIDs.append(ItemTypes.EXPLOSIVE)
 	itemNames.append("Explosive Flask")
-	itemPower.append(100)
-	itemEffect.append(EType.EXPLODE)
+	itemPower.append(10)
+	itemEffect.append(EXPLOSION)
 	itemImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([1, 2])
 
 	#5
 	itemIDs.append(ItemTypes.P_EXPLOSIVE)
 	itemNames.append("Potent Explosive Flask")
-	itemPower.append(150)
-	itemEffect.append(EType.EXPLODE)
+	itemPower.append(15)
+	itemEffect.append(EXPLOSION)
 	itemImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/explosive_flask/explosive_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([2, 3])
 	
 	#6
 	itemIDs.append(ItemTypes.D_FIRE)
 	itemNames.append("Diluted Fire Flask")
-	itemPower.append(50)
-	itemEffect.append(EType.FIRE)
+	itemPower.append(5)
+	itemEffect.append(FIRE)
 	itemImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([0, 1])
 
 	#7
 	itemIDs.append(ItemTypes.FIRE)
 	itemNames.append("Fire Flask")
-	itemPower.append(100)
-	itemEffect.append(EType.FIRE)
+	itemPower.append(10)
+	itemEffect.append(FIRE)
 	itemImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([1, 2])
 	
 	#8
 	itemIDs.append(ItemTypes.P_FIRE)
 	itemNames.append("Potent Fire Flask")
-	itemPower.append(150)
-	itemEffect.append(EType.FIRE)
+	itemPower.append(15)
+	itemEffect.append(FIRE)
 	itemImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/fire_flask/fire_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([2, 3])
 	
 	#9
 	itemIDs.append(ItemTypes.D_ICE)
 	itemNames.append("Diluted Ice Flask")
-	itemPower.append(50)
-	itemEffect.append(EType.ICE)
+	itemPower.append(5)
+	itemEffect.append(ICE)
 	itemImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([0, 1])
 	
 	#10
 	itemIDs.append(ItemTypes.ICE)
 	itemNames.append("Ice Flask")
-	itemPower.append(100)
-	itemEffect.append(EType.ICE)
+	itemPower.append(10)
+	itemEffect.append(ICE)
 	itemImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([1, 2])
 	
 	#11
 	itemIDs.append(ItemTypes.P_ICE)
 	itemNames.append("Potent Ice Flask")
-	itemPower.append(150)
-	itemEffect.append(EType.ICE)
+	itemPower.append(15)
+	itemEffect.append(ICE)
 	itemImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/ice_flask/ice_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([2, 3])
 	
 	#12
 	itemIDs.append(ItemTypes.D_POISON)
 	itemNames.append("Diluted Poison Flask")
-	itemPower.append(50)
-	itemEffect.append(EType.POISON)
+	itemPower.append(5)
+	itemEffect.append(POISON)
 	itemImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([0, 1])
 	
 	#13
 	itemIDs.append(ItemTypes.POISON)
 	itemNames.append("Poison Flask")
-	itemPower.append(100)
-	itemEffect.append(EType.POISON)
+	itemPower.append(10)
+	itemEffect.append(POISON)
 	itemImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([1, 2])
 
 	#14
 	itemIDs.append(ItemTypes.P_POISON)
 	itemNames.append("Potent Poison Flask")
-	itemPower.append(150)
-	itemEffect.append(EType.POISON)
+	itemPower.append(15)
+	itemEffect.append(POISON)
 	itemImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_normal.tres")
 	itemHImage.append("res://Art/Atlas Textures/Items/poison_flask/poison_flask_hover.tres")
-	itemSplash.append(false)
+	itemArea.append([2, 3])
 
 
 	
@@ -232,7 +246,7 @@ func builditemJSON() -> void:
 		"itemEffect" : itemEffect,
 		"itemImage": itemImage,
 		"itemHImage": itemHImage,
-		"itemSplash": itemSplash
+		"itemArea": itemArea
 	}
 	var saveFile = FileAccess.open(itemsFile, FileAccess.WRITE)
 	var json_string = JSON.stringify(save_dict)
@@ -246,43 +260,82 @@ func buildEnemyJSON() -> void:
 	#please number items as you add more so indexes can be tracked
 	
 	#0
-	enemyIDs.append(EnemyTypes.SLIME)
-	enemyNames.append("Slime")
-	enemyATK.append(100)
-	enemyDEF.append(100)
-	enemySPD.append(100)
-	enemyMaxHP.append(100)
-	enemyHP.append(100)
-	enemyImage.append("res://Art/Enemies/slime.png")
-	enemySplash.append(false)
-	enemyUndead.append(false)
-	area.append(0)
+	enemyIDs.append(0)
+	enemyNames.append("Whipkin") # A small rodent that is long like a weasel with big bunny like ears
+	enemyMaxHPs.append(10)
+	enemyATKs.append(4)
+	enemyDEFs.append(6)
+	enemySPDs.append(7)
+	enemyImagesNormal.append("res://Art/Items/blue_potion.png")
+	enemyImagesCharging.append(null)
+	enemyImagesAttacking.append(null)
+	enemyWeaknesses.append([])
+	enemyResistances.append([])
+	enemySpecials.append([])
+	enemyAttackTexts.append(["Tail Slap"])
+	enemyAttackPowers.append([2])
+	enemyAttackTypes.append([NORMAL])
+	enemyBosses.append(false)
+	enemyAreas.append([0, 1])
 	
 	#1
-	enemyIDs.append(EnemyTypes.ZOMBIE)
-	enemyNames.append("Zombie")
-	enemyATK.append(100)
-	enemyDEF.append(100)
-	enemySPD.append(100)
-	enemyMaxHP.append(100)
-	enemyHP.append(100)
-	enemyImage.append("res://Art/Enemies/Zombie Idle.png")
-	enemySplash.append(false)
-	enemyUndead.append(true)
-	area.append(0)
+	enemyIDs.append(1)
+	enemyNames.append("Slime")
+	enemyMaxHPs.append(15)
+	enemyATKs.append(5)
+	enemyDEFs.append(5)
+	enemySPDs.append(5)
+	enemyImagesNormal.append("res://Art/Enemies/slime.png")
+	enemyImagesCharging.append(null)
+	enemyImagesAttacking.append(null)
+	enemyWeaknesses.append([ICE])
+	enemyResistances.append([FIRE])
+	enemySpecials.append([ACID])
+	enemyAttackTexts.append(["Bounce"])
+	enemyAttackPowers.append([3])
+	enemyAttackTypes.append([ACID])
+	enemyBosses.append(false)
+	enemyAreas.append([0, 1])
+	
+	#2
+	enemyIDs.append(2)
+	enemyNames.append("Noxious Shroom")
+	enemyMaxHPs.append(13)
+	enemyATKs.append(8)
+	enemyDEFs.append(5)
+	enemySPDs.append(8)
+	enemyImagesNormal.append("res://Art/Enemies/Zombie Idle.png")
+	enemyImagesCharging.append(null)
+	enemyImagesAttacking.append(null)
+	enemyWeaknesses.append([FIRE, ACID])
+	enemyResistances.append([POISON])
+	enemySpecials.append([])
+	enemyAttackTexts.append(["Noxious Puff", "Ram"])
+	enemyAttackPowers.append([2, 3])
+	enemyAttackTypes.append([POISON, NORMAL])
+	enemyBosses.append(false)
+	enemyAreas.append([1])
 	
 	var save_dict = {
 		"enemyIDs" : enemyIDs,
 		"enemyNames" : enemyNames,
-		"enemyATK" : enemyATK,
-		"enemyDEF" : enemyDEF,
-		"enemySPD" : enemySPD,
-		"enemyMaxHP" : enemyMaxHP,
-		"enemyHP" : enemyHP,
-		"enemyImage" : enemyImage,
-		"enemySplash" : enemySplash,
-		"enemyUndead" : enemyUndead
+		"enemyMaxHPs" : enemyMaxHPs,
+		"enemyATKs" : enemyATKs,
+		"enemyDEFs" : enemyDEFs,
+		"enemySPDs" : enemySPDs,
+		"enemyImagesNormal" : enemyImagesNormal,
+		"enemyImagesCharging" : enemyImagesCharging,
+		"enemyImagesAttacking" : enemyImagesAttacking,
+		"enemyWeaknesses" : enemyWeaknesses,
+		"enemyResistances" : enemyResistances,
+		"enemySpecials" : enemySpecials,
+		"enemyAttackTexts" : enemyAttackTexts,
+		"enemyAttackPowers" : enemyAttackPowers,
+		"enemyAttackTypes" : enemyAttackTypes,
+		"enemyBosses" : enemyBosses,
+		"enemyAreas" : enemyAreas
 	}
+	
 	var saveFile = FileAccess.open(enemiesFile, FileAccess.WRITE)
 	var json_string = JSON.stringify(save_dict)
 	saveFile.store_line(json_string)
@@ -290,13 +343,13 @@ func buildEnemyJSON() -> void:
 #for manually creating or altering player savedata.
 func createSave() -> void:
 	inventoryid = [0, 0, 1]
-	hp = 50
+	HP = 20
 	var save_dict = {
-		"maxhp" : maxhp,
-		"hp" : hp,
-		"spd" : spd,
-		"def": def,
-		"atk": atk,
+		"maxhp" : maxHP,
+		"hp" : HP,
+		"spd" : speed,
+		"def": defense,
+		"atk": attack,
 		"inventoryid": inventoryid
 	}
 	var saveFile = FileAccess.open(playerFile, FileAccess.WRITE)
@@ -306,11 +359,11 @@ func createSave() -> void:
 #saves player data
 func savePlayer() -> void:
 	var save_dict = {
-		"maxhp" : maxhp,
-		"hp" : hp,
-		"spd" : spd,
-		"def": def,
-		"atk": atk,
+		"maxhp" : maxHP,
+		"hp" : HP,
+		"spd" : speed,
+		"def": defense,
+		"atk": attack,
 		"inventoryid": inventoryid
 	}
 	var saveFile = FileAccess.open(playerFile, FileAccess.WRITE)
@@ -352,23 +405,22 @@ func loaditems() -> void:
 				set(i, node_data[i])
 
 # Adds an item to the inventory array using the itemID
-func AddItemToInventory(id: int) -> void:
+func addItemToInventory(id: int) -> void:
 	var iName = itemNames[id]
 	var iPower = itemPower[id]
 	var iEffect = itemEffect[id]
 	var iImage = load(itemImage[id])
 	var iHImage = load(itemHImage[id])
-	var iSplash = itemSplash[id]
-	var iSlotNum = 0
+	var iArea = itemArea[id]
 	
 	# Deferred to ensure the item exists completely before messing with its attributes
 	if (itemInventoryNum != 32):
-		itemInventory[itemInventoryNum].initialize(id, itemInventoryNum, iName, iPower, iEffect, iImage, iHImage, iSplash)
+		itemInventory[itemInventoryNum].initialize(id, itemInventoryNum, iName, iEffect, iPower, iImage, iHImage, iArea)
 		itemInventoryNum += 1
-		ShiftInventoryLeft(0)
+		shiftInventoryLeft(0)
 		updateInventoryDisplay(-1, -1)
-	
-func RemoveItemFromInventory(slotNumber: int, mode: int) -> void:
+
+func removeItemFromInventory(slotNumber: int, mode: int) -> void:
 	if (mode == 1):
 		materialInventory[slotNumber].uninitialize()
 	else:
@@ -378,7 +430,7 @@ func RemoveItemFromInventory(slotNumber: int, mode: int) -> void:
 		@warning_ignore("integer_division")
 		INVENTORY_ITEM_DISPLAYS[slotNumber/16].unlink()
 	
-	ShiftInventoryLeft(mode)
+	shiftInventoryLeft(mode)
 	updateInventoryDisplay(-1, -1)
 
 # Checks if the item in the given item slot number is currently being displayed
@@ -389,7 +441,7 @@ func isCurrentlyDisplayed(itemSlotNumber:int, mode: bool) -> bool:
 	return true
 
 # Shifts all items to the far left of the inventory to remove gaps
-func ShiftInventoryLeft(mode: int):
+func shiftInventoryLeft(mode: int):
 	var inventory
 	if (mode == -1):
 		mode = inventoryMode
@@ -410,7 +462,6 @@ func ShiftInventoryLeft(mode: int):
 			
 	for c in range(count, tempArray.size()):
 		tempArray[c] = itemScene.instantiate()
-		tempArray[c]
 	if (mode == 1):
 		materialInventory = tempArray
 	else:
@@ -444,9 +495,9 @@ func linkItemtoInventoryDisplay(item: int, mode: int, space: int) -> void:
 		# Now we can replace any information in that spot by linking it
 		slot.get_child(0).link(toLink.itemID, toLink.itemName, toLink.itemEffect, 
 							toLink.itemPower, toLink.itemImage, toLink.itemHoverImage, 
-							toLink.itemSplash)
+							toLink.itemArea)
 
-func findAndRemoveFromInventory(displayNum: int) -> void:
+func findAndRemoveFromInventory(displayNum: int, swap: bool) -> void:
 	# The index should be (displayNum - 1) * inventoryPage
 	var inventory
 	if (inventoryMode == 1):
@@ -455,35 +506,60 @@ func findAndRemoveFromInventory(displayNum: int) -> void:
 		inventory = itemInventory
 	inventory[(displayNum - 1) * (inventoryPage + 1)].deinitialize()
 	itemInventoryNum -= 1
-	ShiftInventoryLeft(-1)
+	if (!swap):
+		shiftInventoryLeft(-1)
 	updateInventoryDisplay(-1, -1)
 
-func findAndAddToInventory(toAdd: Dictionary, displayNum: int) -> void:
+func findAndAddToInventory(toAdd: Dictionary, displayNum: int, swap: bool) -> void:
 	if (inventoryMode == 1):
 		pass # TODO add functionality when inventory_material is created
 	else:
 		toAdd["iSlot"] = (displayNum - 1) * (inventoryPage + 1)
 		itemInventory[toAdd["iSlot"]].initializeDict(toAdd)
 		itemInventoryNum += 1
-	ShiftInventoryLeft(-1)
+	if (!swap):
+		shiftInventoryLeft(-1)
 	updateInventoryDisplay(-1, -1)
 
 #for debugging file imports
 func statLog() -> void:
 	print("hp: ")
-	print(hp)
+	print(HP)
 	print("maxhp: ")
-	print(maxhp)
+	print(maxHP)
 	print("def: ")
-	print(def)
+	print(defense)
 	print("spd: ")
-	print(spd)
+	print(speed)
 	print("atk: ")
-	print(atk)
+	print(attack)
 	print("inv: ")
 	print(inventoryid)
 	print(itemNames)
 	print(itemPower)
 	print(itemEffect)
 	print(itemImage)
-	print(itemSplash)
+	print(itemArea)
+
+func giveFreeItems() -> void:
+	for i in 16:
+		addItemToInventory(randi() % 15)
+		
+func takeDamage(amount: int) -> void:
+		HP -= amount
+
+func heal(amount: int) -> void:
+	HP += amount
+	if (HP > maxHP):
+		HP = maxHP
+
+func spawnRandomAreaItem(area: int, iDisplay: ItemDisplay) -> void:
+	var itemPool: Array =[]
+	for i in itemArea.size():
+		for j in itemArea[i].size():
+			if (itemArea[i][j] == area):
+				itemPool.append(i)
+	
+	var iID = itemPool[randi_range(0, itemPool.size() - 1)]
+	iDisplay.link(itemIDs[iID], itemNames[iID], itemEffect[iID], itemPower[iID],
+	load(itemImage[iID]), load(itemHImage[iID]), itemArea[iID])

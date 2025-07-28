@@ -15,7 +15,6 @@ func _ready() -> void:
 
 
 func _on_button_up() -> void:
-	var mode = pHud.inventoryMode
 	var page = pHud.inventoryPage
 	
 	# The plan is to have the item pages scroll when you use the arrows. The
@@ -24,7 +23,7 @@ func _on_button_up() -> void:
 	# player can't even try to add a material into a normal item slot.
 	
 	if (page != 0):
-		pHud.ShiftInventoryLeft(-1)
+		pHud.shiftInventoryLeft(-1)
 		pHud.updateInventoryDisplay(-1, page - 1)
 		pHud.inventoryPage = page - 1
 		if (page - 1 <= 0):

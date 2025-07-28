@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 [autoload]
 
 DragManager="*res://Scripts/drag_manager.gd"
+GeneralFunctions="*res://Scripts/general_functions.gd"
 
 [display]
 
@@ -32,6 +33,13 @@ window/default_font_antialiasing=1
 "Player Hud"=""
 "Inventory Item Displays"=""
 "Main Text Box"=""
+"Enemy Displays"=""
+"Attack Item Displays"=""
+"Enemy Health Bars"=""
+"Next Button"=""
+"Battle Manager"=""
+"Player Stats Display"=""
+"Text Box Button"=""
 
 [gui]
 

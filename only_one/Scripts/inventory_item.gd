@@ -1,6 +1,7 @@
 extends Control
 
-enum EType {HEALING, EXPLODING, FIRE, ICE, POISON}
+enum {NORMAL, EXPLOSION, FIRE, ICE, ELECTRIC, AIR, POISON, ACID, HEAL, ATK_BUFF,
+		DEF_BUFF, SPD_BUFF, ATK_DROP, DEF_DROP, SPD_DROP, BURN, FREEZE, STATIC, KNOCKBACK}
 @export var itemID = -1
 @export var inventorySlot = -1
 @export var itemName = ""
@@ -8,11 +9,11 @@ enum EType {HEALING, EXPLODING, FIRE, ICE, POISON}
 @export var itemPower = -1
 @export var itemImage: AtlasTexture = null
 @export var itemHoverImage: AtlasTexture = null
-@export var itemSplash = false
+@export var itemArea: Array = []
 @export var inventoryDisplaySpotNumber = 0
 
 func initialize(ID: int, InvSlot: int, Name: String, Effect: int, Power: int, iImage: AtlasTexture,
-					 iHImage: AtlasTexture, Splash: bool):
+					 iHImage: AtlasTexture, iArea: Array):
 	itemID = ID
 	inventorySlot = InvSlot
 	itemName = Name
@@ -20,7 +21,7 @@ func initialize(ID: int, InvSlot: int, Name: String, Effect: int, Power: int, iI
 	itemPower = Power
 	itemImage = iImage
 	itemHoverImage = iHImage
-	itemSplash = Splash
+	itemArea = iArea
 	
 func initializeDict(info: Dictionary):
 	itemID = info["iID"]
@@ -30,7 +31,7 @@ func initializeDict(info: Dictionary):
 	itemPower = info["iPower"]
 	itemImage = info["iImage"]
 	itemHoverImage = info["iHImage"]
-	itemSplash = info["iSplash"]
+	itemArea = info["iArea"]
 	
 func deinitialize() -> void:
 	itemID = -1
@@ -38,4 +39,4 @@ func deinitialize() -> void:
 	itemPower = -1
 	itemImage = null
 	itemHoverImage = null
-	itemSplash = false
+	itemArea = []

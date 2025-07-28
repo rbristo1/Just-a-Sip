@@ -31,7 +31,7 @@ func _on_button_up() -> void:
 	# player can't even try to add a material into a normal item slot.
 
 	if mode != 1 and page != itemCapacity:
-		pHud.ShiftInventoryLeft(-1)
+		pHud.shiftInventoryLeft(-1)
 		pHud.updateInventoryDisplay(-1, page + 1)
 		pHud.inventoryPage = page + 1
 		upButton.disabled = false
@@ -39,7 +39,7 @@ func _on_button_up() -> void:
 			disabled = true
 		
 	elif mode == 1 and page != materialCapacity:
-		pHud.ShiftInventoryLeft(-1)
+		pHud.shiftInventoryLeft(-1)
 		pHud.updateInventoryDisplay(-1, page + 1)
 		pHud.inventoryPage = page + 1
 		upButton.disabled = false

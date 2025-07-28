@@ -26,6 +26,7 @@
 [ext_resource type="Script" uid="uid://d15qve8s6syt1" path="res://Scripts/up_inventory_button.gd" id="14_vkhck"]
 [ext_resource type="Script" uid="uid://dkpumvhe2ywbw" path="res://Scripts/down_inventory_button.gd" id="18_4fqb3"]
 [ext_resource type="Texture2D" uid="uid://b8a0b2ak1e7cw" path="res://Art/Atlas Textures/UI/down_arrow/down_arrow_disabled.tres" id="19_5sdde"]
+[ext_resource type="Script" uid="uid://w8eh5fytkg6e" path="res://Scripts/next_button.gd" id="20_3jtpm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_15ks0"]
 texture = ExtResource("1_kt5xe")
@@ -80,10 +81,6 @@ texture = ExtResource("1_o8xso")
 texture = ExtResource("2_vfwc5")
 region_rect = Rect2(0, 0, 16, 16)
 
-[sub_resource type="GDScript" id="GDScript_vltob"]
-script/source = "extends TextureButton
-"
-
 [node name="player_hud" type="Control" groups=["Player Hud"]]
 custom_minimum_size = Vector2(0, 168)
 layout_mode = 3
@@ -95,8 +92,18 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_i2evl")
 playerName = "Andrew"
+maxhp = null
+hp = null
+attack = null
+speed = null
+defense = null
 inventoryid = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 INVENTORY_ITEM_DISPLAYS = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+ITEM_INVENTORY_CAPACITY = null
+MATERIAL_INVENTORY_CAPACITY = null
+itemsFile = null
+playerFile = null
+enemiesFile = null
 
 [node name="PHudMainBox" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -136,6 +143,7 @@ theme_override_constants/margin_bottom = 12
 
 [node name="MainTextBox" type="RichTextLabel" parent="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxMargins" groups=["Main Text Box"]]
 layout_mode = 2
+focus_mode = 2
 theme_override_constants/line_separation = -2
 theme_override_fonts/normal_font = ExtResource("1_8rgen")
 theme_override_fonts/mono_font = ExtResource("1_8rgen")
@@ -146,10 +154,13 @@ theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 fit_content = true
 horizontal_alignment = 1
+selection_enabled = true
 script = ExtResource("4_vltob")
 
-[node name="TextBoxButton" type="TextureButton" parent="PHudMainBox/TextBoxRow/TextBoxBackground" groups=["Text Box Button"]]
+[node name="TextBoxButton" type="TextureButton" parent="PHudMainBox/TextBoxRow/TextBoxBackground"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_hover = SubResource("CompressedTexture2D_15ks0")
 stretch_mode = 5
 script = ExtResource("4_4o4ls")
@@ -203,7 +214,10 @@ theme_override_fonts/italics_font = ExtResource("1_8rgen")
 theme_override_fonts/bold_italics_font = ExtResource("1_8rgen")
 theme_override_fonts/bold_font = ExtResource("1_8rgen")
 theme_override_font_sizes/normal_font_size = 16
-text = "
+text = "HP:123/123
+ATK:973
+DEF:132
+SPD:125	
 "
 
 [node name="StatsTextRight" type="RichTextLabel" parent="PHudMainBox/PlayerRow/StatsInfo/MarginContainer/HBoxContainer"]
@@ -212,6 +226,11 @@ size_flags_horizontal = 3
 mouse_filter = 1
 theme_override_fonts/normal_font = ExtResource("1_8rgen")
 theme_override_font_sizes/normal_font_size = 16
+text = "Items:19/32
+19/32
+Materials:
+26/32
+"
 
 [node name="PlayerRowSpacing2" type="VSeparator" parent="PHudMainBox/PlayerRow"]
 custom_minimum_size = Vector2(16, 0)
@@ -429,7 +448,7 @@ texture_pressed = ExtResource("2_54pr6")
 texture_hover = ExtResource("3_188kt")
 texture_disabled = ExtResource("4_imajn")
 stretch_mode = 5
-script = SubResource("GDScript_vltob")
+script = ExtResource("20_3jtpm")
 
 [node name="PlayerRowSpacing4" type="VSeparator" parent="PHudMainBox/PlayerRow"]
 custom_minimum_size = Vector2(32, 0)
@@ -440,7 +459,6 @@ custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 
 [connection signal="mouse_entered" from="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxMargins/MainTextBox" to="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxMargins/MainTextBox" method="_on_mouse_entered"]
-[connection signal="button_up" from="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton" to="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxMargins/MainTextBox" method="proceedQueue"]
 [connection signal="mouse_entered" from="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton" to="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton" to="PHudMainBox/TextBoxRow/TextBoxBackground/TextBoxButton" method="_on_mouse_exited"]
 [connection signal="button_up" from="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/UpInventoryButton" to="PHudMainBox/PlayerRow/InventoryContainer/MarginContainer/GridContainer/UpInventoryButton" method="_on_button_up"]
