@@ -6,6 +6,7 @@ var map : Array
 @export var numeratorChance = 6
 @export var reduceSizeModifier = 5
 @export var denominatorChance = 10
+@export var mapFile = "res://JSONS/map.JSON"
 
 @export var mapLength = 8
 #make odd ideally
@@ -210,14 +211,15 @@ func displayMap() -> void:
 	var incrX = 630/mapLength
 	var incrY = 350/widthPeak
 	var colorIncre = 0
-	
+	print (adjList)
+	print (playerPosX)
+	print (playerPosY)
 	for i in widthPeak:
 		for j in mapLength:
 			if (map[i][j] == 1):
 				#down
 				var location = TextureButton.new()
-				location.pressed.connect(_on_texture_button_pressed)
-				
+				location.pressed.connect(_on_texture_button_pressed.bind(i))
 				var text1
 				var text2
 				var text3
@@ -244,7 +246,13 @@ func displayMap() -> void:
 				location.texture_hover = text1
 				location.texture_normal = text2
 				location.texture_disabled = text3
+				var dis1
+				var dis2
 				if adjList[playerPosY][playerPosX].find(i) == -1 or j != playerPosX + 1:
+					dis1 = true
+				if adjList[playerPosY][playerPosX].find(float(i)) == -1 or j != playerPosX + 1:
+					dis2 = true
+				if dis1 and dis2:
 					location.disabled = true
 				
 				var position: Vector2
@@ -280,11 +288,55 @@ func displayMap() -> void:
 		y+=incrY
 		x=30
 
-func _on_texture_button_pressed() -> void:
+func _on_texture_button_pressed(i: int) -> void:
+	
+	playerPosX += 1
+	playerPosY = i
+	print(i)
+	mapSave()
+	
 	get_tree().change_scene_to_file("res://Scenes/Battle.tscn")
 
+func mapSave():
+	var save_dict = {
+		"map" : map,
+		"events" : events,
+		"adjList" : adjList,
+		"midpoint": midpoint,
+		"playerPosX": playerPosX,
+		"playerPosY": playerPosY
+	}
+	var saveFile = FileAccess.open(mapFile, FileAccess.WRITE)
+	var json_string = JSON.stringify(save_dict)
+	saveFile.store_line(json_string)
+
+func mapLoad():
+	if not FileAccess.file_exists(mapFile):
+		return
+	else:
+		var save_file = FileAccess.open(mapFile, FileAccess.READ)
+		while save_file.get_position() < save_file.get_length():
+			var json_string = save_file.get_line()
+			var json = JSON.new()
+			var parse_result = json.parse(json_string)
+			if not parse_result == OK:
+				print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+				continue
+			var node_data = json.data
+			for i in node_data.keys():
+				#if (i == "")
+				set(i, node_data[i])
+
 func _ready() ->void:
-	generateMap2()
+	#TODO remove 1 == 0 later once battles can return to map, delete the map JSON after game is won/finished to generate new
+	if FileAccess.file_exists(mapFile):
+		mapLoad()
+		#if playerPosX == 0:
+			#generateMap2()
+	else:
+		generateMap2()
+	
 	displayMap()
+	mapSave()
 	
 	

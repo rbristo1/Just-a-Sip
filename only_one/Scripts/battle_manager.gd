@@ -481,6 +481,7 @@ func endBattle():
 		await nextButton.button_up
 		# TODO: Exit scene to map
 		print("Exit scene to map")
+		get_tree().change_scene_to_file("res://Scenes/map.tscn")
 
 func onItemAttackSlotChange(slotNum: int, itemInSlot: bool) -> void:
 	if (battleEnded == BATTLE_ONGOING):
