@@ -10,7 +10,10 @@ var map : Array
 @export var mapLength = 8
 #make odd ideally
 @export var widthPeak = 5
+var adjList: Array = []
+var widths: Array
 
+#for old generation
 func hasSiblings(map: Array, x: int, y: int) -> bool:
 	var sum = 0
 	if (x > 0 and map[x-1][y] == 1):
@@ -26,7 +29,8 @@ func hasSiblings(map: Array, x: int, y: int) -> bool:
 		return true
 	else:
 		return false
-	
+
+#for old generation
 func hasFewSiblings(map: Array, x: int, y: int) -> int:
 	var sum = 0
 	if (x > 0 and map[x-1][y] == 1):
@@ -40,6 +44,8 @@ func hasFewSiblings(map: Array, x: int, y: int) -> int:
 	
 	return sum
 
+
+#old dungeon generation technique
 func generateMap():
 	for i in mapHeight:
 		var mapRow: Array
@@ -70,6 +76,8 @@ func generateMap():
 	for i in map.size():
 		print(map[i])
 
+
+#Diagonal generation technique
 func generateMap2():
 	for i in widthPeak:
 		var mapRow: Array
@@ -80,7 +88,6 @@ func generateMap2():
 	print(midpoint)
 	map[midpoint][0] = 1
 	var width = 1
-	var widths: Array
 	for i in mapLength:
 		
 		var alternator = -1
@@ -105,16 +112,78 @@ func generateMap2():
 				map[j][i] = 0
 				ran += 1
 				
-	
+	adjListGen()
 	
 	for i in map.size():
 		print(map[i])
 
+#generates 3d array for storing an adjacency list at each point on the map
+func adjListGen():
+	
+	for i in mapLength:
+		var sum = 0
+		for j in widthPeak:
+			if (map[j][i] == 1):
+				sum += 1
+		widths[i] = sum
+	
+	
+	
+	for i in widthPeak:
+		var adjListRow: Array = []
+		for j in mapLength:
+			var adjListRowVecs: Array = []
+			adjListRow.append(adjListRowVecs)
+		adjList.append(adjListRow)
+		print("ran")
+	for i in mapLength-1:
+		var usedIndexes: Array = []
+		for j in widthPeak:
+			if (map[j][i] == 1):
+				var connections = randi()%widths[i+1] + 1
+				var tempVec: Array = []
+				var tempVec2: Array = []
+				for k in widthPeak:
+						if (map[k][i+1] == 1):
+							tempVec.append(k)
+							tempVec2.append(k)
+				for k in connections:
+					if widths[i] == 1:
+						adjList[j][i] = tempVec
+					else:
+						if (tempVec.size() != 0):
+							var index = randi()%tempVec.size()
+							var val = tempVec[index]
+							adjList[j][i].append(val)
+							if (usedIndexes.find(val) == -1):
+								usedIndexes.append(val)
+							tempVec.remove_at(index)
+					if j == widths[i] and usedIndexes.size() != tempVec2.size():
+						adjList[j][i] = tempVec2
+						usedIndexes = tempVec2
+				if j > widths[i] and usedIndexes.size() != tempVec2.size():
+					adjList[j][i] = tempVec2
+					for k in tempVec2.size():
+						if usedIndexes.find(tempVec2[k]) == -1:
+							adjList[j][i].append(tempVec2[k])
+							usedIndexes.append(tempVec2[k])
+					
+					
+					
+					
+			
+
+	
+	for i in adjList.size():
+		print(adjList[i])
+ 
+#creates lines and buttons and places them on the screen
 func displayMap() -> void:
 	var x = 30
 	var y = 40
 	var incrX = 630/mapLength
 	var incrY = 350/widthPeak
+	var colorIncre = 0
 	
 	for i in widthPeak:
 		for j in mapLength:
@@ -128,30 +197,31 @@ func displayMap() -> void:
 				var position: Vector2
 				position.x = x
 				position.y = y
+				colorIncre = colorIncre % 3
 				location.set_position(position, false)
-				#if i != mapHeight-1 and map[i+1][j] == 1: 
-					#var line = Line2D.new()
-					#var pos1 = position
-					#pos1.x+=8
-					#line.add_point(pos1)
-					#line.width = 1
-					#var pos2 = pos1
-					#pos2.y += incrY
-					#line.add_point(pos2)
-					#add_child(line)
-				if j != mapLength-1 and map[i][j+1] == 1: 
+				for k in adjList[i][j].size():
 					var line = Line2D.new()
 					var pos1 = position
+					pos1.x+=16
 					pos1.y+=8
 					line.add_point(pos1)
 					line.width = 1
+					if colorIncre == 0:
+						line.modulate = Color(255, 0, 255)
+					elif colorIncre == 1:
+						line.modulate = Color(0, 255, 255)
+					elif colorIncre == 2:
+						line.modulate = Color(255, 255, 0)
+					
 					var pos2 = pos1
-					pos2.x += incrX
+					pos2.x += incrX-16
+					pos2.y = 40+incrY*adjList[i][j][k]+8
 					line.add_point(pos2)
 					add_child(line)
 				x+=incrX
-				
 				add_child(location)
+				colorIncre += 1
+				colorIncre = colorIncre % 3
 			else:
 				x+=incrX
 		y+=incrY
