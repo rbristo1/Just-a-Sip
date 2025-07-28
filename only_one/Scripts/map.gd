@@ -12,7 +12,10 @@ var map : Array
 @export var widthPeak = 5
 var adjList: Array = []
 var widths: Array
-
+var events: Array = []
+var midpoint
+var playerPosX
+var playerPosY
 #for old generation
 func hasSiblings(map: Array, x: int, y: int) -> bool:
 	var sum = 0
@@ -84,7 +87,9 @@ func generateMap2():
 		for j in mapLength:
 			mapRow.append(0)
 		map.append(mapRow)
-	var midpoint = (widthPeak/2)+widthPeak%2-1
+	midpoint = (widthPeak/2)+widthPeak%2-1
+	playerPosX = 0
+	playerPosY = midpoint
 	print(midpoint)
 	map[midpoint][0] = 1
 	var width = 1
@@ -113,9 +118,30 @@ func generateMap2():
 				ran += 1
 				
 	adjListGen()
-	
+	eventGen()
 	for i in map.size():
 		print(map[i])
+
+
+func eventGen():
+	
+	for i in widthPeak:
+		var eventRow: Array
+		for j in mapLength:
+			if (map[i][j] == 1):
+				eventRow.append(1)
+			else:
+				eventRow.append(0)
+		events.append(eventRow)
+	for i in mapLength:
+		for j in widthPeak:
+			if (map[j][i] == 1):
+				events[j][i] = randi()%3+1
+				
+	events[midpoint][mapLength-1] = 4
+	events[midpoint][0] = -1
+	for i in events.size():
+		print(events[i])
 
 #generates 3d array for storing an adjacency list at each point on the map
 func adjListGen():
@@ -190,10 +216,37 @@ func displayMap() -> void:
 			if (map[i][j] == 1):
 				#down
 				var location = TextureButton.new()
-				var script = load("res://Scripts/locationButton.gd")
-				location.set_script(script)
-				var text = load("res://Art/Atlas Textures/UI/pause_button/pause_button_normal.tres")
-				location.texture_normal = text
+				location.pressed.connect(_on_texture_button_pressed)
+				
+				var text1
+				var text2
+				var text3
+				if (events[i][j] == -1):
+					text1 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-1.png.png")
+					text2 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-2.png.png")
+					text3 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-3.png.png")
+				if (events[i][j] == 1):
+					text1 = load("res://Art/Atlas Textures/UI/map_buttons/Battle-1.png.png")
+					text2 = load("res://Art/Atlas Textures/UI/map_buttons/Battle-2.png.png")
+					text3 = load("res://Art/Atlas Textures/UI/map_buttons/Battle-3.png.png")
+				if (events[i][j] == 2):
+					text1 = load("res://Art/Atlas Textures/UI/map_buttons/Encounter-1.png.png")
+					text2 = load("res://Art/Atlas Textures/UI/map_buttons/Encounter-2.png.png")
+					text3 = load("res://Art/Atlas Textures/UI/map_buttons/Encounter-3.png.png")
+				if (events[i][j] == 3):
+					text1 = load("res://Art/Atlas Textures/UI/map_buttons/Random-1.png.png")
+					text2 = load("res://Art/Atlas Textures/UI/map_buttons/Random-2.png.png")
+					text3 = load("res://Art/Atlas Textures/UI/map_buttons/Random-3.png.png")
+				if (events[i][j] == 4):
+					text1 = load("res://Art/Atlas Textures/UI/map_buttons/Final Battle-1.png.png")
+					text2 = load("res://Art/Atlas Textures/UI/map_buttons/Final Battle-2.png.png")
+					text3 = load("res://Art/Atlas Textures/UI/map_buttons/Final Battle-3.png.png")
+				location.texture_hover = text1
+				location.texture_normal = text2
+				location.texture_disabled = text3
+				if adjList[playerPosY][playerPosX].find(i) == -1 or j != playerPosX + 1:
+					location.disabled = true
+				
 				var position: Vector2
 				position.x = x
 				position.y = y
@@ -227,6 +280,8 @@ func displayMap() -> void:
 		y+=incrY
 		x=30
 
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Battle.tscn")
 
 func _ready() ->void:
 	generateMap2()
