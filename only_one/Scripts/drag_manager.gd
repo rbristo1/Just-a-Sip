@@ -16,4 +16,5 @@ func OnDragStateChanged(value: bool):
 		if (hovered is ItemDisplay and hovered.itemID != -1):
 			hovered.displayText()
 		else:
-			tBox.stopShowingTempText()
+			if (tBox != null):
+				tBox.stopShowingTempText()

@@ -224,9 +224,14 @@ func displayMap() -> void:
 				var text2
 				var text3
 				if (events[i][j] == -1):
-					text1 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-1.png.png")
-					text2 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-2.png.png")
-					text3 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-3.png.png")
+					if playerPosX == 0:
+						text1 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-1.png.png")
+						text2 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-1.png.png")
+						text3 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-1.png.png")
+					else:
+						text1 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-1.png.png")
+						text2 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-2.png.png")
+						text3 = load("res://Art/Atlas Textures/UI/map_buttons/playerStart-3.png.png")
 				if (events[i][j] == 1):
 					text1 = load("res://Art/Atlas Textures/UI/map_buttons/Battle-1.png.png")
 					text2 = load("res://Art/Atlas Textures/UI/map_buttons/Battle-2.png.png")
@@ -266,6 +271,7 @@ func displayMap() -> void:
 					pos1.x+=16
 					pos1.y+=8
 					line.add_point(pos1)
+					
 					line.width = 1
 					if colorIncre == 0:
 						line.modulate = Color(255, 0, 255)
@@ -292,10 +298,24 @@ func _on_texture_button_pressed(i: int) -> void:
 	
 	playerPosX += 1
 	playerPosY = i
+	
 	print(i)
 	mapSave()
-	
-	get_tree().change_scene_to_file("res://Scenes/Battle.tscn")
+	#battle
+	if (events[playerPosY][playerPosX] == 1):
+		get_tree().change_scene_to_file("res://Scenes/Battle.tscn")
+	#encounter
+	elif (events[playerPosY][playerPosX] == 2):
+		get_tree().change_scene_to_file("res://Scenes/encounter.tscn")
+	#random
+	elif (events[playerPosY][playerPosX] == 3):
+		if (randi()%2 == 0):
+			get_tree().change_scene_to_file("res://Scenes/Battle.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/encounter.tscn")
+	#boss
+	elif (events[playerPosY][playerPosX] == 4):
+		get_tree().change_scene_to_file("res://Scenes/Battle.tscn")
 
 func mapSave():
 	var save_dict = {
@@ -334,6 +354,12 @@ func _ready() ->void:
 		#if playerPosX == 0:
 			#generateMap2()
 	else:
+		generateMap2()
+	
+	if playerPosX == float(mapLength)-1.0:
+		adjList = []
+		widths = []
+		events = []
 		generateMap2()
 	
 	displayMap()
