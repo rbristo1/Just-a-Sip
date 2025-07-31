@@ -54,10 +54,11 @@ var bossBattle = false
 var numEnemies
 var enemyAreas: Array
 var enemyBosses: Array
+@export var mapFile = "res://JSONS/map.JSON"
 
-
+@export var eventsFile = "res://JSONS/events.JSON"
 @export var enemiesFile = "res://JSONS/enemies.JSON"
-
+var events: Array = []
 # TODO - remove this. This is for testing only
 func _ready() -> void:
 	#loadEnemyAreaList()
@@ -73,6 +74,9 @@ func _ready() -> void:
 	eDisplays[1].disabled = true
 	eDisplays[2].disabled = true
 	iAttackSlots = GeneralFunctions.sortGroup(get_tree().get_nodes_in_group("Attack Item Displays"))
+	#iAttackSlots[0].z_index = -100
+	#iAttackSlots[1].z_index = -100
+	#iAttackSlots[2].z_index = -100
 	eHealthBars = GeneralFunctions.sortGroup(get_tree().get_nodes_in_group("Enemy Health Bars"))
 	eHealthBars[0].z_index = -100
 	eHealthBars[1].z_index = -100
@@ -90,39 +94,63 @@ func _ready() -> void:
 	#for i in eDisplays.size(): # enemies MUST be added to the scene tree, as that is when _ready() calls
 		#eDisplays[i].add_child(enemies[i])
 	endBattle()
-	
-	
+
+
+func eventsLoad():
+	if not FileAccess.file_exists(eventsFile):
+			return
+	else:
+			var save_file = FileAccess.open(eventsFile, FileAccess.READ)
+			while save_file.get_position() < save_file.get_length():
+				var json_string = save_file.get_line()
+				var json = JSON.new()
+				var parse_result = json.parse(json_string)
+				if not parse_result == OK:
+					print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+					continue
+				var node_data = json.data
+				for i in node_data.keys():
+					set(i, node_data[i])
 
 
 func endBattle():
+	if not FileAccess.file_exists(mapFile):
+		area = 0
+	else:
+		var save_file = FileAccess.open(mapFile, FileAccess.READ)
+		while save_file.get_position() < save_file.get_length():
+			var json_string = save_file.get_line()
+			var json = JSON.new()
+			var parse_result = json.parse(json_string)
+			if not parse_result == OK:
+				print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+				continue
+			var node_data = json.data
+			for i in node_data.keys():
+				if (i == "area"):
+					set(i, int(node_data[i]))
+		#player.loadPlayer()
+		#iAttackSlots[0].z_index = -100
+		#iAttackSlots[1].z_index = -100
+		#iAttackSlots[2].z_index = -100
+		eventsLoad()
 		
-			
 		
-		
-		tBox.queueText("test")
+		tBox.queueTextsFromArray(events[randi()%events.size()])
 		#tBox.queueTextsFromArray()
 		tBox.queueText("SIGNAL_CLICKED_THROUGH")
 		tBox.tempTextDisabled = true
 		await tBox.clickedThroughText
 		tBox.tempTextDisabled = false
 		
-		var temp = randi()%3+1
+		var temp = randi()%3+3
 		# Now we need to give the players the ability to get items after battle
-		if (temp == 1):
-			iAttackSlots[1].enable()
-			iAttackSlots[1].spawnRandomAreaItem(area)
-		elif (temp == 2):
-			iAttackSlots[0].enable()
-			iAttackSlots[2].enable()
-			iAttackSlots[0].spawnRandomAreaItem(area)
-			iAttackSlots[2].spawnRandomAreaItem(area)
-		elif (temp == 3):
-			iAttackSlots[0].enable()
-			iAttackSlots[1].enable()
-			iAttackSlots[2].enable()
-			iAttackSlots[0].spawnRandomAreaItem(area)
-			iAttackSlots[1].spawnRandomAreaItem(area)
-			iAttackSlots[2].spawnRandomAreaItem(area)
+		for i in temp:
+			tBox.queueText(player.spawnRandomAreaItemE(area))
+		tBox.queueText("SIGNAL_CLICKED_THROUGH")
+		tBox.tempTextDisabled = true
+		await tBox.clickedThroughText
+		tBox.tempTextDisabled = false
 		
 		nextButton.disabled = false
 		await nextButton.button_up

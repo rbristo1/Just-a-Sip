@@ -7,7 +7,7 @@ var map : Array
 @export var reduceSizeModifier = 5
 @export var denominatorChance = 10
 @export var mapFile = "res://JSONS/map.JSON"
-
+var area = 0
 @export var mapLength = 8
 #make odd ideally
 @export var widthPeak = 5
@@ -324,7 +324,8 @@ func mapSave():
 		"adjList" : adjList,
 		"midpoint": midpoint,
 		"playerPosX": playerPosX,
-		"playerPosY": playerPosY
+		"playerPosY": playerPosY,
+		"area": area
 	}
 	var saveFile = FileAccess.open(mapFile, FileAccess.WRITE)
 	var json_string = JSON.stringify(save_dict)
@@ -354,9 +355,11 @@ func _ready() ->void:
 		#if playerPosX == 0:
 			#generateMap2()
 	else:
+		area = 0
 		generateMap2()
 	
 	if playerPosX == float(mapLength)-1.0:
+		area += 1
 		adjList = []
 		widths = []
 		events = []

@@ -67,10 +67,14 @@ var enemyAreas: Array
 @export var itemsFile = "res://JSONS/items.JSON"
 @export var playerFile = "res://JSONS/player.JSON"
 @export var enemiesFile = "res://JSONS/enemies.JSON"
+@export var mapFile = "res://JSONS/map.JSON"
+
 
 
 
 func _ready() -> void:
+	
+	createEvents()
 	
 	INVENTORY_ITEM_DISPLAYS = get_tree().get_nodes_in_group("Inventory Item Displays")
 	
@@ -83,17 +87,36 @@ func _ready() -> void:
 	for i in itemInventory.size(): 
 		var instance = itemScene.instantiate()
 		itemInventory[i] = instance
-		
+	
 	builditemJSON()
 	buildEnemyJSON()
+	#giveFreeItems()
 	#TODO remove createSave and builditemJSON at completion
+	#savePlayer()
 	#createSave()
 	loadPlayer()
 	loaditems()
 	
 	#TEST
 	#statLog()
-	giveFreeItems()
+	#giveFreeItems()
+
+var events: Array = []
+@export var eventsFile = "res://JSONS/events.JSON"
+
+func createEvents() -> void:
+	var temp = []
+	temp.append("You stumble across a shelf lined with various flasks, now yours for the taking.")
+	events.append(temp)
+	temp = []
+	var save_dict = {
+		"events": events
+	}
+	var saveFile = FileAccess.open(eventsFile, FileAccess.WRITE)
+	var json_string = JSON.stringify(save_dict)
+	saveFile.store_line(json_string)
+
+
 
 # A comprehensive list of all types of items are in this function
 func builditemJSON() -> void:
@@ -358,13 +381,18 @@ func createSave() -> void:
 
 #saves player data
 func savePlayer() -> void:
+	inventoryid = []
+	for i in itemInventory.size():
+		inventoryid.append(itemInventory[i].itemID)
+		
 	var save_dict = {
 		"maxhp" : maxHP,
 		"hp" : HP,
 		"spd" : speed,
 		"def": defense,
 		"atk": attack,
-		"inventoryid": inventoryid
+		"inventoryid": inventoryid,
+		"itemInventoryNum": itemInventoryNum,
 	}
 	var saveFile = FileAccess.open(playerFile, FileAccess.WRITE)
 	var json_string = JSON.stringify(save_dict)
@@ -386,6 +414,9 @@ func loadPlayer() -> void:
 			var node_data = json.data
 			for i in node_data.keys():
 				set(i, node_data[i])
+	for i in inventoryid.size():
+		if inventoryid[i] != -1:
+			addItemToInventory(int(inventoryid[i]))
 
 #loads items into arrays so that they can quickly and easily be retrived by index
 func loaditems() -> void:
@@ -416,7 +447,7 @@ func addItemToInventory(id: int) -> void:
 	# Deferred to ensure the item exists completely before messing with its attributes
 	if (itemInventoryNum != 32):
 		itemInventory[itemInventoryNum].initialize(id, itemInventoryNum, iName, iEffect, iPower, iImage, iHImage, iArea)
-		itemInventoryNum += 1
+		#itemInventoryNum += 1
 		shiftInventoryLeft(0)
 		updateInventoryDisplay(-1, -1)
 
@@ -563,3 +594,26 @@ func spawnRandomAreaItem(area: int, iDisplay: ItemDisplay) -> void:
 	var iID = itemPool[randi_range(0, itemPool.size() - 1)]
 	iDisplay.link(itemIDs[iID], itemNames[iID], itemEffect[iID], itemPower[iID],
 	load(itemImage[iID]), load(itemHImage[iID]), itemArea[iID])
+	
+func spawnRandomAreaItemE(area: int) -> String:
+	var itemPool: Array =[]
+	for i in itemArea.size():
+		for j in itemArea[i].size():
+			if (itemArea[i][j] == area):
+				itemPool.append(i)
+	var id = itemPool[randi_range(0, itemPool.size() - 1)]
+	var iName = itemNames[id]
+	var iPower = itemPower[id]
+	var iEffect = itemEffect[id]
+	var iImage = load(itemImage[id])
+	var iHImage = load(itemHImage[id])
+	var iArea = itemArea[id]
+	
+	# Deferred to ensure the item exists completely before messing with its attributes
+	if (itemInventoryNum != 32):
+		itemInventory[itemInventoryNum].initialize(id, itemInventoryNum, iName, iEffect, iPower, iImage, iHImage, iArea)
+		itemInventoryNum += 1
+		shiftInventoryLeft(0)
+		updateInventoryDisplay(-1, -1)
+	var temp = "You gained a " + iName + "!"
+	return temp

@@ -56,7 +56,7 @@ var bossBattle = false
 var numEnemies
 var enemyAreas: Array
 var enemyBosses: Array
-
+@export var mapFile = "res://JSONS/map.JSON"
 
 @export var enemiesFile = "res://JSONS/enemies.JSON"
 
@@ -405,6 +405,21 @@ func chooseEnemyMove(enemy: Control, enemySlot: int) -> Array:
 		return [chosenMove, 3] # It must be a damaging move, so target player
 
 func endBattle():
+	if not FileAccess.file_exists(mapFile):
+		area = 0
+	else:
+		var save_file = FileAccess.open(mapFile, FileAccess.READ)
+		while save_file.get_position() < save_file.get_length():
+			var json_string = save_file.get_line()
+			var json = JSON.new()
+			var parse_result = json.parse(json_string)
+			if not parse_result == OK:
+				print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+				continue
+			var node_data = json.data
+			for i in node_data.keys():
+				if (i == "area"):
+					set(i, int(node_data[i]))
 	if (battleEnded == BATTLE_LOST):
 		tBox.queueText("You lost!")
 		tBox.queueText("Game Over!")

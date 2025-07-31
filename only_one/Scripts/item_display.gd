@@ -138,6 +138,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 		if (INVENTORY):
 			pHud.findAndRemoveFromInventory(INVENTORY_NUM, true)
 			pHud.findAndAddToInventory(data, INVENTORY_NUM, true)
+		#if INVENTORY_NUM <= 16:
 		pHud.shiftInventoryLeft(-1)
 	else:
 		linkDict(data)
