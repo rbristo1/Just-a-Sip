@@ -847,6 +847,7 @@ func onRunComplete():
 		player.removeItemFromInventory(item2, 0)
 		tBox.queueText(player.playerName + " dropped " + item1Name + " and " + item2Name + "!")
 		tBox.queueText("SIGNAL_CLICKED_THROUGH")
+		get_tree().change_scene_to_file("res://Scenes/map.tscn")
 		tBox.tempTextDisabled = true
 		await tBox.clickedThroughText
 		tBox.tempTextDisabled = false
