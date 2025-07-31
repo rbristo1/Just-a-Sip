@@ -1,2 +1,2 @@
 # Just a Sip
-rougelike deckbuilding RPG
+roguelike deckbuilding RPG
