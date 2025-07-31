@@ -1,487 +1,488 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1753947695
-m5x7.ttf::FontFile/FontFile::6545090695747415131::1753154233::1753718744::1::::<><><>0<>0<>ac5bd912a314389fada9739369d89389<>res://.godot/imported/m5x7.ttf-ede74fbe3753eb2fe0ebc455b7b3a4db.fontdata::
-new_theme.tres::Theme/Theme::5520479615176399725::1753154233::0::1::::<><><>0<>0<><>::
-PeaberryBase.ttf::FontFile::1482651362908590169::1753947694::1753947695::1::::<><><>0<>0<>ecc0fae2821e1d249d4eb0a484fb163d<>res://.godot/imported/PeaberryBase.ttf-5b7a2a1db73831145d0620bd1f5489d0.fontdata::
-testTheme.tres::Theme/Theme::6357196643116253109::1753154233::0::1::::<><><>0<>0<><>::uid://c0iqxm04l5108::::res://m5x7.ttf
-::res://Art/::1753214782
-::res://Art/Atlas Textures/::1753928099
-::res://Art/Atlas Textures/Enemies/::1753928828
-::res://Art/Atlas Textures/Enemies/Ampcreste/::1753930045
-Ampcreste_Attack.tres::AtlasTexture/AtlasTexture::905954193045313221::1753930045::0::1::::<><><>0<>0<><>::uid://dyrf36etq4sj::::res://Art/Enemies/Ampcreste.png
-Ampcreste_Charging.tres::AtlasTexture/AtlasTexture::8732637998296033360::1753930045::0::1::::<><><>0<>0<><>::uid://dyrf36etq4sj::::res://Art/Enemies/Ampcreste.png
-Ampcreste_Normal.tres::AtlasTexture/AtlasTexture::6320608939135951684::1753930045::0::1::::<><><>0<>0<><>::uid://dyrf36etq4sj::::res://Art/Enemies/Ampcreste.png
-::res://Art/Atlas Textures/Enemies/Bristle/::1753930046
-Bristle_Attack.tres::AtlasTexture/AtlasTexture::8184410774363099445::1753930045::0::1::::<><><>0<>0<><>::uid://c47pkto8j4cth::::res://Art/Enemies/Bristle.png
-Bristle_Charging.tres::AtlasTexture/AtlasTexture::1085300241567733377::1753930045::0::1::::<><><>0<>0<><>::uid://c47pkto8j4cth::::res://Art/Enemies/Bristle.png
-Bristle_Normal.tres::AtlasTexture/AtlasTexture::6803388298370297267::1753930046::0::1::::<><><>0<>0<><>::uid://c47pkto8j4cth::::res://Art/Enemies/Bristle.png
-::res://Art/Atlas Textures/Enemies/Dionydra/::1753930046
-Dionydra_Attack.tres::AtlasTexture/AtlasTexture::8795976614305013368::1753930046::0::1::::<><><>0<>0<><>::uid://cpjugqw2io6l6::::res://Art/Enemies/Dionydra.png
-Dionydra_Charging.tres::AtlasTexture/AtlasTexture::1248833339713985889::1753930046::0::1::::<><><>0<>0<><>::uid://cpjugqw2io6l6::::res://Art/Enemies/Dionydra.png
-Dionydra_Normal.tres::AtlasTexture/AtlasTexture::2826290972025449188::1753930046::0::1::::<><><>0<>0<><>::uid://cpjugqw2io6l6::::res://Art/Enemies/Dionydra.png
-::res://Art/Atlas Textures/Enemies/Elemental Amalgamate/::1753930046
-Elemental Amalgamate_Attack.tres::AtlasTexture/AtlasTexture::8537008068293994223::1753930046::0::1::::<><><>0<>0<><>::uid://bmt3fr3f3wykq::::res://Art/Enemies/Elemental Amalgamate.png
-Elemental Amalgamate_Normal.tres::AtlasTexture/AtlasTexture::3564200210623839949::1753930046::0::1::::<><><>0<>0<><>::uid://bmt3fr3f3wykq::::res://Art/Enemies/Elemental Amalgamate.png
-Elemetnal Amalgamate_Charging.tres::AtlasTexture/AtlasTexture::3088766249839291850::1753930046::0::1::::<><><>0<>0<><>::uid://bmt3fr3f3wykq::::res://Art/Enemies/Elemental Amalgamate.png
-::res://Art/Atlas Textures/Enemies/Fire Elemental/::1753930046
-Fire Elemental_Attack.tres::AtlasTexture/AtlasTexture::2291212009274131532::1753930046::0::1::::<><><>0<>0<><>::uid://bg30b8hu0lxqg::::res://Art/Enemies/Fire Elemenetal.png
-Fire Elemental_Charging.tres::AtlasTexture/AtlasTexture::7042464902069032718::1753930046::0::1::::<><><>0<>0<><>::uid://bg30b8hu0lxqg::::res://Art/Enemies/Fire Elemenetal.png
-Fire Elemental_Normal.tres::AtlasTexture/AtlasTexture::1442874905268083904::1753930046::0::1::::<><><>0<>0<><>::uid://bg30b8hu0lxqg::::res://Art/Enemies/Fire Elemenetal.png
-::res://Art/Atlas Textures/Enemies/Giant Bat/::1753930046
-Giant Bat_Attack.tres::AtlasTexture/AtlasTexture::1665366111583815996::1753930046::0::1::::<><><>0<>0<><>::uid://cmk7m0feusubj::::res://Art/Enemies/Giant Bat.png
-Giant Bat_Charging.tres::AtlasTexture/AtlasTexture::5389429889877765633::1753930046::0::1::::<><><>0<>0<><>::uid://cmk7m0feusubj::::res://Art/Enemies/Giant Bat.png
-Giant Bat_Normal.tres::AtlasTexture/AtlasTexture::2790023051898477669::1753930046::0::1::::<><><>0<>0<><>::uid://cmk7m0feusubj::::res://Art/Enemies/Giant Bat.png
-::res://Art/Atlas Textures/Enemies/Giant Eagle/::1753930046
-Giant Eagle_Attack.tres::AtlasTexture/AtlasTexture::5364366756933746416::1753930046::0::1::::<><><>0<>0<><>::uid://di8dfoxqa3cth::::res://Art/Enemies/Giant Eagle.png
-Giant Eagle_Charging.tres::AtlasTexture/AtlasTexture::950167192460885959::1753930046::0::1::::<><><>0<>0<><>::uid://di8dfoxqa3cth::::res://Art/Enemies/Giant Eagle.png
-Giant Eagle_Normal.tres::AtlasTexture/AtlasTexture::235278311235368476::1753930046::0::1::::<><><>0<>0<><>::uid://di8dfoxqa3cth::::res://Art/Enemies/Giant Eagle.png
-::res://Art/Atlas Textures/Enemies/Ice Elemental/::1753930046
-Ice Elemental_Attack.tres::AtlasTexture/AtlasTexture::6335888201174826917::1753930046::0::1::::<><><>0<>0<><>::uid://c02jc2asvfjw7::::res://Art/Enemies/Ice Elemental.png
-Ice Elemental_Charging.tres::AtlasTexture/AtlasTexture::4926340767730278653::1753930046::0::1::::<><><>0<>0<><>::uid://c02jc2asvfjw7::::res://Art/Enemies/Ice Elemental.png
-Ice Elemental_Normal.tres::AtlasTexture/AtlasTexture::8192106776929979554::1753930046::0::1::::<><><>0<>0<><>::uid://c02jc2asvfjw7::::res://Art/Enemies/Ice Elemental.png
-::res://Art/Atlas Textures/Enemies/Kobold/::1753930046
-Kobold_Attack.tres::AtlasTexture/AtlasTexture::8110207944277658642::1753930046::0::1::::<><><>0<>0<><>::uid://bo0i8cnlfuk5t::::res://Art/Enemies/Kobold.png
-Kobold_Charging.tres::AtlasTexture/AtlasTexture::4424189209172164::1753930046::0::1::::<><><>0<>0<><>::uid://bo0i8cnlfuk5t::::res://Art/Enemies/Kobold.png
-Kobold_Normal.tres::AtlasTexture/AtlasTexture::8507063555293726556::1753930046::0::1::::<><><>0<>0<><>::uid://bo0i8cnlfuk5t::::res://Art/Enemies/Kobold.png
-::res://Art/Atlas Textures/Enemies/Lightning Elemental/::1753930046
-Lightning Elemental_Attack.tres::AtlasTexture/AtlasTexture::4651029800004615409::1753930046::0::1::::<><><>0<>0<><>::uid://ulmmxlwh2gy6::::res://Art/Enemies/Lightning Elemental.png
-Lightning Elemental_Charging.tres::AtlasTexture/AtlasTexture::422158599761984403::1753930046::0::1::::<><><>0<>0<><>::uid://ulmmxlwh2gy6::::res://Art/Enemies/Lightning Elemental.png
-Lightning Elemental_Normal.tres::AtlasTexture/AtlasTexture::5950241945216805010::1753930046::0::1::::<><><>0<>0<><>::uid://ulmmxlwh2gy6::::res://Art/Enemies/Lightning Elemental.png
-::res://Art/Atlas Textures/Enemies/Necrodrake Arm (Left)/::1753930046
-Necrodrake Arm (Left)_Attack.tres::AtlasTexture/AtlasTexture::4356733930523809015::1753930045::0::1::::<><><>0<>0<><>::uid://dhvsdk4q5ed7k::::res://Art/Enemies/Necrodrake Arm (Left).png
-Necrodrake Arm (Left)_Charging.tres::AtlasTexture/AtlasTexture::3762901883543088884::1753930046::0::1::::<><><>0<>0<><>::uid://dhvsdk4q5ed7k::::res://Art/Enemies/Necrodrake Arm (Left).png
-Necrodrake Arm (Left)_Normal.tres::AtlasTexture/AtlasTexture::1357537551825262585::1753930046::0::1::::<><><>0<>0<><>::uid://dhvsdk4q5ed7k::::res://Art/Enemies/Necrodrake Arm (Left).png
-::res://Art/Atlas Textures/Enemies/Necrodrake Arm (Right)/::1753930047
-Necrodrake Arm (Right)_Attack.tres::AtlasTexture/AtlasTexture::6471538806278924515::1753930046::0::1::::<><><>0<>0<><>::uid://dccdeywh0rb3b::::res://Art/Enemies/Necrodrake Arm (Right).png
-Necrodrake Arm (Right)_Charging.tres::AtlasTexture/AtlasTexture::568745935878561754::1753930046::0::1::::<><><>0<>0<><>::uid://dccdeywh0rb3b::::res://Art/Enemies/Necrodrake Arm (Right).png
-Necrodrake Arm (Right)_Normal.tres::AtlasTexture/AtlasTexture::77500281681588473::1753930047::0::1::::<><><>0<>0<><>::uid://dccdeywh0rb3b::::res://Art/Enemies/Necrodrake Arm (Right).png
-::res://Art/Atlas Textures/Enemies/Necrodrake Head/::1753930047
-Necrodrake Head_Attack.tres::AtlasTexture/AtlasTexture::1968091784202972251::1753930047::0::1::::<><><>0<>0<><>::uid://dkvkijr5wifpn::::res://Art/Enemies/Necrodrake Head.png
-Necrodrake Head_Charging.tres::AtlasTexture/AtlasTexture::9051066373641545307::1753930047::0::1::::<><><>0<>0<><>::uid://dkvkijr5wifpn::::res://Art/Enemies/Necrodrake Head.png
-Necrodrake Head_Normal.tres::AtlasTexture/AtlasTexture::1103076178950402725::1753930047::0::1::::<><><>0<>0<><>::uid://dkvkijr5wifpn::::res://Art/Enemies/Necrodrake Head.png
-::res://Art/Atlas Textures/Enemies/Noxious Shroom/::1753930047
-Noxious Shroom_Attack.tres::AtlasTexture/AtlasTexture::454774995491322370::1753930047::0::1::::<><><>0<>0<><>::uid://bs5gekv8floe2::::res://Art/Enemies/Noxious Shroom.png
-Noxious Shroom_Charging.tres::AtlasTexture/AtlasTexture::8293032321791854026::1753930047::0::1::::<><><>0<>0<><>::uid://bs5gekv8floe2::::res://Art/Enemies/Noxious Shroom.png
-Noxious Shroom_Normal.tres::AtlasTexture/AtlasTexture::7046981269907417706::1753930047::0::1::::<><><>0<>0<><>::uid://bs5gekv8floe2::::res://Art/Enemies/Noxious Shroom.png
-::res://Art/Atlas Textures/Enemies/Oozeweaver/::1753930047
-Oozeweaver_Attack.tres::AtlasTexture/AtlasTexture::8253302443616939920::1753930047::0::1::::<><><>0<>0<><>::uid://c4442eqafbe1h::::res://Art/Enemies/Oozeweaver.png
-Oozeweaver_Charging.tres::AtlasTexture/AtlasTexture::8282221995329671228::1753930047::0::1::::<><><>0<>0<><>::uid://c4442eqafbe1h::::res://Art/Enemies/Oozeweaver.png
-Oozeweaver_Normal.tres::AtlasTexture/AtlasTexture::8785406987719494511::1753930047::0::1::::<><><>0<>0<><>::uid://c4442eqafbe1h::::res://Art/Enemies/Oozeweaver.png
-::res://Art/Atlas Textures/Enemies/Skeleton Mage/::1753930047
-Skeleton Mage_Attack.tres::AtlasTexture/AtlasTexture::3109980578702041136::1753930047::0::1::::<><><>0<>0<><>::uid://b7v4lthnpa3mi::::res://Art/Enemies/Skeleton Mage.png
-Skeleton Mage_Charging.tres::AtlasTexture/AtlasTexture::2789171729475563454::1753930047::0::1::::<><><>0<>0<><>::uid://b7v4lthnpa3mi::::res://Art/Enemies/Skeleton Mage.png
-Skeleton Mage_Normal.tres::AtlasTexture/AtlasTexture::3827613253019342576::1753930047::0::1::::<><><>0<>0<><>::uid://b7v4lthnpa3mi::::res://Art/Enemies/Skeleton Mage.png
-::res://Art/Atlas Textures/Enemies/Skeleton Warrior/::1753930047
-Skeleton Warrior_Attack.tres::AtlasTexture/AtlasTexture::2085823679399372527::1753930047::0::1::::<><><>0<>0<><>::uid://cfu53042hhwfh::::res://Art/Enemies/Skeleton Warrior.png
-Skeleton Warrior_Charging.tres::AtlasTexture/AtlasTexture::6253644913990614600::1753930047::0::1::::<><><>0<>0<><>::uid://cfu53042hhwfh::::res://Art/Enemies/Skeleton Warrior.png
-Skeleton Warrior_Normal.tres::AtlasTexture/AtlasTexture::3130724700076126814::1753930047::0::1::::<><><>0<>0<><>::uid://cfu53042hhwfh::::res://Art/Enemies/Skeleton Warrior.png
-::res://Art/Atlas Textures/Enemies/Slime/::1753930047
-Slime_Attack.tres::AtlasTexture/AtlasTexture::6659572295943325248::1753930047::0::1::::<><><>0<>0<><>::uid://ddh2ywiiy0cm3::::res://Art/Enemies/Slime.png
-Slime_Charging.tres::AtlasTexture/AtlasTexture::5780078909820197554::1753930047::0::1::::<><><>0<>0<><>::uid://ddh2ywiiy0cm3::::res://Art/Enemies/Slime.png
-Slime_Normal.tres::AtlasTexture/AtlasTexture::1977599963542519094::1753930047::0::1::::<><><>0<>0<><>::uid://ddh2ywiiy0cm3::::res://Art/Enemies/Slime.png
-::res://Art/Atlas Textures/Enemies/Whipkin/::1753930047
-Whipkin_Attack.tres::AtlasTexture/AtlasTexture::5096934892095312292::1753930047::0::1::::<><><>0<>0<><>::uid://c3kqhxnpltp2e::::res://Art/Enemies/Whipkin.png
-Whipkin_Charging.tres::AtlasTexture/AtlasTexture::5429926860187009904::1753930047::0::1::::<><><>0<>0<><>::uid://c3kqhxnpltp2e::::res://Art/Enemies/Whipkin.png
-Whipkin_Normal.tres::AtlasTexture/AtlasTexture::7692203630124304842::1753930047::0::1::::<><><>0<>0<><>::uid://c3kqhxnpltp2e::::res://Art/Enemies/Whipkin.png
-::res://Art/Atlas Textures/Items/::1753921347
-::res://Art/Atlas Textures/Items/Acid/::1753921170
-::res://Art/Atlas Textures/Items/Acid/Diluted/::1753927422
-Diluted_Acid_Hover.tres::AtlasTexture/AtlasTexture::5516254733235305381::1753927422::0::1::::<><><>0<>0<><>::uid://wjk1ckrash2l::::res://Art/Items/Acid/Diluted Acid Potion.png
-Diluted_Acid_Normal.tres::AtlasTexture/AtlasTexture::291995998716649202::1753927422::0::1::::<><><>0<>0<><>::uid://wjk1ckrash2l::::res://Art/Items/Acid/Diluted Acid Potion.png
-::res://Art/Atlas Textures/Items/Acid/Normal/::1753927422
-Normal_Acid_Hover.tres::AtlasTexture/AtlasTexture::3788530426264835520::1753927422::0::1::::<><><>0<>0<><>::uid://dspu34t8rq6bl::::res://Art/Items/Acid/Acid Potion.png
-Normal_Acid_Normal.tres::AtlasTexture/AtlasTexture::6131222468525397679::1753927422::0::1::::<><><>0<>0<><>::uid://dspu34t8rq6bl::::res://Art/Items/Acid/Acid Potion.png
-::res://Art/Atlas Textures/Items/Acid/Potent/::1753927422
-Potent_Acid_Hover.tres::AtlasTexture/AtlasTexture::8225160885939610998::1753927422::0::1::::<><><>0<>0<><>::uid://my21kuk6eapi::::res://Art/Items/Acid/Potent Acid Potion.png
-Potent_Acid_Normal.tres::AtlasTexture/AtlasTexture::6481039377340771980::1753927422::0::1::::<><><>0<>0<><>::uid://my21kuk6eapi::::res://Art/Items/Acid/Potent Acid Potion.png
-::res://Art/Atlas Textures/Items/Blast/::1753921207
-::res://Art/Atlas Textures/Items/Blast/Diluted/::1753927422
-Diluted_Blast_Hover.tres::AtlasTexture/AtlasTexture::3534601751830535411::1753927422::0::1::::<><><>0<>0<><>::uid://b5ef3efivvj3t::::res://Art/Items/Blast/Diluted Blast Potion.png
-Diluted_Blast_Normal.tres::AtlasTexture/AtlasTexture::3064537909677875236::1753927422::0::1::::<><><>0<>0<><>::uid://b5ef3efivvj3t::::res://Art/Items/Blast/Diluted Blast Potion.png
-::res://Art/Atlas Textures/Items/Blast/Normal/::1753927422
-Normal_Blast_Hover.tres::AtlasTexture/AtlasTexture::4779784927821791829::1753927422::0::1::::<><><>0<>0<><>::uid://nuojpfumkjhm::::res://Art/Items/Blast/Blast Potion.png
-Normal_Blast_Normal.tres::AtlasTexture/AtlasTexture::8248558106889409414::1753927422::0::1::::<><><>0<>0<><>::uid://nuojpfumkjhm::::res://Art/Items/Blast/Blast Potion.png
-::res://Art/Atlas Textures/Items/Blast/Potent/::1753927422
-Potent_Blast_Hover.tres::AtlasTexture/AtlasTexture::7200547260195834044::1753927422::0::1::::<><><>0<>0<><>::uid://bsycrea6r1uhr::::res://Art/Items/Blast/Potent Blast Potion.png
-Potent_Blast_Normal.tres::AtlasTexture/AtlasTexture::4733758358931932845::1753927422::0::1::::<><><>0<>0<><>::uid://bsycrea6r1uhr::::res://Art/Items/Blast/Potent Blast Potion.png
-::res://Art/Atlas Textures/Items/Burn/::1753922563
-::res://Art/Atlas Textures/Items/Burn/Diluted/::1753927422
-Diluted_Burn_Hover.tres::AtlasTexture/AtlasTexture::3187100982044476695::1753927422::0::1::::<><><>0<>0<><>::uid://d30ohor4sttbp::::res://Art/Items/Burn/Diluted Burn Potion.png
-Diluted_Burn_Normal.tres::AtlasTexture/AtlasTexture::2648851285341494414::1753927422::0::1::::<><><>0<>0<><>::uid://d30ohor4sttbp::::res://Art/Items/Burn/Diluted Burn Potion.png
-::res://Art/Atlas Textures/Items/Burn/Normal/::1753927422
-Normal_Burn_Hover.tres::AtlasTexture/AtlasTexture::3155628086320336011::1753927422::0::1::::<><><>0<>0<><>::uid://byf4iralin3fj::::res://Art/Items/Burn/Burn Potion.png
-Normal_Burn_Normal.tres::AtlasTexture/AtlasTexture::6084656452435811927::1753927422::0::1::::<><><>0<>0<><>::uid://byf4iralin3fj::::res://Art/Items/Burn/Burn Potion.png
-::res://Art/Atlas Textures/Items/Burn/Potent/::1753927422
-Potent_Burn_Hover.tres::AtlasTexture/AtlasTexture::1320764971103186021::1753927422::0::1::::<><><>0<>0<><>::uid://cx8gw4vkvlcb2::::res://Art/Items/Burn/Potent Burn Potion.png
-Potent_Burn_Normal.tres::AtlasTexture/AtlasTexture::8238550878792671855::1753927422::0::1::::<><><>0<>0<><>::uid://cx8gw4vkvlcb2::::res://Art/Items/Burn/Potent Burn Potion.png
-::res://Art/Atlas Textures/Items/Corrosive/::1753922772
-::res://Art/Atlas Textures/Items/Corrosive/Diluted/::1753927422
-Diluted_Corrosive_Hover.tres::AtlasTexture/AtlasTexture::2054960105565816531::1753927422::0::1::::<><><>0<>0<><>::uid://jkj2758c4yc5::::res://Art/Items/Corrosive/Diluted Corrosion Potion.png
-Diluted_Corrosive_Normal.tres::AtlasTexture/AtlasTexture::7450312637170444285::1753927422::0::1::::<><><>0<>0<><>::uid://jkj2758c4yc5::::res://Art/Items/Corrosive/Diluted Corrosion Potion.png
-::res://Art/Atlas Textures/Items/Corrosive/Normal/::1753927422
-Normal_Corrosive_Hover.tres::AtlasTexture/AtlasTexture::5754014873221834735::1753927422::0::1::::<><><>0<>0<><>::uid://dgaw23jywqa40::::res://Art/Items/Corrosive/Corrosion Potion.png
-Normal_Corrosive_Normal.tres::AtlasTexture/AtlasTexture::2903771261952048095::1753927422::0::1::::<><><>0<>0<><>::uid://dgaw23jywqa40::::res://Art/Items/Corrosive/Corrosion Potion.png
-::res://Art/Atlas Textures/Items/Corrosive/Potent/::1753927422
-Potent_Corrosive_Hover.tres::AtlasTexture/AtlasTexture::6509195265231627224::1753927422::0::1::::<><><>0<>0<><>::uid://bbv6cjvh84uqp::::res://Art/Items/Corrosive/Potent Corrosion Potion.png
-Potent_Corrosive_Normal.tres::AtlasTexture/AtlasTexture::6275022694866248618::1753927422::0::1::::<><><>0<>0<><>::uid://bbv6cjvh84uqp::::res://Art/Items/Corrosive/Potent Corrosion Potion.png
-::res://Art/Atlas Textures/Items/Electric/::1753922843
-::res://Art/Atlas Textures/Items/Electric/Diluted/::1753927422
-Diluted_Electric_Hover.tres::AtlasTexture/AtlasTexture::5725146122209107410::1753927422::0::1::::<><><>0<>0<><>::uid://bvshdd3divui5::::res://Art/Items/Electric/Diluted Electric Potion.png
-Diluted_Electric_Normal.tres::AtlasTexture/AtlasTexture::2989958082438402204::1753927422::0::1::::<><><>0<>0<><>::uid://bvshdd3divui5::::res://Art/Items/Electric/Diluted Electric Potion.png
-::res://Art/Atlas Textures/Items/Electric/Normal/::1753927423
-Normal_Electric_Hover.tres::AtlasTexture/AtlasTexture::3384867005460428612::1753927422::0::1::::<><><>0<>0<><>::uid://bgd0q8xo4k5pn::::res://Art/Items/Electric/Electric Potion.png
-Normal_Electric_Normal.tres::AtlasTexture/AtlasTexture::1363315143343226098::1753927423::0::1::::<><><>0<>0<><>::uid://bgd0q8xo4k5pn::::res://Art/Items/Electric/Electric Potion.png
-::res://Art/Atlas Textures/Items/Electric/Potent/::1753927423
-Potent_Electric_Hover.tres::AtlasTexture/AtlasTexture::333390738098776369::1753927423::0::1::::<><><>0<>0<><>::uid://c3busbc0jo7lh::::res://Art/Items/Electric/Potent Electric Potion.png
-Potent_Electric_Normal.tres::AtlasTexture/AtlasTexture::2370281237639044240::1753927423::0::1::::<><><>0<>0<><>::uid://c3busbc0jo7lh::::res://Art/Items/Electric/Potent Electric Potion.png
-::res://Art/Atlas Textures/Items/Fire/::1753922954
-::res://Art/Atlas Textures/Items/Fire/Diluted/::1753927423
-Diluted_Fire_Hover.tres::AtlasTexture/AtlasTexture::6576173724082702071::1753927423::0::1::::<><><>0<>0<><>::uid://ca32ghnvywy2b::::res://Art/Items/Fire/Diluted Fire Potion.png
-Diluted_Fire_Normal.tres::AtlasTexture/AtlasTexture::3938468562902792426::1753927423::0::1::::<><><>0<>0<><>::uid://ca32ghnvywy2b::::res://Art/Items/Fire/Diluted Fire Potion.png
-::res://Art/Atlas Textures/Items/Fire/Normal/::1753927423
-Normal_Fire_Hover.tres::AtlasTexture/AtlasTexture::8275140002409032404::1753927423::0::1::::<><><>0<>0<><>::uid://bli0veua5y44g::::res://Art/Items/Fire/Fire Potion.png
-Normal_Fire_Normal.tres::AtlasTexture/AtlasTexture::3437172402786529678::1753927423::0::1::::<><><>0<>0<><>::uid://bli0veua5y44g::::res://Art/Items/Fire/Fire Potion.png
-::res://Art/Atlas Textures/Items/Fire/Potent/::1753927423
-Potent_Fire_Hover.tres::AtlasTexture/AtlasTexture::639152727880288749::1753927423::0::1::::<><><>0<>0<><>::uid://cq4r3n7hsxdce::::res://Art/Items/Fire/Potent Fire Potion.png
-Potent_Fire_Normal.tres::AtlasTexture/AtlasTexture::8884632259154251797::1753927423::0::1::::<><><>0<>0<><>::uid://cq4r3n7hsxdce::::res://Art/Items/Fire/Potent Fire Potion.png
-::res://Art/Atlas Textures/Items/Freeze/::1753921216
-::res://Art/Atlas Textures/Items/Freeze/Diluted/::1753927423
-Diluted_Freeze_Hover.tres::AtlasTexture/AtlasTexture::6150319091218060426::1753927423::0::1::::<><><>0<>0<><>::uid://c7aocxotjnq7v::::res://Art/Items/Freeze/Diluted Freeze Potion.png
-Diluted_Freeze_Normal.tres::AtlasTexture/AtlasTexture::1905554889484512198::1753927423::0::1::::<><><>0<>0<><>::uid://c7aocxotjnq7v::::res://Art/Items/Freeze/Diluted Freeze Potion.png
-::res://Art/Atlas Textures/Items/Freeze/Normal/::1753927423
-Normal_Freeze_Hover.tres::AtlasTexture/AtlasTexture::3263242886785987721::1753927423::0::1::::<><><>0<>0<><>::uid://clso0ty0g3vgb::::res://Art/Items/Freeze/Freeze Potion.png
-Normal_Freeze_Normal.tres::AtlasTexture/AtlasTexture::4644151330422314206::1753927423::0::1::::<><><>0<>0<><>::uid://clso0ty0g3vgb::::res://Art/Items/Freeze/Freeze Potion.png
-::res://Art/Atlas Textures/Items/Freeze/Potent/::1753927423
-Potent_Freeze_Hover.tres::AtlasTexture/AtlasTexture::5980174152609057139::1753927423::0::1::::<><><>0<>0<><>::uid://pit0tcfkgnx8::::res://Art/Items/Freeze/Potent Freeze Potion.png
-Potent_Freeze_Normal.tres::AtlasTexture/AtlasTexture::4390576272903301112::1753927423::0::1::::<><><>0<>0<><>::uid://pit0tcfkgnx8::::res://Art/Items/Freeze/Potent Freeze Potion.png
-::res://Art/Atlas Textures/Items/Health/::1753923118
-::res://Art/Atlas Textures/Items/Health/Diluted/::1753927423
-Diluted_Health_Hover.tres::AtlasTexture/AtlasTexture::3200368282033017896::1753927423::0::1::::<><><>0<>0<><>::uid://6kb8y8jrq78l::::res://Art/Items/Health/Diluted Health Potion.png
-Diluted_Health_Normal.tres::AtlasTexture/AtlasTexture::2571147463633327473::1753927423::0::1::::<><><>0<>0<><>::uid://6kb8y8jrq78l::::res://Art/Items/Health/Diluted Health Potion.png
-::res://Art/Atlas Textures/Items/Health/Normal/::1753927423
-Normal_Health_Hover.tres::AtlasTexture/AtlasTexture::431915441253968472::1753927423::0::1::::<><><>0<>0<><>::uid://b3rwtxffwrlsu::::res://Art/Items/Health/Health Potion.png
-Normal_Health_Normal.tres::AtlasTexture/AtlasTexture::7962011767921690261::1753927423::0::1::::<><><>0<>0<><>::uid://b3rwtxffwrlsu::::res://Art/Items/Health/Health Potion.png
-::res://Art/Atlas Textures/Items/Health/Potent/::1753927423
-Potent_Health_Hover.tres::AtlasTexture/AtlasTexture::8376782476942027584::1753927423::0::1::::<><><>0<>0<><>::uid://bgacq1uhra438::::res://Art/Items/Health/Potent Health Potion.png
-Potent_Health_Normal.tres::AtlasTexture/AtlasTexture::7748144037108666971::1753927423::0::1::::<><><>0<>0<><>::uid://bgacq1uhra438::::res://Art/Items/Health/Potent Health Potion.png
-::res://Art/Atlas Textures/Items/Ice/::1753921220
-::res://Art/Atlas Textures/Items/Ice/Diluted/::1753927423
-Diluted_Ice_Hover.tres::AtlasTexture/AtlasTexture::1537744358620366786::1753927423::0::1::::<><><>0<>0<><>::uid://1u2s3fwhbtvm::::res://Art/Items/Ice/Diluted Ice Potion.png
-Diluted_Ice_Normal.tres::AtlasTexture/AtlasTexture::5127401873502711249::1753927423::0::1::::<><><>0<>0<><>::uid://1u2s3fwhbtvm::::res://Art/Items/Ice/Diluted Ice Potion.png
-::res://Art/Atlas Textures/Items/Ice/Normal/::1753927423
-Normal_Ice_Hover.tres::AtlasTexture/AtlasTexture::8714265584634598835::1753927423::0::1::::<><><>0<>0<><>::uid://p0p6fhy1pkse::::res://Art/Items/Ice/Ice Potion.png
-Normal_Ice_Normal.tres::AtlasTexture/AtlasTexture::5495509422335952808::1753927423::0::1::::<><><>0<>0<><>::uid://p0p6fhy1pkse::::res://Art/Items/Ice/Ice Potion.png
-::res://Art/Atlas Textures/Items/Ice/Potent/::1753927423
-Potent_Ice_Hover.tres::AtlasTexture/AtlasTexture::2352520505234409330::1753927423::0::1::::<><><>0<>0<><>::uid://ba4hwu4xgpm2p::::res://Art/Items/Ice/Potent Ice Potion.png
-Potent_Ice_Normal.tres::AtlasTexture/AtlasTexture::4938443308976620286::1753927423::0::1::::<><><>0<>0<><>::uid://ba4hwu4xgpm2p::::res://Art/Items/Ice/Potent Ice Potion.png
-::res://Art/Atlas Textures/Items/Poison/::1753923434
-::res://Art/Atlas Textures/Items/Poison/Diluted/::1753927423
-Diluted_Poison_Hover.tres::AtlasTexture/AtlasTexture::6372634619481673897::1753927423::0::1::::<><><>0<>0<><>::uid://duj8vlrr6e3g4::::res://Art/Items/Poison/Diluted Poison Potion.png
-Diluted_Poison_Normal.tres::AtlasTexture/AtlasTexture::6441456886663843295::1753927423::0::1::::<><><>0<>0<><>::uid://duj8vlrr6e3g4::::res://Art/Items/Poison/Diluted Poison Potion.png
-::res://Art/Atlas Textures/Items/Poison/Normal/::1753927423
-Normal_Poison_Hover.tres::AtlasTexture/AtlasTexture::8297170547673355859::1753927423::0::1::::<><><>0<>0<><>::uid://bqfx2sc0rn3dq::::res://Art/Items/Poison/Poison Potion.png
-Normal_Poison_Normal.tres::AtlasTexture/AtlasTexture::6846842356712586057::1753927423::0::1::::<><><>0<>0<><>::uid://bqfx2sc0rn3dq::::res://Art/Items/Poison/Poison Potion.png
-::res://Art/Atlas Textures/Items/Poison/Potent/::1753927424
-Potent_Poison_Hover.tres::AtlasTexture/AtlasTexture::6827340275885970790::1753927423::0::1::::<><><>0<>0<><>::uid://bulhjb60s8sxl::::res://Art/Items/Poison/Potent Poison Potion.png
-Potent_Poison_Normal.tres::AtlasTexture/AtlasTexture::6079001463476694867::1753927424::0::1::::<><><>0<>0<><>::uid://bulhjb60s8sxl::::res://Art/Items/Poison/Potent Poison Potion.png
-::res://Art/Atlas Textures/Items/Poisoning/::1753923548
-::res://Art/Atlas Textures/Items/Poisoning/Diluted/::1753927424
-Diluted_Poisoning_Hover.tres::AtlasTexture/AtlasTexture::2817184977922173896::1753927424::0::1::::<><><>0<>0<><>::uid://dm7pvf8d11efp::::res://Art/Items/Poisoning/Diluted Poisoning Potion.png
-Diluted_Poisoning_Normal.tres::AtlasTexture/AtlasTexture::2276110219356834230::1753927424::0::1::::<><><>0<>0<><>::uid://dm7pvf8d11efp::::res://Art/Items/Poisoning/Diluted Poisoning Potion.png
-::res://Art/Atlas Textures/Items/Poisoning/Normal/::1753927424
-Normal_Poisoning_Hover.tres::AtlasTexture/AtlasTexture::525443982300478752::1753927424::0::1::::<><><>0<>0<><>::uid://bom5sa43rhtt0::::res://Art/Items/Poisoning/Poisoning Potion.png
-Normal_Poisoning_Normal.tres::AtlasTexture/AtlasTexture::1205750317175728387::1753927424::0::1::::<><><>0<>0<><>::uid://bom5sa43rhtt0::::res://Art/Items/Poisoning/Poisoning Potion.png
-::res://Art/Atlas Textures/Items/Poisoning/Potent/::1753927424
-Potent_Poisoning_Hover.tres::AtlasTexture/AtlasTexture::7021671239076761771::1753927424::0::1::::<><><>0<>0<><>::uid://baxbegswjmre::::res://Art/Items/Poisoning/Potent Poisoning Potion.png
-Potent_Poisoning_Normal.tres::AtlasTexture/AtlasTexture::7652596865187671763::1753927424::0::1::::<><><>0<>0<><>::uid://baxbegswjmre::::res://Art/Items/Poisoning/Potent Poisoning Potion.png
-::res://Art/Atlas Textures/Items/Shield/::1753923679
-::res://Art/Atlas Textures/Items/Shield/Diluted/::1753927424
-Diluted_Shield_Hover.tres::AtlasTexture/AtlasTexture::6071646012080859867::1753927424::0::1::::<><><>0<>0<><>::uid://cw2tq2p50bqyt::::res://Art/Items/Shield/Diluted Shield Potion.png
-Diluted_Shield_Normal.tres::AtlasTexture/AtlasTexture::1305126931450352325::1753927424::0::1::::<><><>0<>0<><>::uid://cw2tq2p50bqyt::::res://Art/Items/Shield/Diluted Shield Potion.png
-::res://Art/Atlas Textures/Items/Shield/Normal/::1753927424
-Normal_Shield_Hover.tres::AtlasTexture/AtlasTexture::5307126402770181287::1753927424::0::1::::<><><>0<>0<><>::uid://ba63si38w6e6b::::res://Art/Items/Shield/Shield Potion.png
-Normal_Shield_Normal.tres::AtlasTexture/AtlasTexture::3982460259732313576::1753927424::0::1::::<><><>0<>0<><>::uid://ba63si38w6e6b::::res://Art/Items/Shield/Shield Potion.png
-::res://Art/Atlas Textures/Items/Shield/Potent/::1753927424
-Potent_Shield_Hover.tres::AtlasTexture/AtlasTexture::794392397143380093::1753927424::0::1::::<><><>0<>0<><>::uid://o64247jctvrt::::res://Art/Items/Shield/Potent Shield Potion.png
-Potent_Shield_Normal.tres::AtlasTexture/AtlasTexture::6337020712329091109::1753927424::0::1::::<><><>0<>0<><>::uid://ba63si38w6e6b::::res://Art/Items/Shield/Shield Potion.png
-::res://Art/Atlas Textures/Items/Slowness/::1753923851
-::res://Art/Atlas Textures/Items/Slowness/Diluted/::1753927424
-Diluted_Slowness_Hover.tres::AtlasTexture/AtlasTexture::459421442089152010::1753927424::0::1::::<><><>0<>0<><>::uid://bi27q7mm50xnx::::res://Art/Items/Slowness/Diluted Slowness Potion.png
-Diluted_Slowness_Normal.tres::AtlasTexture/AtlasTexture::6000738738831562490::1753927424::0::1::::<><><>0<>0<><>::uid://bi27q7mm50xnx::::res://Art/Items/Slowness/Diluted Slowness Potion.png
-::res://Art/Atlas Textures/Items/Slowness/Normal/::1753927424
-Normal_Slowness_Hover.tres::AtlasTexture/AtlasTexture::6013559706256285510::1753927424::0::1::::<><><>0<>0<><>::uid://dwxn1x12s4lwv::::res://Art/Items/Slowness/Slowness Potion.png
-Normal_Slowness_Normal.tres::AtlasTexture/AtlasTexture::1428720711316640420::1753927424::0::1::::<><><>0<>0<><>::uid://dwxn1x12s4lwv::::res://Art/Items/Slowness/Slowness Potion.png
-::res://Art/Atlas Textures/Items/Slowness/Potent/::1753927424
-Potent_Slowness_Hover.tres::AtlasTexture/AtlasTexture::40193739763777951::1753927424::0::1::::<><><>0<>0<><>::uid://dwan334axweam::::res://Art/Items/Slowness/Potent Slowness Potion.png
-Potent_Slowness_Normal.tres::AtlasTexture/AtlasTexture::3747334048965814787::1753927424::0::1::::<><><>0<>0<><>::uid://dwan334axweam::::res://Art/Items/Slowness/Potent Slowness Potion.png
-::res://Art/Atlas Textures/Items/Static/::1753921227
-::res://Art/Atlas Textures/Items/Static/Diluted/::1753927424
-Diluted_Static_Hover.tres::AtlasTexture/AtlasTexture::5642081174631223725::1753927424::0::1::::<><><>0<>0<><>::uid://b8l1jtplg8ldv::::res://Art/Items/Static/Diluted Static Potion.png
-Diluted_Static_Normal.tres::AtlasTexture/AtlasTexture::8909090365253743074::1753927424::0::1::::<><><>0<>0<><>::uid://b8l1jtplg8ldv::::res://Art/Items/Static/Diluted Static Potion.png
-::res://Art/Atlas Textures/Items/Static/Normal/::1753927424
-Normal_Static_Hover.tres::AtlasTexture/AtlasTexture::5049652392491270045::1753927424::0::1::::<><><>0<>0<><>::uid://ca3fdvpkniulg::::res://Art/Items/Static/Static Potion.png
-Normal_Static_Normal.tres::AtlasTexture/AtlasTexture::6609003160241510666::1753927424::0::1::::<><><>0<>0<><>::uid://ca3fdvpkniulg::::res://Art/Items/Static/Static Potion.png
-::res://Art/Atlas Textures/Items/Static/Potent/::1753927424
-Potent_Static_Hover.tres::AtlasTexture/AtlasTexture::8886349352597616257::1753927424::0::1::::<><><>0<>0<><>::uid://ckw5asmvqfrev::::res://Art/Items/Static/Potent Static Potion.png
-Potent_Static_Normal.tres::AtlasTexture/AtlasTexture::840523777262480478::1753927424::0::1::::<><><>0<>0<><>::uid://ckw5asmvqfrev::::res://Art/Items/Static/Potent Static Potion.png
-::res://Art/Atlas Textures/Items/Strength/::1753924055
-::res://Art/Atlas Textures/Items/Strength/Diluted/::1753927424
-Diluted_Strength_Hover.tres::AtlasTexture/AtlasTexture::3644759947557457610::1753927424::0::1::::<><><>0<>0<><>::uid://rb4mploe3uya::::res://Art/Items/Strength/Diluted Strength Potion.png
-Diluted_Strength_Normal.tres::AtlasTexture/AtlasTexture::323750034022168119::1753927424::0::1::::<><><>0<>0<><>::uid://rb4mploe3uya::::res://Art/Items/Strength/Diluted Strength Potion.png
-::res://Art/Atlas Textures/Items/Strength/Normal/::1753927424
-Normal_Strength_Hover.tres::AtlasTexture/AtlasTexture::5178374425443385365::1753927424::0::1::::<><><>0<>0<><>::uid://cljx6wtlsibhv::::res://Art/Items/Strength/Strength Potion.png
-Normal_Strength_Normal.tres::AtlasTexture/AtlasTexture::6500273661248501428::1753927424::0::1::::<><><>0<>0<><>::uid://cljx6wtlsibhv::::res://Art/Items/Strength/Strength Potion.png
-::res://Art/Atlas Textures/Items/Strength/Potent/::1753927424
-Potent_Strength_Hover.tres::AtlasTexture/AtlasTexture::5799661973194228928::1753927424::0::1::::<><><>0<>0<><>::uid://cpeqpix1njay7::::res://Art/Items/Strength/Potent Strength Potion.png
-Potent_Strength_Normal.tres::AtlasTexture/AtlasTexture::6094330346574803230::1753927424::0::1::::<><><>0<>0<><>::uid://cpeqpix1njay7::::res://Art/Items/Strength/Potent Strength Potion.png
-::res://Art/Atlas Textures/Items/Swiftness/::1753924138
-::res://Art/Atlas Textures/Items/Swiftness/Diluted/::1753927424
-Diluted_Swiftness_Hover.tres::AtlasTexture/AtlasTexture::8391560013009996270::1753927424::0::1::::<><><>0<>0<><>::uid://f0ov1rgcg7dy::::res://Art/Items/Swiftness/Diluted Swiftness Potion.png
-Diluted_Swiftness_Normal.tres::AtlasTexture/AtlasTexture::2327171169018016533::1753927424::0::1::::<><><>0<>0<><>::uid://f0ov1rgcg7dy::::res://Art/Items/Swiftness/Diluted Swiftness Potion.png
-::res://Art/Atlas Textures/Items/Swiftness/Normal/::1753927425
-Normal_Swiftness_Hover.tres::AtlasTexture/AtlasTexture::4918302874037835651::1753927425::0::1::::<><><>0<>0<><>::uid://cdwlxfgajvc8x::::res://Art/Items/Swiftness/Swiftness Potion.png
-Normal_Swiftness_Normal.tres::AtlasTexture/AtlasTexture::4921778209125920851::1753927425::0::1::::<><><>0<>0<><>::uid://cdwlxfgajvc8x::::res://Art/Items/Swiftness/Swiftness Potion.png
-::res://Art/Atlas Textures/Items/Swiftness/Potent/::1753927425
-Potent_Swiftness_Hover.tres::AtlasTexture/AtlasTexture::8717534085157772946::1753927425::0::1::::<><><>0<>0<><>::uid://cvgkmnj44wfhp::::res://Art/Items/Swiftness/Potent Swiftness Potion.png
-Potent_Swiftness_Normal.tres::AtlasTexture/AtlasTexture::8583104668770089084::1753927425::0::1::::<><><>0<>0<><>::uid://cvgkmnj44wfhp::::res://Art/Items/Swiftness/Potent Swiftness Potion.png
-::res://Art/Atlas Textures/Items/Vulnerability/::1753924223
-::res://Art/Atlas Textures/Items/Vulnerability/Diluted/::1753927425
-Diluted_Vulnerability_Hover.tres::AtlasTexture/AtlasTexture::8085908352631454902::1753927425::0::1::::<><><>0<>0<><>::uid://b6ql22stfd58n::::res://Art/Items/Vulnerability/Diluted Vulnerability Potion.png
-Diluted_Vulnerability_Normal.tres::AtlasTexture/AtlasTexture::368164803289878584::1753927425::0::1::::<><><>0<>0<><>::uid://b6ql22stfd58n::::res://Art/Items/Vulnerability/Diluted Vulnerability Potion.png
-::res://Art/Atlas Textures/Items/Vulnerability/Normal/::1753927425
-Normal_Vulnerability_Hover.tres::AtlasTexture/AtlasTexture::2835360756955281407::1753927425::0::1::::<><><>0<>0<><>::uid://dgv6rpybcoipp::::res://Art/Items/Vulnerability/Vulnerability Potion.png
-Normal_Vulnerability_Normal.tres::AtlasTexture/AtlasTexture::6719011983276060392::1753927425::0::1::::<><><>0<>0<><>::uid://dgv6rpybcoipp::::res://Art/Items/Vulnerability/Vulnerability Potion.png
-::res://Art/Atlas Textures/Items/Vulnerability/Potent/::1753927425
-Potent_Vulnerability_Hover.tres::AtlasTexture/AtlasTexture::3529406364245218396::1753927425::0::1::::<><><>0<>0<><>::uid://bc23wp0mxfxl7::::res://Art/Items/Vulnerability/Potent Vulnerability Potion.png
-Potent_Vulnerability_Normal.tres::AtlasTexture/AtlasTexture::1715566152234202455::1753927425::0::1::::<><><>0<>0<><>::uid://bc23wp0mxfxl7::::res://Art/Items/Vulnerability/Potent Vulnerability Potion.png
-::res://Art/Atlas Textures/Items/Weakness/::1753921240
-::res://Art/Atlas Textures/Items/Weakness/Diluted/::1753927425
-Diluted_Weakness_Hover.tres::AtlasTexture/AtlasTexture::4270322674042304135::1753927425::0::1::::<><><>0<>0<><>::uid://kslvd5htj2w5::::res://Art/Items/Weakness/Diluted Weakness Potion.png
-Diluted_Weakness_Normal.tres::AtlasTexture/AtlasTexture::6717790745643582809::1753927425::0::1::::<><><>0<>0<><>::uid://kslvd5htj2w5::::res://Art/Items/Weakness/Diluted Weakness Potion.png
-::res://Art/Atlas Textures/Items/Weakness/Normal/::1753927425
-Normal_Weakness_Hover.tres::AtlasTexture/AtlasTexture::2553108654470813206::1753927425::0::1::::<><><>0<>0<><>::uid://ppa6y7g5kpdk::::res://Art/Items/Weakness/Weakness Potion.png
-Normal_Weakness_Normal.tres::AtlasTexture/AtlasTexture::3274754483854181726::1753927425::0::1::::<><><>0<>0<><>::uid://ppa6y7g5kpdk::::res://Art/Items/Weakness/Weakness Potion.png
-::res://Art/Atlas Textures/Items/Weakness/Potent/::1753927425
-Potent_Weakness_Hover.tres::AtlasTexture/AtlasTexture::4785927945261196041::1753927425::0::1::::<><><>0<>0<><>::uid://qv4dq18m7siw::::res://Art/Items/Weakness/Potent Weakness Potion.png
-Potent_Weakness_Normal.tres::AtlasTexture/AtlasTexture::3063202605830402795::1753927425::0::1::::<><><>0<>0<><>::uid://qv4dq18m7siw::::res://Art/Items/Weakness/Potent Weakness Potion.png
-::res://Art/Atlas Textures/Items/Wind/::1753924399
-::res://Art/Atlas Textures/Items/Wind/Diluted/::1753927425
-Diluted_Wind_Hover.tres::AtlasTexture/AtlasTexture::6402452287293485852::1753927425::0::1::::<><><>0<>0<><>::uid://ddulap3mplnm8::::res://Art/Items/Wind/Diluted Wind Potion.png
-Diluted_Wind_Normal.tres::AtlasTexture/AtlasTexture::6743263566904543369::1753927425::0::1::::<><><>0<>0<><>::uid://ddulap3mplnm8::::res://Art/Items/Wind/Diluted Wind Potion.png
-::res://Art/Atlas Textures/Items/Wind/Normal/::1753927425
-Normal_Wind_Hover.tres::AtlasTexture/AtlasTexture::2576717302746091897::1753927425::0::1::::<><><>0<>0<><>::uid://brsn8qgocnder::::res://Art/Items/Wind/Wind Potion.png
-Normal_Wind_Normal.tres::AtlasTexture/AtlasTexture::5487201326908690480::1753927425::0::1::::<><><>0<>0<><>::uid://brsn8qgocnder::::res://Art/Items/Wind/Wind Potion.png
-::res://Art/Atlas Textures/Items/Wind/Potent/::1753927425
-Potent_Wind_Hover.tres::AtlasTexture/AtlasTexture::6146555355157727168::1753927425::0::1::::<><><>0<>0<><>::uid://c3qpr3j16b7bv::::res://Art/Items/Wind/Potent Wind Potion.png
-Potent_Wind_Normal.tres::AtlasTexture/AtlasTexture::3253340435522018798::1753927425::0::1::::<><><>0<>0<><>::uid://c3qpr3j16b7bv::::res://Art/Items/Wind/Potent Wind Potion.png
-::res://Art/Atlas Textures/UI/::1753851061
-::res://Art/Atlas Textures/UI/down_arrow/::1753154233
-down_arrow_disabled.tres::AtlasTexture/AtlasTexture::4704173652980983386::1753154233::0::1::::<><><>0<>0<><>::uid://dj7xwf1fpb4ye::::res://Art/UI/down_arrow.png
-down_arrow_hover.tres::AtlasTexture/AtlasTexture::4861890113974260749::1753154233::0::1::::<><><>0<>0<><>::uid://dj7xwf1fpb4ye::::res://Art/UI/down_arrow.png
-down_arrow_normal.tres::AtlasTexture/AtlasTexture::881377901426043962::1753154233::0::1::::<><><>0<>0<><>::uid://dj7xwf1fpb4ye::::res://Art/UI/down_arrow.png
-down_arrow_pressed.tres::AtlasTexture/AtlasTexture::8997636227821584161::1753154233::0::1::::<><><>0<>0<><>::uid://dj7xwf1fpb4ye::::res://Art/UI/down_arrow.png
-::res://Art/Atlas Textures/UI/item_slot/::1753154233
-item_slot_hover.tres::AtlasTexture/AtlasTexture::9085434031736928507::1753154233::0::1::::<><><>0<>0<><>::uid://433dga1o4twv::::res://Art/UI/item_slot.png
-item_slot_normal.tres::AtlasTexture/AtlasTexture::1838494449015364001::1753154233::0::1::::<><><>0<>0<><>::uid://433dga1o4twv::::res://Art/UI/item_slot.png
-::res://Art/Atlas Textures/UI/map_buttons/::1753851101
-Battle-1.png.png::CompressedTexture2D/CompressedTexture2D::4578794061521812935::1753851061::1753851101::1::::<><><>0<>0<>d210ace97de0b8802630165265d620b3<>res://.godot/imported/Battle-1.png.png-2fbe2da69abbe71c1bdce1534c4858c0.ctex::
-Battle-2.png.png::CompressedTexture2D/CompressedTexture2D::7445442723394588051::1753851061::1753851101::1::::<><><>0<>0<>f94ed8e2dc9dfd07acccdaff2205b723<>res://.godot/imported/Battle-2.png.png-3ab094fb009413aa2ea52f6589498059.ctex::
-Battle-3.png.png::CompressedTexture2D/CompressedTexture2D::1783145764320058434::1753851061::1753851101::1::::<><><>0<>0<>7a7d22e226f6e0a0f41f67f554f20fa6<>res://.godot/imported/Battle-3.png.png-702cf9ce7a8b3c956b0a33fa58cfe1f6.ctex::
-Encounter-1.png.png::CompressedTexture2D/CompressedTexture2D::3034495018590123893::1753851061::1753851101::1::::<><><>0<>0<>48cd70ac974aac073cea82a1054d8f1d<>res://.godot/imported/Encounter-1.png.png-1aa061074842495f946c1c0869d608e4.ctex::
-Encounter-2.png.png::CompressedTexture2D/CompressedTexture2D::1319770925273232165::1753851061::1753851100::1::::<><><>0<>0<>e88f29be14aa14377f3802e28b158b68<>res://.godot/imported/Encounter-2.png.png-d41f13c880126b920357568488b365a0.ctex::
-Encounter-3.png.png::CompressedTexture2D/CompressedTexture2D::1777484702325319883::1753851061::1753851101::1::::<><><>0<>0<>20b3369a2db835df52504f4b46a46bc5<>res://.godot/imported/Encounter-3.png.png-f4a2e40504cd87ce78711885e0473ad7.ctex::
-Final Battle-1.png.png::CompressedTexture2D/CompressedTexture2D::2069732515578141470::1753851061::1753851101::1::::<><><>0<>0<>92998cebe1c768431c327fd28bf61981<>res://.godot/imported/Final Battle-1.png.png-42c70ea39628bb20fec577324c763d8d.ctex::
-Final Battle-2.png.png::CompressedTexture2D/CompressedTexture2D::3157884494708891237::1753851061::1753851101::1::::<><><>0<>0<>7bd2625c883802c6224fc2afaad7213d<>res://.godot/imported/Final Battle-2.png.png-0bbc58ada198d14edc1a59f50a62c299.ctex::
-Final Battle-3.png.png::CompressedTexture2D/CompressedTexture2D::2558819774516446000::1753851061::1753851101::1::::<><><>0<>0<>f41c3332764e00025ee9949eae3bce7d<>res://.godot/imported/Final Battle-3.png.png-12c4b32142747c861eff5ff804ceb4bf.ctex::
-playerStart-1.png.png::CompressedTexture2D/CompressedTexture2D::1136656773831536292::1753851061::1753851101::1::::<><><>0<>0<>3ede038d779e0386f5e872f2f363207a<>res://.godot/imported/playerStart-1.png.png-e19e0da86717a40a128cd5b0cdf94bfd.ctex::
-playerStart-2.png.png::CompressedTexture2D/CompressedTexture2D::4819331040346782632::1753851061::1753851101::1::::<><><>0<>0<>233d4e9d166eaf1a549d09ad3a21bd7e<>res://.godot/imported/playerStart-2.png.png-521777cdbcbd77e8236f2984cf31cacc.ctex::
-playerStart-3.png.png::CompressedTexture2D/CompressedTexture2D::8522176330570744219::1753851061::1753851101::1::::<><><>0<>0<>53c19cc847c128d85e3716db8b2add4c<>res://.godot/imported/playerStart-3.png.png-d649b6d565ab2abe2a7263a2f6e765f6.ctex::
-Random-1.png.png::CompressedTexture2D/CompressedTexture2D::3140698471571617406::1753851061::1753851100::1::::<><><>0<>0<>4ab16d9c4d141586fa5df223376d82a9<>res://.godot/imported/Random-1.png.png-f57b27b7de498db23b462c8c57245f60.ctex::
-Random-2.png.png::CompressedTexture2D/CompressedTexture2D::5323112213859612464::1753851061::1753851101::1::::<><><>0<>0<>4a92f11b03c0b49c54487527c6c92516<>res://.godot/imported/Random-2.png.png-dd861ae72827b3a6f76e482cda1bb8e1.ctex::
-Random-3.png.png::CompressedTexture2D/CompressedTexture2D::2069998020197819662::1753851061::1753851101::1::::<><><>0<>0<>7bfbfd0ac5b003a9211259a0ba6b4d4c<>res://.godot/imported/Random-3.png.png-fa94468ff9dd6df99f797b6ac66a9323.ctex::
-::res://Art/Atlas Textures/UI/next_button/::1753154233
-hover_button_pressed.tres::AtlasTexture/AtlasTexture::204319332114293448::1753154233::0::1::::<><><>0<>0<><>::uid://ng81v6xoo5nd::::res://Art/UI/next_button.png
-next_button_disabled.tres::AtlasTexture/AtlasTexture::984752372013790030::1753154233::0::1::::<><><>0<>0<><>::uid://ng81v6xoo5nd::::res://Art/UI/next_button.png
-next_button_hover.tres::AtlasTexture/AtlasTexture::8688844483788317358::1753154233::0::1::::<><><>0<>0<><>::uid://ng81v6xoo5nd::::res://Art/UI/next_button.png
-next_button_normal.tres::AtlasTexture/AtlasTexture::7418559828174482344::1753154233::0::1::::<><><>0<>0<><>::uid://ng81v6xoo5nd::::res://Art/UI/next_button.png
-::res://Art/Atlas Textures/UI/pause_button/::1753154233
-pause_button_hover.tres::AtlasTexture/AtlasTexture::5091147998019530093::1753154233::0::1::::<><><>0<>0<><>::uid://dgvnrt60vve0m::::res://Art/UI/pause_button.png
-pause_button_normal.tres::AtlasTexture/AtlasTexture::1208006574843520899::1753154233::0::1::::<><><>0<>0<><>::uid://dgvnrt60vve0m::::res://Art/UI/pause_button.png
-pause_button_pressed.tres::AtlasTexture/AtlasTexture::6829498174153446734::1753154233::0::1::::<><><>0<>0<><>::uid://dgvnrt60vve0m::::res://Art/UI/pause_button.png
-::res://Art/Atlas Textures/UI/run_button/::1753154233
-rune_button_hover.tres::AtlasTexture/AtlasTexture::7975522527317091036::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_normal.tres::AtlasTexture/AtlasTexture::3233885300309097363::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed0.tres::AtlasTexture/AtlasTexture::550707287225795273::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed1.tres::AtlasTexture/AtlasTexture::3522675596717205362::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed2.tres::AtlasTexture/AtlasTexture::2657552852134809947::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed3.tres::AtlasTexture/AtlasTexture::4325387782303595021::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed4.tres::AtlasTexture/AtlasTexture::45355983922069135::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed5.tres::AtlasTexture/AtlasTexture::6228549608555617333::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed6.tres::AtlasTexture/AtlasTexture::6242219299935430787::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed7.tres::AtlasTexture/AtlasTexture::7842713613650990786::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed8.tres::AtlasTexture/AtlasTexture::8451151203020427145::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed9.tres::AtlasTexture/AtlasTexture::5421505096147976823::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed10.tres::AtlasTexture/AtlasTexture::6828137370801666010::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed11.tres::AtlasTexture/AtlasTexture::8824067628577075831::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed12.tres::AtlasTexture/AtlasTexture::7904816694868033673::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed13.tres::AtlasTexture/AtlasTexture::1943820087952226577::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed14.tres::AtlasTexture/AtlasTexture::7738100763066807477::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed15.tres::AtlasTexture/AtlasTexture::5041668915833011773::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-run_button_pressed16.tres::AtlasTexture/AtlasTexture::6485142992040628961::1753154233::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
-::res://Art/Atlas Textures/UI/up_arrow/::1753154233
-up_arrows_disabled.tres::AtlasTexture/AtlasTexture::9069305878406076319::1753154233::0::1::::<><><>0<>0<><>::uid://dtygi4j6skuf8::::res://Art/UI/up_button.png
-up_arrow_hover.tres::AtlasTexture/AtlasTexture::1807190135701761403::1753154233::0::1::::<><><>0<>0<><>::uid://dtygi4j6skuf8::::res://Art/UI/up_button.png
-up_arrow_normal.tres::AtlasTexture/AtlasTexture::6258922603020098903::1753154233::0::1::::<><><>0<>0<><>::uid://dtygi4j6skuf8::::res://Art/UI/up_button.png
-up_arrow_pressed.tres::AtlasTexture/AtlasTexture::7386494656311205928::1753154233::0::1::::<><><>0<>0<><>::uid://dtygi4j6skuf8::::res://Art/UI/up_button.png
-::res://Art/Enemies/::1753928302
-Ampcreste.png::CompressedTexture2D/CompressedTexture2D::261154233608622161::1753928301::1753928302::1::::<><><>0<>0<>5fbc52dac84d34a4f2996920ce070858<>res://.godot/imported/Ampcreste.png-cdf534cb75b6b3a6213313f40ff679a6.ctex::
-Bristle.png::CompressedTexture2D/CompressedTexture2D::6875307554933053357::1753928301::1753928302::1::::<><><>0<>0<>13c98da548b97751e3a0a07ebd68df47<>res://.godot/imported/Bristle.png-758553f31a95433a65bf0989d8493c0d.ctex::
-Dionydra.png::CompressedTexture2D/CompressedTexture2D::5845479351959317601::1753928301::1753928302::1::::<><><>0<>0<>d3a8ada180b40e112c1452dd7868c0b9<>res://.godot/imported/Dionydra.png-e09d92c58986b2b1337645079a92649c.ctex::
-Elemental Amalgamate.png::CompressedTexture2D/CompressedTexture2D::3269619925860574292::1753928301::1753928302::1::::<><><>0<>0<>0f414235502a435a0237757a72a61c6c<>res://.godot/imported/Elemental Amalgamate.png-cd23c89520e3f223a30ffb12cc060556.ctex::
-Fire Elemenetal.png::CompressedTexture2D/CompressedTexture2D::2866877778274797610::1753928301::1753928302::1::::<><><>0<>0<>69be8cfc66e7309e594a56d65cfdd97b<>res://.godot/imported/Fire Elemenetal.png-f1e0bf398c61129f18e740abdc15f78d.ctex::
-Giant Bat.png::CompressedTexture2D/CompressedTexture2D::5637716962895548811::1753928301::1753928302::1::::<><><>0<>0<>11eb1d812b10508a2c5683233c1a6644<>res://.godot/imported/Giant Bat.png-dd01b025cf1fb95792478569481fac04.ctex::
-Giant Eagle.png::CompressedTexture2D/CompressedTexture2D::7789089117600832565::1753928301::1753928302::1::::<><><>0<>0<>da89086786222b6fc89e64a3b17a607c<>res://.godot/imported/Giant Eagle.png-b10bdd97659b7cd7b8269b283e8ef1e4.ctex::
-Ice Elemental.png::CompressedTexture2D/CompressedTexture2D::6583852101195895912::1753928301::1753928302::1::::<><><>0<>0<>ccdee4a710df99254f2469779ffe7933<>res://.godot/imported/Ice Elemental.png-4121d669e2368954d441b767f3b29e05.ctex::
-Kobold.png::CompressedTexture2D/CompressedTexture2D::3421218731254469831::1753928301::1753928302::1::::<><><>0<>0<>335dee75a14d137406735c050c6d9ea2<>res://.godot/imported/Kobold.png-eb13f42ffdcaa8a31aaa0bd43cca691d.ctex::
-Lightning Elemental.png::CompressedTexture2D/CompressedTexture2D::1427236287535266095::1753928301::1753928302::1::::<><><>0<>0<>327add1f165e83c60b92cfdad3591173<>res://.godot/imported/Lightning Elemental.png-eee6938f698e112cf44a10f6fd1f9ba7.ctex::
-Necrodrake Arm (Left).png::CompressedTexture2D/CompressedTexture2D::7695034723432344342::1753928301::1753928302::1::::<><><>0<>0<>0e226efe19361e5a0282c2af6b33879e<>res://.godot/imported/Necrodrake Arm (Left).png-150f19bbaf6c306ce681bde83d2827f5.ctex::
-Necrodrake Arm (Right).png::CompressedTexture2D/CompressedTexture2D::7303959082915633717::1753928301::1753928302::1::::<><><>0<>0<>1465274c3f5da82a0accd8339ee0c85f<>res://.godot/imported/Necrodrake Arm (Right).png-9069955f46b54e8d0200dd6af66bef6c.ctex::
-Necrodrake Head.png::CompressedTexture2D/CompressedTexture2D::7905124376938395327::1753928301::1753928302::1::::<><><>0<>0<>183fe89a6b8f121982f653a8ac966e6f<>res://.godot/imported/Necrodrake Head.png-aa2c8b84dffc60e1c2cde96f0447cd42.ctex::
-Noxious Shroom.png::CompressedTexture2D/CompressedTexture2D::3712123206112589155::1753928301::1753928302::1::::<><><>0<>0<>8dc76697c1f87f12658a1f42929915d3<>res://.godot/imported/Noxious Shroom.png-7cefbbad74427cc678ff5bf81fa8a126.ctex::
-Oozeweaver.png::CompressedTexture2D/CompressedTexture2D::6869994031799532131::1753928301::1753928302::1::::<><><>0<>0<>244dea2c166ec622a641faada5ada78d<>res://.godot/imported/Oozeweaver.png-8e7b3d43812e9cbfa7594ba437ce84f3.ctex::
-Skeleton Mage.png::CompressedTexture2D/CompressedTexture2D::4677597058836595936::1753928301::1753928302::1::::<><><>0<>0<>6bbe098370b288f516c12117d09a7606<>res://.godot/imported/Skeleton Mage.png-5d48d8b00e0c94e5940ac5e09ed6d996.ctex::
-Skeleton Warrior.png::CompressedTexture2D/CompressedTexture2D::5166946011789383761::1753928301::1753928302::1::::<><><>0<>0<>ff09319185224855d5ed95e5358848fe<>res://.godot/imported/Skeleton Warrior.png-0305af3801ad4c581d25706b390c5d50.ctex::
-Slime.png::CompressedTexture2D/CompressedTexture2D::7385962612398910084::1753928301::1753928302::1::::<><><>0<>0<>a41484528b69cae63ef6e812c580a33e<>res://.godot/imported/Slime.png-efac08e4852f7f4799011e92bd581b83.ctex::
-Whipkin.png::CompressedTexture2D/CompressedTexture2D::6759757968049811134::1753928301::1753928302::1::::<><><>0<>0<>38abdef1caa723782e73262ef91d9e61<>res://.godot/imported/Whipkin.png-d3ebb92b64bcd30cafab5f4e1db299f6.ctex::
-::res://Art/Items/::1753921446
-::res://Art/Items/Acid/::1753921662
-Acid Potion.png::CompressedTexture2D/CompressedTexture2D::8454892799010638617::1753921662::1753921662::1::::<><><>0<>0<>46ea47bcf77278fc2338341a8f961023<>res://.godot/imported/Acid Potion.png-0efe63253b829e2f4edda4abc8ddca12.ctex::
-Diluted Acid Potion.png::CompressedTexture2D/CompressedTexture2D::1563387681660305517::1753921662::1753921662::1::::<><><>0<>0<>44b9973bb4a9de8cf93299f56e166cd9<>res://.godot/imported/Diluted Acid Potion.png-5db3e9a5df6370f3ecc1908c2f40b609.ctex::
-Potent Acid Potion.png::CompressedTexture2D/CompressedTexture2D::893497535825573206::1753921662::1753921662::1::::<><><>0<>0<>8f6d9cdacdf9d8234dced54b999d94a2<>res://.godot/imported/Potent Acid Potion.png-5a71aeb8e09847cc97c1a16048472650.ctex::
-::res://Art/Items/Blast/::1753921671
-Blast Potion.png::CompressedTexture2D/CompressedTexture2D::954609428918913518::1753921671::1753921671::1::::<><><>0<>0<>a17784316ac237d67085f492f6c320a9<>res://.godot/imported/Blast Potion.png-558941070c93c8b31d4d8830eced1fad.ctex::
-Diluted Blast Potion.png::CompressedTexture2D/CompressedTexture2D::4500697309253286951::1753921671::1753921671::1::::<><><>0<>0<>f9ae6ca56565a2ee803135e0ecf2fe0d<>res://.godot/imported/Diluted Blast Potion.png-6e901761b2171cee49a44022b80371f6.ctex::
-Potent Blast Potion.png::CompressedTexture2D/CompressedTexture2D::3699516939282696463::1753921671::1753921671::1::::<><><>0<>0<>4b64d9095df7e9151add4087b7bf101f<>res://.godot/imported/Potent Blast Potion.png-feab4911284daa537f3ae0c69e95767d.ctex::
-::res://Art/Items/Burn/::1753921681
-Burn Potion.png::CompressedTexture2D/CompressedTexture2D::4083050792325620075::1753921680::1753921681::1::::<><><>0<>0<>8479426483ac5c70e8f398da15c5566d<>res://.godot/imported/Burn Potion.png-3e45b7ae95cb0af985311c59ee0de708.ctex::
-Diluted Burn Potion.png::CompressedTexture2D/CompressedTexture2D::9177022418182796309::1753921680::1753921681::1::::<><><>0<>0<>ededf78e657e2919958a43d8f0e2d159<>res://.godot/imported/Diluted Burn Potion.png-5e1708266fee55e98816a609772307a0.ctex::
-Potent Burn Potion.png::CompressedTexture2D/CompressedTexture2D::6455714382468324973::1753921680::1753921681::1::::<><><>0<>0<>3fdfe9a7a990c41b397d2a55865b57e6<>res://.godot/imported/Potent Burn Potion.png-320524dbaaec8dfafa977e1adffb39df.ctex::
-::res://Art/Items/Corrosive/::1753921687
-Corrosion Potion.png::CompressedTexture2D/CompressedTexture2D::7581780588861315091::1753921686::1753921687::1::::<><><>0<>0<>db5fa9caf725ce1bb541021be329e36b<>res://.godot/imported/Corrosion Potion.png-ef32095d6e827c582865b31cdd1d1c0d.ctex::
-Diluted Corrosion Potion.png::CompressedTexture2D/CompressedTexture2D::652939768247765994::1753921686::1753921687::1::::<><><>0<>0<>f9088fc8b1a6d2be2f00cb2836f57e6a<>res://.godot/imported/Diluted Corrosion Potion.png-3ea7f8cc3ed6a7a018b41783bfb9a5c2.ctex::
-Potent Corrosion Potion.png::CompressedTexture2D/CompressedTexture2D::2501847764044313495::1753921686::1753921687::1::::<><><>0<>0<>9f0406daecf0fa77d9810fbb775712f2<>res://.godot/imported/Potent Corrosion Potion.png-bb996c3a8a29113010baadb4750b7cda.ctex::
-::res://Art/Items/Electric/::1753921694
-Diluted Electric Potion.png::CompressedTexture2D/CompressedTexture2D::3897975776968356870::1753921694::1753921694::1::::<><><>0<>0<>331515e23c82292fbf3a3a16b7abb53d<>res://.godot/imported/Diluted Electric Potion.png-ca03b875072ff6c47827eea4c30676bd.ctex::
-Electric Potion.png::CompressedTexture2D/CompressedTexture2D::2815295145781448867::1753921694::1753921694::1::::<><><>0<>0<>d208547dd7d3284391925748b73cd3da<>res://.godot/imported/Electric Potion.png-f391e6a2582804a1accd4e7655301e2b.ctex::
-Potent Electric Potion.png::CompressedTexture2D/CompressedTexture2D::6741439907912245277::1753921694::1753921694::1::::<><><>0<>0<>c6fd6ac0559b6bcfaa6406d51d278151<>res://.godot/imported/Potent Electric Potion.png-b382cc3122c192293a95c8e4f355d626.ctex::
-::res://Art/Items/Fire/::1753921701
-Diluted Fire Potion.png::CompressedTexture2D/CompressedTexture2D::4832294406801017479::1753921701::1753921701::1::::<><><>0<>0<>54c345f88715e95930dae76720a37abc<>res://.godot/imported/Diluted Fire Potion.png-acb6854048edcd4445a9d609e82f61d1.ctex::
-Fire Potion.png::CompressedTexture2D/CompressedTexture2D::3176568653265656692::1753921701::1753921701::1::::<><><>0<>0<>0c69b2157c0a446a45e788692b1c354f<>res://.godot/imported/Fire Potion.png-1e64591c37b4d7a61696fc765bf9507c.ctex::
-Potent Fire Potion.png::CompressedTexture2D/CompressedTexture2D::5956812744149123468::1753921701::1753921701::1::::<><><>0<>0<>424057bf46292e71064dd0976c87fe28<>res://.godot/imported/Potent Fire Potion.png-0bb53e4ebd0a259545963f5fa1d276f0.ctex::
-::res://Art/Items/Freeze/::1753921707
-Diluted Freeze Potion.png::CompressedTexture2D/CompressedTexture2D::7019739203829924461::1753921706::1753921707::1::::<><><>0<>0<>96727825e06ddfa49a74f1fb1b1a2c72<>res://.godot/imported/Diluted Freeze Potion.png-99d413b80a50d0dd6282e44bc064bf0a.ctex::
-Freeze Potion.png::CompressedTexture2D/CompressedTexture2D::5582973165887974529::1753921706::1753921707::1::::<><><>0<>0<>540f9291da63d99f0192c5ce73bb884d<>res://.godot/imported/Freeze Potion.png-a7b5cd956c3f1a3cdf9891f80a4cafa5.ctex::
-Potent Freeze Potion.png::CompressedTexture2D/CompressedTexture2D::1070546945587202899::1753921706::1753921707::1::::<><><>0<>0<>9bbb0f322f99c1ffb791674108870eef<>res://.godot/imported/Potent Freeze Potion.png-a1ef8523d5bd389d75724906edf0f006.ctex::
-::res://Art/Items/Health/::1753921715
-Diluted Health Potion.png::CompressedTexture2D/CompressedTexture2D::2196618890482482397::1753921714::1753921715::1::::<><><>0<>0<>a433cffba49d097626235340d9455cbe<>res://.godot/imported/Diluted Health Potion.png-ed2bd6f363ae77e8e26788357f11eab8.ctex::
-Health Potion.png::CompressedTexture2D/CompressedTexture2D::4388173647320412652::1753921714::1753921715::1::::<><><>0<>0<>3edaff37b9edc4da0d52dc4edf99279b<>res://.godot/imported/Health Potion.png-5b5fb8dc77181e7aded0291f303766b8.ctex::
-Potent Health Potion.png::CompressedTexture2D/CompressedTexture2D::2807705149053298877::1753921714::1753921715::1::::<><><>0<>0<>43fd24994c424d7f649f496388c043ce<>res://.godot/imported/Potent Health Potion.png-94e75336f4e2c1323aada6c8d6e4da4c.ctex::
-::res://Art/Items/Ice/::1753921720
-Diluted Ice Potion.png::CompressedTexture2D/CompressedTexture2D::1867870472151841946::1753921719::1753921720::1::::<><><>0<>0<>0f7c6c1c8f40fcdd7b8ed769c7bfcda9<>res://.godot/imported/Diluted Ice Potion.png-ffcd674f2b858ceaec0f003a1db31dd2.ctex::
-Ice Potion.png::CompressedTexture2D/CompressedTexture2D::1105408487480707176::1753921719::1753921720::1::::<><><>0<>0<>61b4143bc4731a8dd10f8ed9ce0299b6<>res://.godot/imported/Ice Potion.png-7180a65467f82d776fb5f1c9aa007ded.ctex::
-Potent Ice Potion.png::CompressedTexture2D/CompressedTexture2D::2446753041296075597::1753921719::1753921720::1::::<><><>0<>0<>ccae38415988f90af87e94cdb6cd8b11<>res://.godot/imported/Potent Ice Potion.png-6371e23681f4e03f3ad4c65a9b965f3e.ctex::
-::res://Art/Items/Poison/::1753921733
-Diluted Poison Potion.png::CompressedTexture2D/CompressedTexture2D::8583660090892330057::1753921733::1753921733::1::::<><><>0<>0<>3e0374511f47890d7c36518ef39eafc0<>res://.godot/imported/Diluted Poison Potion.png-8d356a60b53ab4d2839253d56da952df.ctex::
-Poison Potion.png::CompressedTexture2D/CompressedTexture2D::3521209727610037118::1753921733::1753921733::1::::<><><>0<>0<>bd9d29faaf802b1058a2a9f7e3fe21aa<>res://.godot/imported/Poison Potion.png-ca98f6656455a4147dd4a9a249b1fb61.ctex::
-Potent Poison Potion.png::CompressedTexture2D/CompressedTexture2D::3813346904416460905::1753921733::1753921733::1::::<><><>0<>0<>c47208da28f21380ba4f4b0ad6709b54<>res://.godot/imported/Potent Poison Potion.png-ff05b298e7b93e80f86b1c6da7491c8e.ctex::
-::res://Art/Items/Poisoning/::1753921738
-Diluted Poisoning Potion.png::CompressedTexture2D/CompressedTexture2D::8068536833196478553::1753921738::1753921738::1::::<><><>0<>0<>d1ad7a61d97fcbe87ef1c3582b55631b<>res://.godot/imported/Diluted Poisoning Potion.png-4d6d4f89bc0a6087a40cf82d9c908580.ctex::
-Poisoning Potion.png::CompressedTexture2D/CompressedTexture2D::3395690727842089203::1753921738::1753921738::1::::<><><>0<>0<>a326832ad68570d8bb9c7fcb5c7688f6<>res://.godot/imported/Poisoning Potion.png-9b14c0e9807702b400a35a37080d3f56.ctex::
-Potent Poisoning Potion.png::CompressedTexture2D/CompressedTexture2D::71587340475398238::1753921738::1753921738::1::::<><><>0<>0<>d000a8cbd4d09e161235dde65d126058<>res://.godot/imported/Potent Poisoning Potion.png-000c742543d8a670159ce69febb5cb60.ctex::
-::res://Art/Items/Shield/::1753921744
-Diluted Shield Potion.png::CompressedTexture2D/CompressedTexture2D::6373917765046619547::1753921743::1753921744::1::::<><><>0<>0<>1c1a0d32e688d3375cc8a9b39007c5c1<>res://.godot/imported/Diluted Shield Potion.png-9deb9642d78c1b9cf872147c753ee87d.ctex::
-Potent Shield Potion.png::CompressedTexture2D/CompressedTexture2D::1048450103557224705::1753921743::1753921744::1::::<><><>0<>0<>5dc3d963bfba7b6a1f219445e2170ef9<>res://.godot/imported/Potent Shield Potion.png-f722e3e825724931d41ab5a98f7bec6d.ctex::
-Shield Potion.png::CompressedTexture2D/CompressedTexture2D::2452149079128020519::1753921743::1753921744::1::::<><><>0<>0<>406fffd9ac3b7de853816bfcc9506194<>res://.godot/imported/Shield Potion.png-86abb38dc91a65fc05718126a5d0ff14.ctex::
-::res://Art/Items/Slowness/::1753921752
-Diluted Slowness Potion.png::CompressedTexture2D/CompressedTexture2D::3005642848499161685::1753921751::1753921752::1::::<><><>0<>0<>ed21191ecf2046a22367b11447cb9591<>res://.godot/imported/Diluted Slowness Potion.png-a144b7c991809d45ea293680ec58daee.ctex::
-Potent Slowness Potion.png::CompressedTexture2D/CompressedTexture2D::8704257449736053884::1753921751::1753921752::1::::<><><>0<>0<>a6e6383541dae04cd8492a23d472c9d4<>res://.godot/imported/Potent Slowness Potion.png-9509a10b9422ad9044bc9b4282f04360.ctex::
-Slowness Potion.png::CompressedTexture2D/CompressedTexture2D::8751734300460813717::1753921751::1753921752::1::::<><><>0<>0<>f086f063b27bc76366851cdec275ac6b<>res://.godot/imported/Slowness Potion.png-f4562e6f0d22233bf25bb48e41162634.ctex::
-::res://Art/Items/Static/::1753921764
-Diluted Static Potion.png::CompressedTexture2D/CompressedTexture2D::4726956414624735919::1753921763::1753921764::1::::<><><>0<>0<>0f7f7fbaf1b1ddc746a6ddfac703a1ec<>res://.godot/imported/Diluted Static Potion.png-4b71bb8cd3c270da89269c43b9bc07d4.ctex::
-Potent Static Potion.png::CompressedTexture2D/CompressedTexture2D::5521968589072532137::1753921763::1753921764::1::::<><><>0<>0<>51faecc0ea1282cd83a739d8ac52cd5c<>res://.godot/imported/Potent Static Potion.png-e73eea39a84ccf97b2322528d10fd57b.ctex::
-Static Potion.png::CompressedTexture2D/CompressedTexture2D::4830954013479906652::1753921763::1753921764::1::::<><><>0<>0<>517ce76ef50537505bc42bd60a19c1b6<>res://.godot/imported/Static Potion.png-3fbbd22745a4624a549d28b90c360d75.ctex::
-::res://Art/Items/Strength/::1753921774
-Diluted Strength Potion.png::CompressedTexture2D/CompressedTexture2D::1197057747403362976::1753921773::1753921774::1::::<><><>0<>0<>28569581b4e21897229c99522b499584<>res://.godot/imported/Diluted Strength Potion.png-a983d289b2b46c4d23d9afdc5d3d0a07.ctex::
-Potent Strength Potion.png::CompressedTexture2D/CompressedTexture2D::5834930248682114536::1753921773::1753921774::1::::<><><>0<>0<>96bab41902e57c570df7f2148cf9a6b8<>res://.godot/imported/Potent Strength Potion.png-af34286d6a19888751dce00319a0c8e6.ctex::
-Strength Potion.png::CompressedTexture2D/CompressedTexture2D::5564951083024923399::1753921773::1753921774::1::::<><><>0<>0<>a88717962bd5b01de2ac16621f89ecb9<>res://.godot/imported/Strength Potion.png-1ee9957e4acc61a9108019ff276fd2ea.ctex::
-::res://Art/Items/Swiftness/::1753921789
-Diluted Swiftness Potion.png::CompressedTexture2D/CompressedTexture2D::403442593756726606::1753921788::1753921789::1::::<><><>0<>0<>8b7b777a3f8323f141cda7a48fbcb343<>res://.godot/imported/Diluted Swiftness Potion.png-3a10ee90b3b048a3d2e3971a95f234b6.ctex::
-Potent Swiftness Potion.png::CompressedTexture2D/CompressedTexture2D::6259822647827807601::1753921788::1753921789::1::::<><><>0<>0<>f5d499bd3ef0537f2a34ed379edaa923<>res://.godot/imported/Potent Swiftness Potion.png-8008035e9c510fe0113802aa2a015ffc.ctex::
-Swiftness Potion.png::CompressedTexture2D/CompressedTexture2D::5029533440968291129::1753921788::1753921789::1::::<><><>0<>0<>470295df0a269d0bdaef6ce98b59a95a<>res://.godot/imported/Swiftness Potion.png-8d6d66b1caf59c33a530757fda11bab4.ctex::
-::res://Art/Items/Vulnerability/::1753921794
-Diluted Vulnerability Potion.png::CompressedTexture2D/CompressedTexture2D::4596022430699966511::1753921793::1753921794::1::::<><><>0<>0<>ea73759b097443f65826db4ef796206d<>res://.godot/imported/Diluted Vulnerability Potion.png-051e7b4bc8a484621f5a8897240d2b7c.ctex::
-Potent Vulnerability Potion.png::CompressedTexture2D/CompressedTexture2D::2584276760638695370::1753921793::1753921794::1::::<><><>0<>0<>c7cc234737bbb4e76260c9686c243cdf<>res://.godot/imported/Potent Vulnerability Potion.png-763b8bbe09df0e96359137a6b0b44124.ctex::
-Vulnerability Potion.png::CompressedTexture2D/CompressedTexture2D::7625660455989122653::1753921793::1753921794::1::::<><><>0<>0<>abacf4febde2e31e559145d91eb41a5d<>res://.godot/imported/Vulnerability Potion.png-9660cb90598028791119a2ec78f1ce2f.ctex::
-::res://Art/Items/Weakness/::1753921801
-Diluted Weakness Potion.png::CompressedTexture2D/CompressedTexture2D::739752828803840718::1753921801::1753921801::1::::<><><>0<>0<>c6fcaeef1dd1d89036074c909029c4f3<>res://.godot/imported/Diluted Weakness Potion.png-8d52d576c63eacc6a9415c2449a63e52.ctex::
-Potent Weakness Potion.png::CompressedTexture2D/CompressedTexture2D::1168140463270916558::1753921801::1753921801::1::::<><><>0<>0<>0a75e4cf326e3b0c061b01ee31ddee7c<>res://.godot/imported/Potent Weakness Potion.png-9a4e323cb329b7439adfb5044e00ff2e.ctex::
-Weakness Potion.png::CompressedTexture2D/CompressedTexture2D::1083854990799692060::1753921801::1753921801::1::::<><><>0<>0<>527e1ed81a9cea7bf5cd686c220226dc<>res://.godot/imported/Weakness Potion.png-5296f11bd94f82deedb77da39140c058.ctex::
-::res://Art/Items/Wind/::1753921809
-Diluted Wind Potion.png::CompressedTexture2D/CompressedTexture2D::7411784855665520693::1753921809::1753921809::1::::<><><>0<>0<>cde9cbcf7f5607c7ef67292d436ce3cc<>res://.godot/imported/Diluted Wind Potion.png-7a580698799f602cb2ce50f9fdf0bfc7.ctex::
-Potent Wind Potion.png::CompressedTexture2D/CompressedTexture2D::6772101632483813039::1753921809::1753921809::1::::<><><>0<>0<>02b927230d614da7ce7faf0af5bde57e<>res://.godot/imported/Potent Wind Potion.png-3227eb9d12e40f776eeb2f548e8e923a.ctex::
-Wind Potion.png::CompressedTexture2D/CompressedTexture2D::3617638927499265133::1753921809::1753921809::1::::<><><>0<>0<>e2c43bf6bf1de5958ddd74d5d5f101b0<>res://.godot/imported/Wind Potion.png-7e8e0d0aa629827cca4df7ae25a1e70d.ctex::
-::res://Art/UI/::1753950630
-background.png::CompressedTexture2D/CompressedTexture2D::8914758076143089302::1753154233::1753718745::1::::<><><>0<>0<>b78a5a82cc8cf5fa86e7238063a0c1ae<>res://.godot/imported/background.png-9ae53d19f6fb584bc7f3e95588c20fc8.ctex::
-Battle.png::CompressedTexture2D/CompressedTexture2D::7860686197237209983::1753851061::1753851100::1::::<><><>0<>0<>2c384643caa33a74a08b043c809d0d96<>res://.godot/imported/Battle.png-04e1ed2c5d964409ee532ce53e9d0adb.ctex::
-down_arrow.png::CompressedTexture2D/CompressedTexture2D::7858457813280005184::1753154233::1753718745::1::::<><><>0<>0<>868fe0414a0716971ee00e48adec03f6<>res://.godot/imported/down_arrow.png-ff2205bfb51df80014079d184f1525fb.ctex::
-Encounter.png::CompressedTexture2D/CompressedTexture2D::2480890785518970061::1753851061::1753851101::1::::<><><>0<>0<>0cdb930387e9ffa4122843e356754548<>res://.godot/imported/Encounter.png-c68fe31f704aecd16a724d80bdc6cedd.ctex::
-Final Battle.png::CompressedTexture2D/CompressedTexture2D::8165388639993050095::1753851061::1753851100::1::::<><><>0<>0<>fd093c7fffe99161920b479d8472a4b6<>res://.godot/imported/Final Battle.png-e11ff655ac4852fdb507aff13d7b06cf.ctex::
-inventory_background.png::CompressedTexture2D/CompressedTexture2D::3865453852843842646::1753154233::1753718745::1::::<><><>0<>0<>ef063ac445d7e280bb784cc7c01f63f0<>res://.godot/imported/inventory_background.png-b946867381b98a628f17b561f22450a1.ctex::
-item_slot.png::CompressedTexture2D/CompressedTexture2D::2094984792137081685::1753154233::1753718745::1::::<><><>0<>0<>8ece77c5df3267154c2aa65de4bdcd84<>res://.godot/imported/item_slot.png-3b54e33d8606450863771074c64d80cf.ctex::
-Menu Button Highlighted.png::CompressedTexture2D::2794787670105098282::1753950630::1753950630::1::::<><><>0<>0<>7e5030d3470dcfc3706f063145ce8c62<>res://.godot/imported/Menu Button Highlighted.png-e44215f7c08c6331fff1dff7908b01cc.ctex::
-Menu Button.png::CompressedTexture2D::2366404708763079588::1753950630::1753950630::1::::<><><>0<>0<>6af20739f3b5cc05b3dacd6106108ba2<>res://.godot/imported/Menu Button.png-73189298b0d5733e85fbe3b261385996.ctex::
-next_button.png::CompressedTexture2D/CompressedTexture2D::926892477165199013::1753154233::1753718745::1::::<><><>0<>0<>5b831c0bd0197f8a4b3417079a4da0fc<>res://.godot/imported/next_button.png-da851fde5ed87b0793e9e38adf760442.ctex::
-pause_button.png::CompressedTexture2D/CompressedTexture2D::7624567772142469190::1753154233::1753718745::1::::<><><>0<>0<>4aa40a10381837ecaf9d05cdac920cd9<>res://.godot/imported/pause_button.png-f41a15a1a48611a4eb9f331d5f36c50d.ctex::
-playerStart.png::CompressedTexture2D/CompressedTexture2D::7276841454483482206::1753851061::1753851100::1::::<><><>0<>0<>f29cad6cf6ea497c70e0d5eefeb2f5a5<>res://.godot/imported/playerStart.png-53250b32f63950a23c56690064e01e0a.ctex::
-Random.png::CompressedTexture2D/CompressedTexture2D::5575382006117862841::1753851061::1753851100::1::::<><><>0<>0<>d1c66f83fefc453125be20dbd633dc0a<>res://.godot/imported/Random.png-151e184fe1587adb077005de623b89b9.ctex::
-run_button.png::CompressedTexture2D/CompressedTexture2D::5309318599542639056::1753154233::1753718745::1::::<><><>0<>0<>3ec614c60ab139780d666c6a2c29fbd2<>res://.godot/imported/run_button.png-f9bbfbbfbf6c6fccff0525c430af6443.ctex::
-stats_box.png::CompressedTexture2D/CompressedTexture2D::4077863268461485888::1753154233::1753718745::1::::<><><>0<>0<>605490088428d8e6e0050a690ff5c461<>res://.godot/imported/stats_box.png-f9331c87bd3e683eb863bdfd8747e92e.ctex::
-text_box.png::CompressedTexture2D/CompressedTexture2D::333094050911077353::1753154233::1753718745::1::::<><><>0<>0<>66a912707cb07f09a7aa5348bd702bdb<>res://.godot/imported/text_box.png-9507623ff4db2423fdae804c409c87f2.ctex::
-text_box_next.png::CompressedTexture2D/CompressedTexture2D::3365653202406685073::1753154233::1753718745::1::::<><><>0<>0<>38c8037b7eca6765a0351d29bcbefd62<>res://.godot/imported/text_box_next.png-284be74a6c121c25b61c47cfedab4962.ctex::
-text_box_next_blank.png::CompressedTexture2D/CompressedTexture2D::4883935338994375665::1753154233::1753718745::1::::<><><>0<>0<>e9b84e2d59b88e57de87f8cb8811a029<>res://.godot/imported/text_box_next_blank.png-fd631f3e334635a1cb23aa891894de60.ctex::
-up_button.png::CompressedTexture2D/CompressedTexture2D::8542775273120553515::1753154233::1753718745::1::::<><><>0<>0<>c20ee1b25b1a93e2e2715f0dedfb8cfc<>res://.godot/imported/up_button.png-c9489cc1e7c8a8844c598ed1fd6844df.ctex::
-::res://JSONS/::1753945061
-enemies.JSON::JSON::-1::1753947252::0::1::::<><><>0<>0<><>::
-events.JSON::JSON::-1::1753947252::0::1::::<><><>0<>0<><>::
-items.JSON::JSON::-1::1753947252::0::1::::<><><>0<>0<><>::
-map.JSON::JSON::-1::1753945061::0::1::::<><><>0<>0<><>::
-player.JSON::JSON::-1::1753942055::0::1::::<><><>0<>0<><>::
-::res://Scenes/::1753947266
-Battle.tscn::PackedScene::3379514146984060196::1753947250::0::1::::<><><>0<>0<><>::uid://d0i6ia4013jp0::::res://Scripts/battle_manager.gd<>uid://lk3u43141ady::::res://Scenes/battle_hud.tscn
-battle_hud.tscn::PackedScene::794458416887287518::1753947251::0::1::::<><><>0<>0<><>::uid://bg8per6ea7hkt::::res://Scenes/pause_button.tscn<>uid://cwtqdnra1go4t::::res://testTheme.tres<>uid://h31cliy5ink8::::res://Art/Atlas Textures/UI/run_button/run_button_pressed0.tres<>uid://bmcrva5mj2ilv::::res://Art/Atlas Textures/UI/run_button/run_button_normal.tres<>uid://5ksslj7ls40q::::res://Scenes/enemy_display.tscn<>uid://bqo13isbnspjk::::res://Scenes/player_hud.tscn<>uid://c28o8e3akqrll::::res://Scripts/run_button.gd<>uid://bqgn7m8p47ojy::::res://Art/Atlas Textures/UI/run_button/run_button_pressed1.tres<>uid://dlvnxqsw38u5i::::res://Art/Atlas Textures/UI/run_button/rune_button_hover.tres<>uid://bd4lrilbnposx::::res://Art/Atlas Textures/UI/run_button/run_button_pressed2.tres<>uid://b2virft0eo4aj::::res://Art/Atlas Textures/UI/run_button/run_button_pressed3.tres<>uid://v8ahow1mkmp::::res://Art/Atlas Textures/UI/run_button/run_button_pressed4.tres<>uid://cu0fkjf14dwk8::::res://Art/Atlas Textures/UI/run_button/run_button_pressed5.tres<>uid://cu61o7qwq24st::::res://Art/Atlas Textures/UI/run_button/run_button_pressed6.tres<>uid://dj0cl2trd7heo::::res://Art/Atlas Textures/UI/run_button/run_button_pressed7.tres<>uid://dsn2hw1nq2mgv::::res://Art/Atlas Textures/UI/run_button/run_button_pressed8.tres<>uid://cjihnq0p6fh6f::::res://Art/Atlas Textures/UI/run_button/run_button_pressed9.tres<>uid://c4juopga2vdla::::res://Art/Atlas Textures/UI/run_button/run_button_pressed10.tres<>uid://dxypds7nf0lel::::res://Art/Atlas Textures/UI/run_button/run_button_pressed11.tres<>uid://dkvff8rym2o8x::::res://Art/Atlas Textures/UI/run_button/run_button_pressed12.tres<>uid://2xuoym36h0w0::::res://Art/Atlas Textures/UI/run_button/run_button_pressed13.tres<>uid://diinnhx6qfjjx::::res://Art/Atlas Textures/UI/run_button/run_button_pressed14.tres<>uid://cd3hsyk01h270::::res://Art/Atlas Textures/UI/run_button/run_button_pressed15.tres<>uid://cynpmfmvi7r82::::res://Art/Atlas Textures/UI/run_button/run_button_pressed16.tres<>uid://433dga1o4twv::::res://Art/UI/item_slot.png<>uid://b8lpi8rnpiq5q::::res://Scenes/item_display.tscn
-encounter.tscn::PackedScene/PackedScene::336154546351210113::1753851061::0::1::::<><><>0<>0<><>::uid://bcgcbd6gqf82y::::res://Scripts/encounter.gd<>uid://lk3u43141ady::::res://Scenes/battle_hud.tscn
-enemy.tscn::PackedScene/PackedScene::5147811592271626264::1753718131::0::1::::<><><>0<>0<><>::uid://bwv0qsntxrsho::::res://Scripts/enemy.gd
-enemy_display.tscn::PackedScene/PackedScene::2127434729971120214::1753851415::0::1::::<><><>0<>0<><>::uid://cifvyjhru4qeq::::res://Scripts/enemy_display.gd
-inventory_item.tscn::PackedScene/PackedScene::3955045184545938764::1753718131::0::1::::<><><>0<>0<><>::uid://crwayajb36xqm::::res://Scripts/inventory_item.gd
-item_display.tscn::PackedScene/PackedScene::4726287480428832732::1753647507::0::1::::<><><>0<>0<><>::uid://dl3a4v8we6hvb::::res://Scripts/item_display.gd
-map.tscn::PackedScene::4651548473785511650::1753947251::0::1::::<><><>0<>0<><>::uid://hd5j81hpibow::::res://Scripts/map.gd
-pause_button.tscn::PackedScene/PackedScene::2876597050441281731::1753298597::0::1::::<><><>0<>0<><>::uid://rhfxrylrdufb::::res://Art/Atlas Textures/UI/pause_button/pause_button_normal.tres<>uid://c4ki3pyn17pny::::res://Art/Atlas Textures/UI/pause_button/pause_button_pressed.tres<>uid://cesgp1bk2po5r::::res://Art/Atlas Textures/UI/pause_button/pause_button_hover.tres
-player_hud.tscn::PackedScene::3539972562556534776::1753947266::0::1::::<><><>0<>0<><>::uid://c0iqxm04l5108::::res://m5x7.ttf<>uid://bvowwc5ncwf3s::::res://Scripts/player.gd<>uid://e0mal755m8kr::::res://Art/UI/text_box.png<>uid://bvcppv87p0kbu::::res://Art/UI/inventory_background.png<>uid://ddxuujta7cc7q::::res://Art/Atlas Textures/UI/next_button/next_button_normal.tres<>uid://c58dyvxuj6e3::::res://Art/Atlas Textures/UI/next_button/hover_button_pressed.tres<>uid://433dga1o4twv::::res://Art/UI/item_slot.png<>uid://cvf4sng342o1d::::res://Art/Atlas Textures/UI/up_arrow/up_arrow_normal.tres<>uid://dv1688cie4wmw::::res://Art/Atlas Textures/UI/next_button/next_button_hover.tres<>uid://bn7l205lejkpd::::res://Art/UI/text_box_next.png<>uid://wxnyy3mnkgh7::::res://Scripts/text_box_button.gd<>uid://cbt2x36a1008d::::res://Art/UI/text_box_next_blank.png<>uid://obay0hijq51s::::res://Art/Atlas Textures/UI/next_button/next_button_disabled.tres<>uid://ddicqt5327ahk::::res://Art/Atlas Textures/UI/up_arrow/up_arrow_pressed.tres<>uid://bkkgqh80wpc1y::::res://Scripts/main_text_box.gd<>uid://00ofmcos6uj8::::res://Art/Atlas Textures/UI/up_arrow/up_arrow_hover.tres<>uid://ms7fvbuk8brm::::res://Art/Atlas Textures/UI/down_arrow/down_arrow_normal.tres<>uid://bydl2u7uvbiu7::::res://Art/UI/stats_box.png<>uid://d1gr0v0gp8iw4::::res://Art/Atlas Textures/UI/down_arrow/down_arrow_pressed.tres<>uid://cbjevcsoxkncv::::res://Art/Atlas Textures/UI/down_arrow/down_arrow_hover.tres<>uid://ciupvtcdnq3xa::::res://Scripts/stats_info.gd<>uid://b8lpi8rnpiq5q::::res://Scenes/item_display.tscn<>uid://d2hie4bvuw5n4::::res://Art/Atlas Textures/UI/up_arrow/up_arrows_disabled.tres<>uid://d15qve8s6syt1::::res://Scripts/up_inventory_button.gd<>uid://dkpumvhe2ywbw::::res://Scripts/down_inventory_button.gd<>uid://b8a0b2ak1e7cw::::res://Art/Atlas Textures/UI/down_arrow/down_arrow_disabled.tres
-::res://Scripts/::1753947250
-battle_manager.gd::GDScript::8932394723160660379::1753946594::0::1::::<>Node2D<><>0<>0<><>::
-down_inventory_button.gd::GDScript::7893353037175487168::1753940244::0::1::::<>TextureButton<><>0<>0<><>::
-drag_manager.gd::GDScript/GDScript::8321440655131998132::1753851061::0::1::::<>Node<><>0<>0<><>::
-encounter.gd::GDScript::2539308063026179162::1753945061::0::1::::<>Node2D<><>0<>0<><>::
-enemy.gd::GDScript/GDScript::3975474640484166748::1753718313::0::1::::<>Control<><>0<>0<><>::
-enemy_display.gd::GDScript/GDScript::5345992405486642912::1753719538::0::1::::<>TextureRect<><>0<>0<><>::
-general_functions.gd::GDScript/GDScript::2822739802607943739::1753561786::0::1::::<>Node<><>0<>0<><>::
-inventory_item.gd::GDScript/GDScript::6011510892863123360::1753684103::0::1::::<>Control<><>0<>0<><>::
-item_display.gd::GDScript::7989194851209625759::1753945061::0::1::::ItemDisplay<>TextureRect<><>0<>0<><>::
-locationButton.gd::GDScript/GDScript::1860054420139888967::1753851061::0::1::::<>Node<><>0<>0<><>::
-main_text_box.gd::GDScript/GDScript::3109346192080974284::1753716093::0::1::::<>RichTextLabel<><>0<>0<><>::
-map.gd::GDScript::499354394430422662::1753945061::0::1::::<>Control<><>0<>0<><>::
-player.gd::GDScript::3890662901940425294::1753947250::0::1::::<>Control<><>0<>0<><>::
-run_button.gd::GDScript/GDScript::6736973833956577637::1753852800::0::1::::<>TextureButton<><>0<>0<><>::
-stats_info.gd::GDScript/GDScript::5376588929322758702::1753681930::0::1::::<>PanelContainer<><>0<>0<><>::
-text_box_button.gd::GDScript/GDScript::1592468732717693638::1753654520::0::1::::<>TextureButton<><>0<>0<><>::
-up_inventory_button.gd::GDScript/GDScript::9047112553778150912::1753582134::0::1::::<>TextureButton<><>0<>0<><>::
+::res://::1753953010
+m5x7.ttf::FontFile/FontFile::6545090695747415131::1753935073::1753952171::1::::<><><>0<>0<>ac5bd912a314389fada9739369d89389<>res://.godot/imported/m5x7.ttf-ede74fbe3753eb2fe0ebc455b7b3a4db.fontdata::
+new_theme.tres::Theme/Theme::5520479615176399725::1753935073::0::1::::<><><>0<>0<><>::
+PeaberryBase.ttf::FontFile/FontFile::1482651362908590169::1753951998::1753952171::1::::<><><>0<>0<>ecc0fae2821e1d249d4eb0a484fb163d<>res://.godot/imported/PeaberryBase.ttf-5b7a2a1db73831145d0620bd1f5489d0.fontdata::
+testTheme.tres::Theme/Theme::6357196643116253109::1753935073::0::1::::<><><>0<>0<><>::uid://c0iqxm04l5108::::res://m5x7.ttf
+::res://Art/::1753944479
+::res://Art/Atlas Textures/::1753944479
+::res://Art/Atlas Textures/Enemies/::1753944479
+::res://Art/Atlas Textures/Enemies/Ampcreste/::1753944479
+Ampcreste_Attack.tres::AtlasTexture/AtlasTexture::905954193045313221::1753944479::0::1::::<><><>0<>0<><>::uid://dyrf36etq4sj::::res://Art/Enemies/Ampcreste.png
+Ampcreste_Charging.tres::AtlasTexture/AtlasTexture::8732637998296033360::1753944479::0::1::::<><><>0<>0<><>::uid://dyrf36etq4sj::::res://Art/Enemies/Ampcreste.png
+Ampcreste_Normal.tres::AtlasTexture/AtlasTexture::6320608939135951684::1753944479::0::1::::<><><>0<>0<><>::uid://dyrf36etq4sj::::res://Art/Enemies/Ampcreste.png
+::res://Art/Atlas Textures/Enemies/Bristle/::1753944479
+Bristle_Attack.tres::AtlasTexture/AtlasTexture::8184410774363099445::1753944479::0::1::::<><><>0<>0<><>::uid://c47pkto8j4cth::::res://Art/Enemies/Bristle.png
+Bristle_Charging.tres::AtlasTexture/AtlasTexture::1085300241567733377::1753944479::0::1::::<><><>0<>0<><>::uid://c47pkto8j4cth::::res://Art/Enemies/Bristle.png
+Bristle_Normal.tres::AtlasTexture/AtlasTexture::6803388298370297267::1753944479::0::1::::<><><>0<>0<><>::uid://c47pkto8j4cth::::res://Art/Enemies/Bristle.png
+::res://Art/Atlas Textures/Enemies/Dionydra/::1753944479
+Dionydra_Attack.tres::AtlasTexture/AtlasTexture::8795976614305013368::1753944479::0::1::::<><><>0<>0<><>::uid://cpjugqw2io6l6::::res://Art/Enemies/Dionydra.png
+Dionydra_Charging.tres::AtlasTexture/AtlasTexture::1248833339713985889::1753944479::0::1::::<><><>0<>0<><>::uid://cpjugqw2io6l6::::res://Art/Enemies/Dionydra.png
+Dionydra_Normal.tres::AtlasTexture/AtlasTexture::2826290972025449188::1753944479::0::1::::<><><>0<>0<><>::uid://cpjugqw2io6l6::::res://Art/Enemies/Dionydra.png
+::res://Art/Atlas Textures/Enemies/Elemental Amalgamate/::1753944479
+Elemental Amalgamate_Attack.tres::AtlasTexture/AtlasTexture::8537008068293994223::1753944479::0::1::::<><><>0<>0<><>::uid://bmt3fr3f3wykq::::res://Art/Enemies/Elemental Amalgamate.png
+Elemental Amalgamate_Normal.tres::AtlasTexture/AtlasTexture::3564200210623839949::1753944479::0::1::::<><><>0<>0<><>::uid://bmt3fr3f3wykq::::res://Art/Enemies/Elemental Amalgamate.png
+Elemetnal Amalgamate_Charging.tres::AtlasTexture/AtlasTexture::3088766249839291850::1753944479::0::1::::<><><>0<>0<><>::uid://bmt3fr3f3wykq::::res://Art/Enemies/Elemental Amalgamate.png
+::res://Art/Atlas Textures/Enemies/Fire Elemental/::1753944479
+Fire Elemental_Attack.tres::AtlasTexture/AtlasTexture::2291212009274131532::1753944479::0::1::::<><><>0<>0<><>::uid://bg30b8hu0lxqg::::res://Art/Enemies/Fire Elemenetal.png
+Fire Elemental_Charging.tres::AtlasTexture/AtlasTexture::7042464902069032718::1753944479::0::1::::<><><>0<>0<><>::uid://bg30b8hu0lxqg::::res://Art/Enemies/Fire Elemenetal.png
+Fire Elemental_Normal.tres::AtlasTexture/AtlasTexture::1442874905268083904::1753944479::0::1::::<><><>0<>0<><>::uid://bg30b8hu0lxqg::::res://Art/Enemies/Fire Elemenetal.png
+::res://Art/Atlas Textures/Enemies/Giant Bat/::1753944479
+Giant Bat_Attack.tres::AtlasTexture/AtlasTexture::1665366111583815996::1753944479::0::1::::<><><>0<>0<><>::uid://cmk7m0feusubj::::res://Art/Enemies/Giant Bat.png
+Giant Bat_Charging.tres::AtlasTexture/AtlasTexture::5389429889877765633::1753944479::0::1::::<><><>0<>0<><>::uid://cmk7m0feusubj::::res://Art/Enemies/Giant Bat.png
+Giant Bat_Normal.tres::AtlasTexture/AtlasTexture::2790023051898477669::1753944479::0::1::::<><><>0<>0<><>::uid://cmk7m0feusubj::::res://Art/Enemies/Giant Bat.png
+::res://Art/Atlas Textures/Enemies/Giant Eagle/::1753944479
+Giant Eagle_Attack.tres::AtlasTexture/AtlasTexture::5364366756933746416::1753944479::0::1::::<><><>0<>0<><>::uid://di8dfoxqa3cth::::res://Art/Enemies/Giant Eagle.png
+Giant Eagle_Charging.tres::AtlasTexture/AtlasTexture::950167192460885959::1753944479::0::1::::<><><>0<>0<><>::uid://di8dfoxqa3cth::::res://Art/Enemies/Giant Eagle.png
+Giant Eagle_Normal.tres::AtlasTexture/AtlasTexture::235278311235368476::1753944479::0::1::::<><><>0<>0<><>::uid://di8dfoxqa3cth::::res://Art/Enemies/Giant Eagle.png
+::res://Art/Atlas Textures/Enemies/Ice Elemental/::1753944479
+Ice Elemental_Attack.tres::AtlasTexture/AtlasTexture::6335888201174826917::1753944479::0::1::::<><><>0<>0<><>::uid://c02jc2asvfjw7::::res://Art/Enemies/Ice Elemental.png
+Ice Elemental_Charging.tres::AtlasTexture/AtlasTexture::4926340767730278653::1753944479::0::1::::<><><>0<>0<><>::uid://c02jc2asvfjw7::::res://Art/Enemies/Ice Elemental.png
+Ice Elemental_Normal.tres::AtlasTexture/AtlasTexture::8192106776929979554::1753944479::0::1::::<><><>0<>0<><>::uid://c02jc2asvfjw7::::res://Art/Enemies/Ice Elemental.png
+::res://Art/Atlas Textures/Enemies/Kobold/::1753944479
+Kobold_Attack.tres::AtlasTexture/AtlasTexture::8110207944277658642::1753944479::0::1::::<><><>0<>0<><>::uid://bo0i8cnlfuk5t::::res://Art/Enemies/Kobold.png
+Kobold_Charging.tres::AtlasTexture/AtlasTexture::4424189209172164::1753944479::0::1::::<><><>0<>0<><>::uid://bo0i8cnlfuk5t::::res://Art/Enemies/Kobold.png
+Kobold_Normal.tres::AtlasTexture/AtlasTexture::8507063555293726556::1753944479::0::1::::<><><>0<>0<><>::uid://bo0i8cnlfuk5t::::res://Art/Enemies/Kobold.png
+::res://Art/Atlas Textures/Enemies/Lightning Elemental/::1753944479
+Lightning Elemental_Attack.tres::AtlasTexture/AtlasTexture::4651029800004615409::1753944479::0::1::::<><><>0<>0<><>::uid://ulmmxlwh2gy6::::res://Art/Enemies/Lightning Elemental.png
+Lightning Elemental_Charging.tres::AtlasTexture/AtlasTexture::422158599761984403::1753944479::0::1::::<><><>0<>0<><>::uid://ulmmxlwh2gy6::::res://Art/Enemies/Lightning Elemental.png
+Lightning Elemental_Normal.tres::AtlasTexture/AtlasTexture::5950241945216805010::1753944479::0::1::::<><><>0<>0<><>::uid://ulmmxlwh2gy6::::res://Art/Enemies/Lightning Elemental.png
+::res://Art/Atlas Textures/Enemies/Necrodrake Arm (Left)/::1753944479
+Necrodrake Arm (Left)_Attack.tres::AtlasTexture/AtlasTexture::4356733930523809015::1753944479::0::1::::<><><>0<>0<><>::uid://dhvsdk4q5ed7k::::res://Art/Enemies/Necrodrake Arm (Left).png
+Necrodrake Arm (Left)_Charging.tres::AtlasTexture/AtlasTexture::3762901883543088884::1753944479::0::1::::<><><>0<>0<><>::uid://dhvsdk4q5ed7k::::res://Art/Enemies/Necrodrake Arm (Left).png
+Necrodrake Arm (Left)_Normal.tres::AtlasTexture/AtlasTexture::1357537551825262585::1753944479::0::1::::<><><>0<>0<><>::uid://dhvsdk4q5ed7k::::res://Art/Enemies/Necrodrake Arm (Left).png
+::res://Art/Atlas Textures/Enemies/Necrodrake Arm (Right)/::1753944479
+Necrodrake Arm (Right)_Attack.tres::AtlasTexture/AtlasTexture::6471538806278924515::1753944479::0::1::::<><><>0<>0<><>::uid://dccdeywh0rb3b::::res://Art/Enemies/Necrodrake Arm (Right).png
+Necrodrake Arm (Right)_Charging.tres::AtlasTexture/AtlasTexture::568745935878561754::1753944479::0::1::::<><><>0<>0<><>::uid://dccdeywh0rb3b::::res://Art/Enemies/Necrodrake Arm (Right).png
+Necrodrake Arm (Right)_Normal.tres::AtlasTexture/AtlasTexture::77500281681588473::1753944479::0::1::::<><><>0<>0<><>::uid://dccdeywh0rb3b::::res://Art/Enemies/Necrodrake Arm (Right).png
+::res://Art/Atlas Textures/Enemies/Necrodrake Head/::1753944479
+Necrodrake Head_Attack.tres::AtlasTexture/AtlasTexture::1968091784202972251::1753944479::0::1::::<><><>0<>0<><>::uid://dkvkijr5wifpn::::res://Art/Enemies/Necrodrake Head.png
+Necrodrake Head_Charging.tres::AtlasTexture/AtlasTexture::9051066373641545307::1753944479::0::1::::<><><>0<>0<><>::uid://dkvkijr5wifpn::::res://Art/Enemies/Necrodrake Head.png
+Necrodrake Head_Normal.tres::AtlasTexture/AtlasTexture::1103076178950402725::1753944479::0::1::::<><><>0<>0<><>::uid://dkvkijr5wifpn::::res://Art/Enemies/Necrodrake Head.png
+::res://Art/Atlas Textures/Enemies/Noxious Shroom/::1753944479
+Noxious Shroom_Attack.tres::AtlasTexture/AtlasTexture::454774995491322370::1753944479::0::1::::<><><>0<>0<><>::uid://bs5gekv8floe2::::res://Art/Enemies/Noxious Shroom.png
+Noxious Shroom_Charging.tres::AtlasTexture/AtlasTexture::8293032321791854026::1753944479::0::1::::<><><>0<>0<><>::uid://bs5gekv8floe2::::res://Art/Enemies/Noxious Shroom.png
+Noxious Shroom_Normal.tres::AtlasTexture/AtlasTexture::7046981269907417706::1753944479::0::1::::<><><>0<>0<><>::uid://bs5gekv8floe2::::res://Art/Enemies/Noxious Shroom.png
+::res://Art/Atlas Textures/Enemies/Oozeweaver/::1753944479
+Oozeweaver_Attack.tres::AtlasTexture/AtlasTexture::8253302443616939920::1753944479::0::1::::<><><>0<>0<><>::uid://c4442eqafbe1h::::res://Art/Enemies/Oozeweaver.png
+Oozeweaver_Charging.tres::AtlasTexture/AtlasTexture::8282221995329671228::1753944479::0::1::::<><><>0<>0<><>::uid://c4442eqafbe1h::::res://Art/Enemies/Oozeweaver.png
+Oozeweaver_Normal.tres::AtlasTexture/AtlasTexture::8785406987719494511::1753944479::0::1::::<><><>0<>0<><>::uid://c4442eqafbe1h::::res://Art/Enemies/Oozeweaver.png
+::res://Art/Atlas Textures/Enemies/Skeleton Mage/::1753944479
+Skeleton Mage_Attack.tres::AtlasTexture/AtlasTexture::3109980578702041136::1753944479::0::1::::<><><>0<>0<><>::uid://b7v4lthnpa3mi::::res://Art/Enemies/Skeleton Mage.png
+Skeleton Mage_Charging.tres::AtlasTexture/AtlasTexture::2789171729475563454::1753944479::0::1::::<><><>0<>0<><>::uid://b7v4lthnpa3mi::::res://Art/Enemies/Skeleton Mage.png
+Skeleton Mage_Normal.tres::AtlasTexture/AtlasTexture::3827613253019342576::1753944479::0::1::::<><><>0<>0<><>::uid://b7v4lthnpa3mi::::res://Art/Enemies/Skeleton Mage.png
+::res://Art/Atlas Textures/Enemies/Skeleton Warrior/::1753944479
+Skeleton Warrior_Attack.tres::AtlasTexture/AtlasTexture::2085823679399372527::1753944479::0::1::::<><><>0<>0<><>::uid://cfu53042hhwfh::::res://Art/Enemies/Skeleton Warrior.png
+Skeleton Warrior_Charging.tres::AtlasTexture/AtlasTexture::6253644913990614600::1753944479::0::1::::<><><>0<>0<><>::uid://cfu53042hhwfh::::res://Art/Enemies/Skeleton Warrior.png
+Skeleton Warrior_Normal.tres::AtlasTexture/AtlasTexture::3130724700076126814::1753944479::0::1::::<><><>0<>0<><>::uid://cfu53042hhwfh::::res://Art/Enemies/Skeleton Warrior.png
+::res://Art/Atlas Textures/Enemies/Slime/::1753944479
+Slime_Attack.tres::AtlasTexture/AtlasTexture::6659572295943325248::1753944479::0::1::::<><><>0<>0<><>::uid://ddh2ywiiy0cm3::::res://Art/Enemies/Slime.png
+Slime_Charging.tres::AtlasTexture/AtlasTexture::5780078909820197554::1753944479::0::1::::<><><>0<>0<><>::uid://ddh2ywiiy0cm3::::res://Art/Enemies/Slime.png
+Slime_Normal.tres::AtlasTexture/AtlasTexture::1977599963542519094::1753944479::0::1::::<><><>0<>0<><>::uid://ddh2ywiiy0cm3::::res://Art/Enemies/Slime.png
+::res://Art/Atlas Textures/Enemies/Whipkin/::1753944479
+Whipkin_Attack.tres::AtlasTexture/AtlasTexture::5096934892095312292::1753944479::0::1::::<><><>0<>0<><>::uid://c3kqhxnpltp2e::::res://Art/Enemies/Whipkin.png
+Whipkin_Charging.tres::AtlasTexture/AtlasTexture::5429926860187009904::1753944479::0::1::::<><><>0<>0<><>::uid://c3kqhxnpltp2e::::res://Art/Enemies/Whipkin.png
+Whipkin_Normal.tres::AtlasTexture/AtlasTexture::7692203630124304842::1753944479::0::1::::<><><>0<>0<><>::uid://c3kqhxnpltp2e::::res://Art/Enemies/Whipkin.png
+::res://Art/Atlas Textures/Items/::1753944479
+::res://Art/Atlas Textures/Items/Acid/::1753944479
+::res://Art/Atlas Textures/Items/Acid/Diluted/::1753944479
+Diluted_Acid_Hover.tres::AtlasTexture/AtlasTexture::5516254733235305381::1753944479::0::1::::<><><>0<>0<><>::uid://wjk1ckrash2l::::res://Art/Items/Acid/Diluted Acid Potion.png
+Diluted_Acid_Normal.tres::AtlasTexture/AtlasTexture::291995998716649202::1753944479::0::1::::<><><>0<>0<><>::uid://wjk1ckrash2l::::res://Art/Items/Acid/Diluted Acid Potion.png
+::res://Art/Atlas Textures/Items/Acid/Normal/::1753944479
+Normal_Acid_Hover.tres::AtlasTexture/AtlasTexture::3788530426264835520::1753944479::0::1::::<><><>0<>0<><>::uid://dspu34t8rq6bl::::res://Art/Items/Acid/Acid Potion.png
+Normal_Acid_Normal.tres::AtlasTexture/AtlasTexture::6131222468525397679::1753944479::0::1::::<><><>0<>0<><>::uid://dspu34t8rq6bl::::res://Art/Items/Acid/Acid Potion.png
+::res://Art/Atlas Textures/Items/Acid/Potent/::1753944479
+Potent_Acid_Hover.tres::AtlasTexture/AtlasTexture::8225160885939610998::1753944479::0::1::::<><><>0<>0<><>::uid://my21kuk6eapi::::res://Art/Items/Acid/Potent Acid Potion.png
+Potent_Acid_Normal.tres::AtlasTexture/AtlasTexture::6481039377340771980::1753944479::0::1::::<><><>0<>0<><>::uid://my21kuk6eapi::::res://Art/Items/Acid/Potent Acid Potion.png
+::res://Art/Atlas Textures/Items/Blast/::1753944479
+::res://Art/Atlas Textures/Items/Blast/Diluted/::1753944479
+Diluted_Blast_Hover.tres::AtlasTexture/AtlasTexture::3534601751830535411::1753944479::0::1::::<><><>0<>0<><>::uid://b5ef3efivvj3t::::res://Art/Items/Blast/Diluted Blast Potion.png
+Diluted_Blast_Normal.tres::AtlasTexture/AtlasTexture::3064537909677875236::1753944479::0::1::::<><><>0<>0<><>::uid://b5ef3efivvj3t::::res://Art/Items/Blast/Diluted Blast Potion.png
+::res://Art/Atlas Textures/Items/Blast/Normal/::1753944479
+Normal_Blast_Hover.tres::AtlasTexture/AtlasTexture::4779784927821791829::1753944479::0::1::::<><><>0<>0<><>::uid://nuojpfumkjhm::::res://Art/Items/Blast/Blast Potion.png
+Normal_Blast_Normal.tres::AtlasTexture/AtlasTexture::8248558106889409414::1753944479::0::1::::<><><>0<>0<><>::uid://nuojpfumkjhm::::res://Art/Items/Blast/Blast Potion.png
+::res://Art/Atlas Textures/Items/Blast/Potent/::1753944479
+Potent_Blast_Hover.tres::AtlasTexture/AtlasTexture::7200547260195834044::1753944479::0::1::::<><><>0<>0<><>::uid://bsycrea6r1uhr::::res://Art/Items/Blast/Potent Blast Potion.png
+Potent_Blast_Normal.tres::AtlasTexture/AtlasTexture::4733758358931932845::1753944479::0::1::::<><><>0<>0<><>::uid://bsycrea6r1uhr::::res://Art/Items/Blast/Potent Blast Potion.png
+::res://Art/Atlas Textures/Items/Burn/::1753944479
+::res://Art/Atlas Textures/Items/Burn/Diluted/::1753944479
+Diluted_Burn_Hover.tres::AtlasTexture/AtlasTexture::3187100982044476695::1753944479::0::1::::<><><>0<>0<><>::uid://d30ohor4sttbp::::res://Art/Items/Burn/Diluted Burn Potion.png
+Diluted_Burn_Normal.tres::AtlasTexture/AtlasTexture::2648851285341494414::1753944479::0::1::::<><><>0<>0<><>::uid://d30ohor4sttbp::::res://Art/Items/Burn/Diluted Burn Potion.png
+::res://Art/Atlas Textures/Items/Burn/Normal/::1753944479
+Normal_Burn_Hover.tres::AtlasTexture/AtlasTexture::3155628086320336011::1753944479::0::1::::<><><>0<>0<><>::uid://byf4iralin3fj::::res://Art/Items/Burn/Burn Potion.png
+Normal_Burn_Normal.tres::AtlasTexture/AtlasTexture::6084656452435811927::1753944479::0::1::::<><><>0<>0<><>::uid://byf4iralin3fj::::res://Art/Items/Burn/Burn Potion.png
+::res://Art/Atlas Textures/Items/Burn/Potent/::1753944479
+Potent_Burn_Hover.tres::AtlasTexture/AtlasTexture::1320764971103186021::1753944479::0::1::::<><><>0<>0<><>::uid://cx8gw4vkvlcb2::::res://Art/Items/Burn/Potent Burn Potion.png
+Potent_Burn_Normal.tres::AtlasTexture/AtlasTexture::8238550878792671855::1753944479::0::1::::<><><>0<>0<><>::uid://cx8gw4vkvlcb2::::res://Art/Items/Burn/Potent Burn Potion.png
+::res://Art/Atlas Textures/Items/Corrosive/::1753944479
+::res://Art/Atlas Textures/Items/Corrosive/Diluted/::1753944479
+Diluted_Corrosive_Hover.tres::AtlasTexture/AtlasTexture::2054960105565816531::1753944479::0::1::::<><><>0<>0<><>::uid://jkj2758c4yc5::::res://Art/Items/Corrosive/Diluted Corrosion Potion.png
+Diluted_Corrosive_Normal.tres::AtlasTexture/AtlasTexture::7450312637170444285::1753944479::0::1::::<><><>0<>0<><>::uid://jkj2758c4yc5::::res://Art/Items/Corrosive/Diluted Corrosion Potion.png
+::res://Art/Atlas Textures/Items/Corrosive/Normal/::1753944479
+Normal_Corrosive_Hover.tres::AtlasTexture/AtlasTexture::5754014873221834735::1753944479::0::1::::<><><>0<>0<><>::uid://dgaw23jywqa40::::res://Art/Items/Corrosive/Corrosion Potion.png
+Normal_Corrosive_Normal.tres::AtlasTexture/AtlasTexture::2903771261952048095::1753944479::0::1::::<><><>0<>0<><>::uid://dgaw23jywqa40::::res://Art/Items/Corrosive/Corrosion Potion.png
+::res://Art/Atlas Textures/Items/Corrosive/Potent/::1753944479
+Potent_Corrosive_Hover.tres::AtlasTexture/AtlasTexture::6509195265231627224::1753944479::0::1::::<><><>0<>0<><>::uid://bbv6cjvh84uqp::::res://Art/Items/Corrosive/Potent Corrosion Potion.png
+Potent_Corrosive_Normal.tres::AtlasTexture/AtlasTexture::6275022694866248618::1753944479::0::1::::<><><>0<>0<><>::uid://bbv6cjvh84uqp::::res://Art/Items/Corrosive/Potent Corrosion Potion.png
+::res://Art/Atlas Textures/Items/Electric/::1753944479
+::res://Art/Atlas Textures/Items/Electric/Diluted/::1753944479
+Diluted_Electric_Hover.tres::AtlasTexture/AtlasTexture::5725146122209107410::1753944479::0::1::::<><><>0<>0<><>::uid://bvshdd3divui5::::res://Art/Items/Electric/Diluted Electric Potion.png
+Diluted_Electric_Normal.tres::AtlasTexture/AtlasTexture::2989958082438402204::1753944479::0::1::::<><><>0<>0<><>::uid://bvshdd3divui5::::res://Art/Items/Electric/Diluted Electric Potion.png
+::res://Art/Atlas Textures/Items/Electric/Normal/::1753944479
+Normal_Electric_Hover.tres::AtlasTexture/AtlasTexture::3384867005460428612::1753944479::0::1::::<><><>0<>0<><>::uid://bgd0q8xo4k5pn::::res://Art/Items/Electric/Electric Potion.png
+Normal_Electric_Normal.tres::AtlasTexture/AtlasTexture::1363315143343226098::1753944479::0::1::::<><><>0<>0<><>::uid://bgd0q8xo4k5pn::::res://Art/Items/Electric/Electric Potion.png
+::res://Art/Atlas Textures/Items/Electric/Potent/::1753944479
+Potent_Electric_Hover.tres::AtlasTexture/AtlasTexture::333390738098776369::1753944479::0::1::::<><><>0<>0<><>::uid://c3busbc0jo7lh::::res://Art/Items/Electric/Potent Electric Potion.png
+Potent_Electric_Normal.tres::AtlasTexture/AtlasTexture::2370281237639044240::1753944479::0::1::::<><><>0<>0<><>::uid://c3busbc0jo7lh::::res://Art/Items/Electric/Potent Electric Potion.png
+::res://Art/Atlas Textures/Items/Fire/::1753944479
+::res://Art/Atlas Textures/Items/Fire/Diluted/::1753944479
+Diluted_Fire_Hover.tres::AtlasTexture/AtlasTexture::6576173724082702071::1753944479::0::1::::<><><>0<>0<><>::uid://ca32ghnvywy2b::::res://Art/Items/Fire/Diluted Fire Potion.png
+Diluted_Fire_Normal.tres::AtlasTexture/AtlasTexture::3938468562902792426::1753944479::0::1::::<><><>0<>0<><>::uid://ca32ghnvywy2b::::res://Art/Items/Fire/Diluted Fire Potion.png
+::res://Art/Atlas Textures/Items/Fire/Normal/::1753944479
+Normal_Fire_Hover.tres::AtlasTexture/AtlasTexture::8275140002409032404::1753944479::0::1::::<><><>0<>0<><>::uid://bli0veua5y44g::::res://Art/Items/Fire/Fire Potion.png
+Normal_Fire_Normal.tres::AtlasTexture/AtlasTexture::3437172402786529678::1753944479::0::1::::<><><>0<>0<><>::uid://bli0veua5y44g::::res://Art/Items/Fire/Fire Potion.png
+::res://Art/Atlas Textures/Items/Fire/Potent/::1753944479
+Potent_Fire_Hover.tres::AtlasTexture/AtlasTexture::639152727880288749::1753944479::0::1::::<><><>0<>0<><>::uid://cq4r3n7hsxdce::::res://Art/Items/Fire/Potent Fire Potion.png
+Potent_Fire_Normal.tres::AtlasTexture/AtlasTexture::8884632259154251797::1753944479::0::1::::<><><>0<>0<><>::uid://cq4r3n7hsxdce::::res://Art/Items/Fire/Potent Fire Potion.png
+::res://Art/Atlas Textures/Items/Freeze/::1753944479
+::res://Art/Atlas Textures/Items/Freeze/Diluted/::1753944479
+Diluted_Freeze_Hover.tres::AtlasTexture/AtlasTexture::6150319091218060426::1753944479::0::1::::<><><>0<>0<><>::uid://c7aocxotjnq7v::::res://Art/Items/Freeze/Diluted Freeze Potion.png
+Diluted_Freeze_Normal.tres::AtlasTexture/AtlasTexture::1905554889484512198::1753944479::0::1::::<><><>0<>0<><>::uid://c7aocxotjnq7v::::res://Art/Items/Freeze/Diluted Freeze Potion.png
+::res://Art/Atlas Textures/Items/Freeze/Normal/::1753944479
+Normal_Freeze_Hover.tres::AtlasTexture/AtlasTexture::3263242886785987721::1753944479::0::1::::<><><>0<>0<><>::uid://clso0ty0g3vgb::::res://Art/Items/Freeze/Freeze Potion.png
+Normal_Freeze_Normal.tres::AtlasTexture/AtlasTexture::4644151330422314206::1753944479::0::1::::<><><>0<>0<><>::uid://clso0ty0g3vgb::::res://Art/Items/Freeze/Freeze Potion.png
+::res://Art/Atlas Textures/Items/Freeze/Potent/::1753944479
+Potent_Freeze_Hover.tres::AtlasTexture/AtlasTexture::5980174152609057139::1753944479::0::1::::<><><>0<>0<><>::uid://pit0tcfkgnx8::::res://Art/Items/Freeze/Potent Freeze Potion.png
+Potent_Freeze_Normal.tres::AtlasTexture/AtlasTexture::4390576272903301112::1753944479::0::1::::<><><>0<>0<><>::uid://pit0tcfkgnx8::::res://Art/Items/Freeze/Potent Freeze Potion.png
+::res://Art/Atlas Textures/Items/Health/::1753944479
+::res://Art/Atlas Textures/Items/Health/Diluted/::1753944479
+Diluted_Health_Hover.tres::AtlasTexture/AtlasTexture::3200368282033017896::1753944479::0::1::::<><><>0<>0<><>::uid://6kb8y8jrq78l::::res://Art/Items/Health/Diluted Health Potion.png
+Diluted_Health_Normal.tres::AtlasTexture/AtlasTexture::2571147463633327473::1753944479::0::1::::<><><>0<>0<><>::uid://6kb8y8jrq78l::::res://Art/Items/Health/Diluted Health Potion.png
+::res://Art/Atlas Textures/Items/Health/Normal/::1753944479
+Normal_Health_Hover.tres::AtlasTexture/AtlasTexture::431915441253968472::1753944479::0::1::::<><><>0<>0<><>::uid://b3rwtxffwrlsu::::res://Art/Items/Health/Health Potion.png
+Normal_Health_Normal.tres::AtlasTexture/AtlasTexture::7962011767921690261::1753944479::0::1::::<><><>0<>0<><>::uid://b3rwtxffwrlsu::::res://Art/Items/Health/Health Potion.png
+::res://Art/Atlas Textures/Items/Health/Potent/::1753944479
+Potent_Health_Hover.tres::AtlasTexture/AtlasTexture::8376782476942027584::1753944479::0::1::::<><><>0<>0<><>::uid://bgacq1uhra438::::res://Art/Items/Health/Potent Health Potion.png
+Potent_Health_Normal.tres::AtlasTexture/AtlasTexture::7748144037108666971::1753944479::0::1::::<><><>0<>0<><>::uid://bgacq1uhra438::::res://Art/Items/Health/Potent Health Potion.png
+::res://Art/Atlas Textures/Items/Ice/::1753944479
+::res://Art/Atlas Textures/Items/Ice/Diluted/::1753944479
+Diluted_Ice_Hover.tres::AtlasTexture/AtlasTexture::1537744358620366786::1753944479::0::1::::<><><>0<>0<><>::uid://1u2s3fwhbtvm::::res://Art/Items/Ice/Diluted Ice Potion.png
+Diluted_Ice_Normal.tres::AtlasTexture/AtlasTexture::5127401873502711249::1753944479::0::1::::<><><>0<>0<><>::uid://1u2s3fwhbtvm::::res://Art/Items/Ice/Diluted Ice Potion.png
+::res://Art/Atlas Textures/Items/Ice/Normal/::1753944479
+Normal_Ice_Hover.tres::AtlasTexture/AtlasTexture::8714265584634598835::1753944479::0::1::::<><><>0<>0<><>::uid://p0p6fhy1pkse::::res://Art/Items/Ice/Ice Potion.png
+Normal_Ice_Normal.tres::AtlasTexture/AtlasTexture::5495509422335952808::1753944479::0::1::::<><><>0<>0<><>::uid://p0p6fhy1pkse::::res://Art/Items/Ice/Ice Potion.png
+::res://Art/Atlas Textures/Items/Ice/Potent/::1753944479
+Potent_Ice_Hover.tres::AtlasTexture/AtlasTexture::2352520505234409330::1753944479::0::1::::<><><>0<>0<><>::uid://ba4hwu4xgpm2p::::res://Art/Items/Ice/Potent Ice Potion.png
+Potent_Ice_Normal.tres::AtlasTexture/AtlasTexture::4938443308976620286::1753944479::0::1::::<><><>0<>0<><>::uid://ba4hwu4xgpm2p::::res://Art/Items/Ice/Potent Ice Potion.png
+::res://Art/Atlas Textures/Items/Poison/::1753944479
+::res://Art/Atlas Textures/Items/Poison/Diluted/::1753944479
+Diluted_Poison_Hover.tres::AtlasTexture/AtlasTexture::6372634619481673897::1753944479::0::1::::<><><>0<>0<><>::uid://duj8vlrr6e3g4::::res://Art/Items/Poison/Diluted Poison Potion.png
+Diluted_Poison_Normal.tres::AtlasTexture/AtlasTexture::6441456886663843295::1753944479::0::1::::<><><>0<>0<><>::uid://duj8vlrr6e3g4::::res://Art/Items/Poison/Diluted Poison Potion.png
+::res://Art/Atlas Textures/Items/Poison/Normal/::1753944479
+Normal_Poison_Hover.tres::AtlasTexture/AtlasTexture::8297170547673355859::1753944479::0::1::::<><><>0<>0<><>::uid://bqfx2sc0rn3dq::::res://Art/Items/Poison/Poison Potion.png
+Normal_Poison_Normal.tres::AtlasTexture/AtlasTexture::6846842356712586057::1753944479::0::1::::<><><>0<>0<><>::uid://bqfx2sc0rn3dq::::res://Art/Items/Poison/Poison Potion.png
+::res://Art/Atlas Textures/Items/Poison/Potent/::1753944479
+Potent_Poison_Hover.tres::AtlasTexture/AtlasTexture::6827340275885970790::1753944479::0::1::::<><><>0<>0<><>::uid://bulhjb60s8sxl::::res://Art/Items/Poison/Potent Poison Potion.png
+Potent_Poison_Normal.tres::AtlasTexture/AtlasTexture::6079001463476694867::1753944479::0::1::::<><><>0<>0<><>::uid://bulhjb60s8sxl::::res://Art/Items/Poison/Potent Poison Potion.png
+::res://Art/Atlas Textures/Items/Poisoning/::1753944479
+::res://Art/Atlas Textures/Items/Poisoning/Diluted/::1753944479
+Diluted_Poisoning_Hover.tres::AtlasTexture/AtlasTexture::2817184977922173896::1753944479::0::1::::<><><>0<>0<><>::uid://dm7pvf8d11efp::::res://Art/Items/Poisoning/Diluted Poisoning Potion.png
+Diluted_Poisoning_Normal.tres::AtlasTexture/AtlasTexture::2276110219356834230::1753944479::0::1::::<><><>0<>0<><>::uid://dm7pvf8d11efp::::res://Art/Items/Poisoning/Diluted Poisoning Potion.png
+::res://Art/Atlas Textures/Items/Poisoning/Normal/::1753944479
+Normal_Poisoning_Hover.tres::AtlasTexture/AtlasTexture::525443982300478752::1753944479::0::1::::<><><>0<>0<><>::uid://bom5sa43rhtt0::::res://Art/Items/Poisoning/Poisoning Potion.png
+Normal_Poisoning_Normal.tres::AtlasTexture/AtlasTexture::1205750317175728387::1753944479::0::1::::<><><>0<>0<><>::uid://bom5sa43rhtt0::::res://Art/Items/Poisoning/Poisoning Potion.png
+::res://Art/Atlas Textures/Items/Poisoning/Potent/::1753944479
+Potent_Poisoning_Hover.tres::AtlasTexture/AtlasTexture::7021671239076761771::1753944479::0::1::::<><><>0<>0<><>::uid://baxbegswjmre::::res://Art/Items/Poisoning/Potent Poisoning Potion.png
+Potent_Poisoning_Normal.tres::AtlasTexture/AtlasTexture::7652596865187671763::1753944479::0::1::::<><><>0<>0<><>::uid://baxbegswjmre::::res://Art/Items/Poisoning/Potent Poisoning Potion.png
+::res://Art/Atlas Textures/Items/Shield/::1753944479
+::res://Art/Atlas Textures/Items/Shield/Diluted/::1753944479
+Diluted_Shield_Hover.tres::AtlasTexture/AtlasTexture::6071646012080859867::1753944479::0::1::::<><><>0<>0<><>::uid://cw2tq2p50bqyt::::res://Art/Items/Shield/Diluted Shield Potion.png
+Diluted_Shield_Normal.tres::AtlasTexture/AtlasTexture::1305126931450352325::1753944479::0::1::::<><><>0<>0<><>::uid://cw2tq2p50bqyt::::res://Art/Items/Shield/Diluted Shield Potion.png
+::res://Art/Atlas Textures/Items/Shield/Normal/::1753944479
+Normal_Shield_Hover.tres::AtlasTexture/AtlasTexture::5307126402770181287::1753944479::0::1::::<><><>0<>0<><>::uid://ba63si38w6e6b::::res://Art/Items/Shield/Shield Potion.png
+Normal_Shield_Normal.tres::AtlasTexture/AtlasTexture::3982460259732313576::1753944479::0::1::::<><><>0<>0<><>::uid://ba63si38w6e6b::::res://Art/Items/Shield/Shield Potion.png
+::res://Art/Atlas Textures/Items/Shield/Potent/::1753951998
+Potent_Shield_Hover.tres::AtlasTexture/AtlasTexture::794392397143380093::1753944479::0::1::::<><><>0<>0<><>::uid://o64247jctvrt::::res://Art/Items/Shield/Potent Shield Potion.png
+Potent_Shield_Normal.tres::AtlasTexture/AtlasTexture::6337020712329091109::1753951998::0::1::::<><><>0<>0<><>::uid://ba63si38w6e6b::::res://Art/Items/Shield/Shield Potion.png
+::res://Art/Atlas Textures/Items/Slowness/::1753944479
+::res://Art/Atlas Textures/Items/Slowness/Diluted/::1753944479
+Diluted_Slowness_Hover.tres::AtlasTexture/AtlasTexture::459421442089152010::1753944479::0::1::::<><><>0<>0<><>::uid://bi27q7mm50xnx::::res://Art/Items/Slowness/Diluted Slowness Potion.png
+Diluted_Slowness_Normal.tres::AtlasTexture/AtlasTexture::6000738738831562490::1753944479::0::1::::<><><>0<>0<><>::uid://bi27q7mm50xnx::::res://Art/Items/Slowness/Diluted Slowness Potion.png
+::res://Art/Atlas Textures/Items/Slowness/Normal/::1753944479
+Normal_Slowness_Hover.tres::AtlasTexture/AtlasTexture::6013559706256285510::1753944479::0::1::::<><><>0<>0<><>::uid://dwxn1x12s4lwv::::res://Art/Items/Slowness/Slowness Potion.png
+Normal_Slowness_Normal.tres::AtlasTexture/AtlasTexture::1428720711316640420::1753944479::0::1::::<><><>0<>0<><>::uid://dwxn1x12s4lwv::::res://Art/Items/Slowness/Slowness Potion.png
+::res://Art/Atlas Textures/Items/Slowness/Potent/::1753944479
+Potent_Slowness_Hover.tres::AtlasTexture/AtlasTexture::40193739763777951::1753944479::0::1::::<><><>0<>0<><>::uid://dwan334axweam::::res://Art/Items/Slowness/Potent Slowness Potion.png
+Potent_Slowness_Normal.tres::AtlasTexture/AtlasTexture::3747334048965814787::1753944479::0::1::::<><><>0<>0<><>::uid://dwan334axweam::::res://Art/Items/Slowness/Potent Slowness Potion.png
+::res://Art/Atlas Textures/Items/Static/::1753944479
+::res://Art/Atlas Textures/Items/Static/Diluted/::1753944479
+Diluted_Static_Hover.tres::AtlasTexture/AtlasTexture::5642081174631223725::1753944479::0::1::::<><><>0<>0<><>::uid://b8l1jtplg8ldv::::res://Art/Items/Static/Diluted Static Potion.png
+Diluted_Static_Normal.tres::AtlasTexture/AtlasTexture::8909090365253743074::1753944479::0::1::::<><><>0<>0<><>::uid://b8l1jtplg8ldv::::res://Art/Items/Static/Diluted Static Potion.png
+::res://Art/Atlas Textures/Items/Static/Normal/::1753944479
+Normal_Static_Hover.tres::AtlasTexture/AtlasTexture::5049652392491270045::1753944479::0::1::::<><><>0<>0<><>::uid://ca3fdvpkniulg::::res://Art/Items/Static/Static Potion.png
+Normal_Static_Normal.tres::AtlasTexture/AtlasTexture::6609003160241510666::1753944479::0::1::::<><><>0<>0<><>::uid://ca3fdvpkniulg::::res://Art/Items/Static/Static Potion.png
+::res://Art/Atlas Textures/Items/Static/Potent/::1753944479
+Potent_Static_Hover.tres::AtlasTexture/AtlasTexture::8886349352597616257::1753944479::0::1::::<><><>0<>0<><>::uid://ckw5asmvqfrev::::res://Art/Items/Static/Potent Static Potion.png
+Potent_Static_Normal.tres::AtlasTexture/AtlasTexture::840523777262480478::1753944479::0::1::::<><><>0<>0<><>::uid://ckw5asmvqfrev::::res://Art/Items/Static/Potent Static Potion.png
+::res://Art/Atlas Textures/Items/Strength/::1753944479
+::res://Art/Atlas Textures/Items/Strength/Diluted/::1753944479
+Diluted_Strength_Hover.tres::AtlasTexture/AtlasTexture::3644759947557457610::1753944479::0::1::::<><><>0<>0<><>::uid://rb4mploe3uya::::res://Art/Items/Strength/Diluted Strength Potion.png
+Diluted_Strength_Normal.tres::AtlasTexture/AtlasTexture::323750034022168119::1753944479::0::1::::<><><>0<>0<><>::uid://rb4mploe3uya::::res://Art/Items/Strength/Diluted Strength Potion.png
+::res://Art/Atlas Textures/Items/Strength/Normal/::1753944479
+Normal_Strength_Hover.tres::AtlasTexture/AtlasTexture::5178374425443385365::1753944479::0::1::::<><><>0<>0<><>::uid://cljx6wtlsibhv::::res://Art/Items/Strength/Strength Potion.png
+Normal_Strength_Normal.tres::AtlasTexture/AtlasTexture::6500273661248501428::1753944479::0::1::::<><><>0<>0<><>::uid://cljx6wtlsibhv::::res://Art/Items/Strength/Strength Potion.png
+::res://Art/Atlas Textures/Items/Strength/Potent/::1753944479
+Potent_Strength_Hover.tres::AtlasTexture/AtlasTexture::5799661973194228928::1753944479::0::1::::<><><>0<>0<><>::uid://cpeqpix1njay7::::res://Art/Items/Strength/Potent Strength Potion.png
+Potent_Strength_Normal.tres::AtlasTexture/AtlasTexture::6094330346574803230::1753944479::0::1::::<><><>0<>0<><>::uid://cpeqpix1njay7::::res://Art/Items/Strength/Potent Strength Potion.png
+::res://Art/Atlas Textures/Items/Swiftness/::1753944479
+::res://Art/Atlas Textures/Items/Swiftness/Diluted/::1753944479
+Diluted_Swiftness_Hover.tres::AtlasTexture/AtlasTexture::8391560013009996270::1753944479::0::1::::<><><>0<>0<><>::uid://f0ov1rgcg7dy::::res://Art/Items/Swiftness/Diluted Swiftness Potion.png
+Diluted_Swiftness_Normal.tres::AtlasTexture/AtlasTexture::2327171169018016533::1753944479::0::1::::<><><>0<>0<><>::uid://f0ov1rgcg7dy::::res://Art/Items/Swiftness/Diluted Swiftness Potion.png
+::res://Art/Atlas Textures/Items/Swiftness/Normal/::1753944479
+Normal_Swiftness_Hover.tres::AtlasTexture/AtlasTexture::4918302874037835651::1753944479::0::1::::<><><>0<>0<><>::uid://cdwlxfgajvc8x::::res://Art/Items/Swiftness/Swiftness Potion.png
+Normal_Swiftness_Normal.tres::AtlasTexture/AtlasTexture::4921778209125920851::1753944479::0::1::::<><><>0<>0<><>::uid://cdwlxfgajvc8x::::res://Art/Items/Swiftness/Swiftness Potion.png
+::res://Art/Atlas Textures/Items/Swiftness/Potent/::1753944479
+Potent_Swiftness_Hover.tres::AtlasTexture/AtlasTexture::8717534085157772946::1753944479::0::1::::<><><>0<>0<><>::uid://cvgkmnj44wfhp::::res://Art/Items/Swiftness/Potent Swiftness Potion.png
+Potent_Swiftness_Normal.tres::AtlasTexture/AtlasTexture::8583104668770089084::1753944479::0::1::::<><><>0<>0<><>::uid://cvgkmnj44wfhp::::res://Art/Items/Swiftness/Potent Swiftness Potion.png
+::res://Art/Atlas Textures/Items/Vulnerability/::1753944479
+::res://Art/Atlas Textures/Items/Vulnerability/Diluted/::1753944479
+Diluted_Vulnerability_Hover.tres::AtlasTexture/AtlasTexture::8085908352631454902::1753944479::0::1::::<><><>0<>0<><>::uid://b6ql22stfd58n::::res://Art/Items/Vulnerability/Diluted Vulnerability Potion.png
+Diluted_Vulnerability_Normal.tres::AtlasTexture/AtlasTexture::368164803289878584::1753944479::0::1::::<><><>0<>0<><>::uid://b6ql22stfd58n::::res://Art/Items/Vulnerability/Diluted Vulnerability Potion.png
+::res://Art/Atlas Textures/Items/Vulnerability/Normal/::1753944479
+Normal_Vulnerability_Hover.tres::AtlasTexture/AtlasTexture::2835360756955281407::1753944479::0::1::::<><><>0<>0<><>::uid://dgv6rpybcoipp::::res://Art/Items/Vulnerability/Vulnerability Potion.png
+Normal_Vulnerability_Normal.tres::AtlasTexture/AtlasTexture::6719011983276060392::1753944479::0::1::::<><><>0<>0<><>::uid://dgv6rpybcoipp::::res://Art/Items/Vulnerability/Vulnerability Potion.png
+::res://Art/Atlas Textures/Items/Vulnerability/Potent/::1753944479
+Potent_Vulnerability_Hover.tres::AtlasTexture/AtlasTexture::3529406364245218396::1753944479::0::1::::<><><>0<>0<><>::uid://bc23wp0mxfxl7::::res://Art/Items/Vulnerability/Potent Vulnerability Potion.png
+Potent_Vulnerability_Normal.tres::AtlasTexture/AtlasTexture::1715566152234202455::1753944479::0::1::::<><><>0<>0<><>::uid://bc23wp0mxfxl7::::res://Art/Items/Vulnerability/Potent Vulnerability Potion.png
+::res://Art/Atlas Textures/Items/Weakness/::1753944479
+::res://Art/Atlas Textures/Items/Weakness/Diluted/::1753944479
+Diluted_Weakness_Hover.tres::AtlasTexture/AtlasTexture::4270322674042304135::1753944479::0::1::::<><><>0<>0<><>::uid://kslvd5htj2w5::::res://Art/Items/Weakness/Diluted Weakness Potion.png
+Diluted_Weakness_Normal.tres::AtlasTexture/AtlasTexture::6717790745643582809::1753944479::0::1::::<><><>0<>0<><>::uid://kslvd5htj2w5::::res://Art/Items/Weakness/Diluted Weakness Potion.png
+::res://Art/Atlas Textures/Items/Weakness/Normal/::1753944479
+Normal_Weakness_Hover.tres::AtlasTexture/AtlasTexture::2553108654470813206::1753944479::0::1::::<><><>0<>0<><>::uid://ppa6y7g5kpdk::::res://Art/Items/Weakness/Weakness Potion.png
+Normal_Weakness_Normal.tres::AtlasTexture/AtlasTexture::3274754483854181726::1753944479::0::1::::<><><>0<>0<><>::uid://ppa6y7g5kpdk::::res://Art/Items/Weakness/Weakness Potion.png
+::res://Art/Atlas Textures/Items/Weakness/Potent/::1753944479
+Potent_Weakness_Hover.tres::AtlasTexture/AtlasTexture::4785927945261196041::1753944479::0::1::::<><><>0<>0<><>::uid://qv4dq18m7siw::::res://Art/Items/Weakness/Potent Weakness Potion.png
+Potent_Weakness_Normal.tres::AtlasTexture/AtlasTexture::3063202605830402795::1753944479::0::1::::<><><>0<>0<><>::uid://qv4dq18m7siw::::res://Art/Items/Weakness/Potent Weakness Potion.png
+::res://Art/Atlas Textures/Items/Wind/::1753944479
+::res://Art/Atlas Textures/Items/Wind/Diluted/::1753944479
+Diluted_Wind_Hover.tres::AtlasTexture/AtlasTexture::6402452287293485852::1753944479::0::1::::<><><>0<>0<><>::uid://ddulap3mplnm8::::res://Art/Items/Wind/Diluted Wind Potion.png
+Diluted_Wind_Normal.tres::AtlasTexture/AtlasTexture::6743263566904543369::1753944479::0::1::::<><><>0<>0<><>::uid://ddulap3mplnm8::::res://Art/Items/Wind/Diluted Wind Potion.png
+::res://Art/Atlas Textures/Items/Wind/Normal/::1753944479
+Normal_Wind_Hover.tres::AtlasTexture/AtlasTexture::2576717302746091897::1753944479::0::1::::<><><>0<>0<><>::uid://brsn8qgocnder::::res://Art/Items/Wind/Wind Potion.png
+Normal_Wind_Normal.tres::AtlasTexture/AtlasTexture::5487201326908690480::1753944479::0::1::::<><><>0<>0<><>::uid://brsn8qgocnder::::res://Art/Items/Wind/Wind Potion.png
+::res://Art/Atlas Textures/Items/Wind/Potent/::1753944479
+Potent_Wind_Hover.tres::AtlasTexture/AtlasTexture::6146555355157727168::1753944479::0::1::::<><><>0<>0<><>::uid://c3qpr3j16b7bv::::res://Art/Items/Wind/Potent Wind Potion.png
+Potent_Wind_Normal.tres::AtlasTexture/AtlasTexture::3253340435522018798::1753944479::0::1::::<><><>0<>0<><>::uid://c3qpr3j16b7bv::::res://Art/Items/Wind/Potent Wind Potion.png
+::res://Art/Atlas Textures/UI/::1753935073
+::res://Art/Atlas Textures/UI/down_arrow/::1753935073
+down_arrow_disabled.tres::AtlasTexture/AtlasTexture::4704173652980983386::1753935073::0::1::::<><><>0<>0<><>::uid://dj7xwf1fpb4ye::::res://Art/UI/down_arrow.png
+down_arrow_hover.tres::AtlasTexture/AtlasTexture::4861890113974260749::1753935073::0::1::::<><><>0<>0<><>::uid://dj7xwf1fpb4ye::::res://Art/UI/down_arrow.png
+down_arrow_normal.tres::AtlasTexture/AtlasTexture::881377901426043962::1753935073::0::1::::<><><>0<>0<><>::uid://dj7xwf1fpb4ye::::res://Art/UI/down_arrow.png
+down_arrow_pressed.tres::AtlasTexture/AtlasTexture::8997636227821584161::1753935073::0::1::::<><><>0<>0<><>::uid://dj7xwf1fpb4ye::::res://Art/UI/down_arrow.png
+::res://Art/Atlas Textures/UI/item_slot/::1753935073
+item_slot_hover.tres::AtlasTexture/AtlasTexture::9085434031736928507::1753935073::0::1::::<><><>0<>0<><>::uid://433dga1o4twv::::res://Art/UI/item_slot.png
+item_slot_normal.tres::AtlasTexture/AtlasTexture::1838494449015364001::1753935073::0::1::::<><><>0<>0<><>::uid://433dga1o4twv::::res://Art/UI/item_slot.png
+::res://Art/Atlas Textures/UI/map_buttons/::1753952172
+Battle-1.png.png::CompressedTexture2D/CompressedTexture2D::4578794061521812935::1753935073::1753952172::1::::<><><>0<>0<>d210ace97de0b8802630165265d620b3<>res://.godot/imported/Battle-1.png.png-2fbe2da69abbe71c1bdce1534c4858c0.ctex::
+Battle-2.png.png::CompressedTexture2D/CompressedTexture2D::7445442723394588051::1753935073::1753952172::1::::<><><>0<>0<>f94ed8e2dc9dfd07acccdaff2205b723<>res://.godot/imported/Battle-2.png.png-3ab094fb009413aa2ea52f6589498059.ctex::
+Battle-3.png.png::CompressedTexture2D/CompressedTexture2D::1783145764320058434::1753935073::1753952172::1::::<><><>0<>0<>7a7d22e226f6e0a0f41f67f554f20fa6<>res://.godot/imported/Battle-3.png.png-702cf9ce7a8b3c956b0a33fa58cfe1f6.ctex::
+Encounter-1.png.png::CompressedTexture2D/CompressedTexture2D::3034495018590123893::1753935073::1753952172::1::::<><><>0<>0<>48cd70ac974aac073cea82a1054d8f1d<>res://.godot/imported/Encounter-1.png.png-1aa061074842495f946c1c0869d608e4.ctex::
+Encounter-2.png.png::CompressedTexture2D/CompressedTexture2D::1319770925273232165::1753935073::1753952172::1::::<><><>0<>0<>e88f29be14aa14377f3802e28b158b68<>res://.godot/imported/Encounter-2.png.png-d41f13c880126b920357568488b365a0.ctex::
+Encounter-3.png.png::CompressedTexture2D/CompressedTexture2D::1777484702325319883::1753935073::1753952172::1::::<><><>0<>0<>20b3369a2db835df52504f4b46a46bc5<>res://.godot/imported/Encounter-3.png.png-f4a2e40504cd87ce78711885e0473ad7.ctex::
+Final Battle-1.png.png::CompressedTexture2D/CompressedTexture2D::2069732515578141470::1753935073::1753952172::1::::<><><>0<>0<>92998cebe1c768431c327fd28bf61981<>res://.godot/imported/Final Battle-1.png.png-42c70ea39628bb20fec577324c763d8d.ctex::
+Final Battle-2.png.png::CompressedTexture2D/CompressedTexture2D::3157884494708891237::1753935073::1753952172::1::::<><><>0<>0<>7bd2625c883802c6224fc2afaad7213d<>res://.godot/imported/Final Battle-2.png.png-0bbc58ada198d14edc1a59f50a62c299.ctex::
+Final Battle-3.png.png::CompressedTexture2D/CompressedTexture2D::2558819774516446000::1753935073::1753952172::1::::<><><>0<>0<>f41c3332764e00025ee9949eae3bce7d<>res://.godot/imported/Final Battle-3.png.png-12c4b32142747c861eff5ff804ceb4bf.ctex::
+playerStart-1.png.png::CompressedTexture2D/CompressedTexture2D::1136656773831536292::1753935073::1753952172::1::::<><><>0<>0<>3ede038d779e0386f5e872f2f363207a<>res://.godot/imported/playerStart-1.png.png-e19e0da86717a40a128cd5b0cdf94bfd.ctex::
+playerStart-2.png.png::CompressedTexture2D/CompressedTexture2D::4819331040346782632::1753935073::1753952172::1::::<><><>0<>0<>233d4e9d166eaf1a549d09ad3a21bd7e<>res://.godot/imported/playerStart-2.png.png-521777cdbcbd77e8236f2984cf31cacc.ctex::
+playerStart-3.png.png::CompressedTexture2D/CompressedTexture2D::8522176330570744219::1753935073::1753952172::1::::<><><>0<>0<>53c19cc847c128d85e3716db8b2add4c<>res://.godot/imported/playerStart-3.png.png-d649b6d565ab2abe2a7263a2f6e765f6.ctex::
+Random-1.png.png::CompressedTexture2D/CompressedTexture2D::3140698471571617406::1753935073::1753952172::1::::<><><>0<>0<>4ab16d9c4d141586fa5df223376d82a9<>res://.godot/imported/Random-1.png.png-f57b27b7de498db23b462c8c57245f60.ctex::
+Random-2.png.png::CompressedTexture2D/CompressedTexture2D::5323112213859612464::1753935073::1753952172::1::::<><><>0<>0<>4a92f11b03c0b49c54487527c6c92516<>res://.godot/imported/Random-2.png.png-dd861ae72827b3a6f76e482cda1bb8e1.ctex::
+Random-3.png.png::CompressedTexture2D/CompressedTexture2D::2069998020197819662::1753935073::1753952172::1::::<><><>0<>0<>7bfbfd0ac5b003a9211259a0ba6b4d4c<>res://.godot/imported/Random-3.png.png-fa94468ff9dd6df99f797b6ac66a9323.ctex::
+::res://Art/Atlas Textures/UI/next_button/::1753935073
+hover_button_pressed.tres::AtlasTexture/AtlasTexture::204319332114293448::1753935073::0::1::::<><><>0<>0<><>::uid://ng81v6xoo5nd::::res://Art/UI/next_button.png
+next_button_disabled.tres::AtlasTexture/AtlasTexture::984752372013790030::1753935073::0::1::::<><><>0<>0<><>::uid://ng81v6xoo5nd::::res://Art/UI/next_button.png
+next_button_hover.tres::AtlasTexture/AtlasTexture::8688844483788317358::1753935073::0::1::::<><><>0<>0<><>::uid://ng81v6xoo5nd::::res://Art/UI/next_button.png
+next_button_normal.tres::AtlasTexture/AtlasTexture::7418559828174482344::1753935073::0::1::::<><><>0<>0<><>::uid://ng81v6xoo5nd::::res://Art/UI/next_button.png
+::res://Art/Atlas Textures/UI/pause_button/::1753935073
+pause_button_hover.tres::AtlasTexture/AtlasTexture::5091147998019530093::1753935073::0::1::::<><><>0<>0<><>::uid://dgvnrt60vve0m::::res://Art/UI/pause_button.png
+pause_button_normal.tres::AtlasTexture/AtlasTexture::1208006574843520899::1753935073::0::1::::<><><>0<>0<><>::uid://dgvnrt60vve0m::::res://Art/UI/pause_button.png
+pause_button_pressed.tres::AtlasTexture/AtlasTexture::6829498174153446734::1753935073::0::1::::<><><>0<>0<><>::uid://dgvnrt60vve0m::::res://Art/UI/pause_button.png
+::res://Art/Atlas Textures/UI/run_button/::1753935073
+rune_button_hover.tres::AtlasTexture/AtlasTexture::7975522527317091036::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_normal.tres::AtlasTexture/AtlasTexture::3233885300309097363::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed0.tres::AtlasTexture/AtlasTexture::550707287225795273::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed1.tres::AtlasTexture/AtlasTexture::3522675596717205362::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed2.tres::AtlasTexture/AtlasTexture::2657552852134809947::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed3.tres::AtlasTexture/AtlasTexture::4325387782303595021::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed4.tres::AtlasTexture/AtlasTexture::45355983922069135::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed5.tres::AtlasTexture/AtlasTexture::6228549608555617333::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed6.tres::AtlasTexture/AtlasTexture::6242219299935430787::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed7.tres::AtlasTexture/AtlasTexture::7842713613650990786::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed8.tres::AtlasTexture/AtlasTexture::8451151203020427145::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed9.tres::AtlasTexture/AtlasTexture::5421505096147976823::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed10.tres::AtlasTexture/AtlasTexture::6828137370801666010::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed11.tres::AtlasTexture/AtlasTexture::8824067628577075831::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed12.tres::AtlasTexture/AtlasTexture::7904816694868033673::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed13.tres::AtlasTexture/AtlasTexture::1943820087952226577::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed14.tres::AtlasTexture/AtlasTexture::7738100763066807477::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed15.tres::AtlasTexture/AtlasTexture::5041668915833011773::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+run_button_pressed16.tres::AtlasTexture/AtlasTexture::6485142992040628961::1753935073::0::1::::<><><>0<>0<><>::uid://chv4x4c84a0ho::::res://Art/UI/run_button.png
+::res://Art/Atlas Textures/UI/up_arrow/::1753935073
+up_arrows_disabled.tres::AtlasTexture/AtlasTexture::9069305878406076319::1753935073::0::1::::<><><>0<>0<><>::uid://dtygi4j6skuf8::::res://Art/UI/up_button.png
+up_arrow_hover.tres::AtlasTexture/AtlasTexture::1807190135701761403::1753935073::0::1::::<><><>0<>0<><>::uid://dtygi4j6skuf8::::res://Art/UI/up_button.png
+up_arrow_normal.tres::AtlasTexture/AtlasTexture::6258922603020098903::1753935073::0::1::::<><><>0<>0<><>::uid://dtygi4j6skuf8::::res://Art/UI/up_button.png
+up_arrow_pressed.tres::AtlasTexture/AtlasTexture::7386494656311205928::1753935073::0::1::::<><><>0<>0<><>::uid://dtygi4j6skuf8::::res://Art/UI/up_button.png
+::res://Art/Enemies/::1753952172
+Ampcreste.png::CompressedTexture2D/CompressedTexture2D::261154233608622161::1753944479::1753952172::1::::<><><>0<>0<>5fbc52dac84d34a4f2996920ce070858<>res://.godot/imported/Ampcreste.png-cdf534cb75b6b3a6213313f40ff679a6.ctex::
+Bristle.png::CompressedTexture2D/CompressedTexture2D::6875307554933053357::1753944479::1753952172::1::::<><><>0<>0<>13c98da548b97751e3a0a07ebd68df47<>res://.godot/imported/Bristle.png-758553f31a95433a65bf0989d8493c0d.ctex::
+Dionydra.png::CompressedTexture2D/CompressedTexture2D::5845479351959317601::1753944479::1753952172::1::::<><><>0<>0<>d3a8ada180b40e112c1452dd7868c0b9<>res://.godot/imported/Dionydra.png-e09d92c58986b2b1337645079a92649c.ctex::
+Elemental Amalgamate.png::CompressedTexture2D/CompressedTexture2D::3269619925860574292::1753944479::1753952172::1::::<><><>0<>0<>0f414235502a435a0237757a72a61c6c<>res://.godot/imported/Elemental Amalgamate.png-cd23c89520e3f223a30ffb12cc060556.ctex::
+Fire Elemenetal.png::CompressedTexture2D/CompressedTexture2D::2866877778274797610::1753944479::1753952172::1::::<><><>0<>0<>69be8cfc66e7309e594a56d65cfdd97b<>res://.godot/imported/Fire Elemenetal.png-f1e0bf398c61129f18e740abdc15f78d.ctex::
+Giant Bat.png::CompressedTexture2D/CompressedTexture2D::5637716962895548811::1753944479::1753952172::1::::<><><>0<>0<>11eb1d812b10508a2c5683233c1a6644<>res://.godot/imported/Giant Bat.png-dd01b025cf1fb95792478569481fac04.ctex::
+Giant Eagle.png::CompressedTexture2D/CompressedTexture2D::7789089117600832565::1753944479::1753952171::1::::<><><>0<>0<>da89086786222b6fc89e64a3b17a607c<>res://.godot/imported/Giant Eagle.png-b10bdd97659b7cd7b8269b283e8ef1e4.ctex::
+Ice Elemental.png::CompressedTexture2D/CompressedTexture2D::6583852101195895912::1753944479::1753952171::1::::<><><>0<>0<>ccdee4a710df99254f2469779ffe7933<>res://.godot/imported/Ice Elemental.png-4121d669e2368954d441b767f3b29e05.ctex::
+Kobold.png::CompressedTexture2D/CompressedTexture2D::3421218731254469831::1753944479::1753952171::1::::<><><>0<>0<>335dee75a14d137406735c050c6d9ea2<>res://.godot/imported/Kobold.png-eb13f42ffdcaa8a31aaa0bd43cca691d.ctex::
+Lightning Elemental.png::CompressedTexture2D/CompressedTexture2D::1427236287535266095::1753944479::1753952171::1::::<><><>0<>0<>327add1f165e83c60b92cfdad3591173<>res://.godot/imported/Lightning Elemental.png-eee6938f698e112cf44a10f6fd1f9ba7.ctex::
+Necrodrake Arm (Left).png::CompressedTexture2D/CompressedTexture2D::7695034723432344342::1753944479::1753952171::1::::<><><>0<>0<>0e226efe19361e5a0282c2af6b33879e<>res://.godot/imported/Necrodrake Arm (Left).png-150f19bbaf6c306ce681bde83d2827f5.ctex::
+Necrodrake Arm (Right).png::CompressedTexture2D/CompressedTexture2D::7303959082915633717::1753944479::1753952171::1::::<><><>0<>0<>1465274c3f5da82a0accd8339ee0c85f<>res://.godot/imported/Necrodrake Arm (Right).png-9069955f46b54e8d0200dd6af66bef6c.ctex::
+Necrodrake Head.png::CompressedTexture2D/CompressedTexture2D::7905124376938395327::1753944479::1753952172::1::::<><><>0<>0<>183fe89a6b8f121982f653a8ac966e6f<>res://.godot/imported/Necrodrake Head.png-aa2c8b84dffc60e1c2cde96f0447cd42.ctex::
+Noxious Shroom.png::CompressedTexture2D/CompressedTexture2D::3712123206112589155::1753944479::1753952172::1::::<><><>0<>0<>8dc76697c1f87f12658a1f42929915d3<>res://.godot/imported/Noxious Shroom.png-7cefbbad74427cc678ff5bf81fa8a126.ctex::
+Oozeweaver.png::CompressedTexture2D/CompressedTexture2D::6869994031799532131::1753944479::1753952172::1::::<><><>0<>0<>244dea2c166ec622a641faada5ada78d<>res://.godot/imported/Oozeweaver.png-8e7b3d43812e9cbfa7594ba437ce84f3.ctex::
+Skeleton Mage.png::CompressedTexture2D/CompressedTexture2D::4677597058836595936::1753944479::1753952172::1::::<><><>0<>0<>6bbe098370b288f516c12117d09a7606<>res://.godot/imported/Skeleton Mage.png-5d48d8b00e0c94e5940ac5e09ed6d996.ctex::
+Skeleton Warrior.png::CompressedTexture2D/CompressedTexture2D::5166946011789383761::1753944479::1753952172::1::::<><><>0<>0<>ff09319185224855d5ed95e5358848fe<>res://.godot/imported/Skeleton Warrior.png-0305af3801ad4c581d25706b390c5d50.ctex::
+slime.png::CompressedTexture2D/CompressedTexture2D::7385962612398910084::1753944479::1753952172::1::::<><><>0<>0<>754b9741489fc278bf3232e5dae0cff7<>res://.godot/imported/slime.png-553ea15dc7386e4725d20d913e9a52de.ctex::
+Whipkin.png::CompressedTexture2D/CompressedTexture2D::6759757968049811134::1753944479::1753952172::1::::<><><>0<>0<>38abdef1caa723782e73262ef91d9e61<>res://.godot/imported/Whipkin.png-d3ebb92b64bcd30cafab5f4e1db299f6.ctex::
+::res://Art/Items/::1753944479
+::res://Art/Items/Acid/::1753952172
+Acid Potion.png::CompressedTexture2D/CompressedTexture2D::8454892799010638617::1753944479::1753952172::1::::<><><>0<>0<>46ea47bcf77278fc2338341a8f961023<>res://.godot/imported/Acid Potion.png-0efe63253b829e2f4edda4abc8ddca12.ctex::
+Diluted Acid Potion.png::CompressedTexture2D/CompressedTexture2D::1563387681660305517::1753944479::1753952172::1::::<><><>0<>0<>44b9973bb4a9de8cf93299f56e166cd9<>res://.godot/imported/Diluted Acid Potion.png-5db3e9a5df6370f3ecc1908c2f40b609.ctex::
+Potent Acid Potion.png::CompressedTexture2D/CompressedTexture2D::893497535825573206::1753944479::1753952172::1::::<><><>0<>0<>8f6d9cdacdf9d8234dced54b999d94a2<>res://.godot/imported/Potent Acid Potion.png-5a71aeb8e09847cc97c1a16048472650.ctex::
+::res://Art/Items/Blast/::1753952172
+Blast Potion.png::CompressedTexture2D/CompressedTexture2D::954609428918913518::1753944479::1753952172::1::::<><><>0<>0<>a17784316ac237d67085f492f6c320a9<>res://.godot/imported/Blast Potion.png-558941070c93c8b31d4d8830eced1fad.ctex::
+Diluted Blast Potion.png::CompressedTexture2D/CompressedTexture2D::4500697309253286951::1753944479::1753952172::1::::<><><>0<>0<>f9ae6ca56565a2ee803135e0ecf2fe0d<>res://.godot/imported/Diluted Blast Potion.png-6e901761b2171cee49a44022b80371f6.ctex::
+Potent Blast Potion.png::CompressedTexture2D/CompressedTexture2D::3699516939282696463::1753944479::1753952172::1::::<><><>0<>0<>4b64d9095df7e9151add4087b7bf101f<>res://.godot/imported/Potent Blast Potion.png-feab4911284daa537f3ae0c69e95767d.ctex::
+::res://Art/Items/Burn/::1753952172
+Burn Potion.png::CompressedTexture2D/CompressedTexture2D::4083050792325620075::1753944479::1753952172::1::::<><><>0<>0<>8479426483ac5c70e8f398da15c5566d<>res://.godot/imported/Burn Potion.png-3e45b7ae95cb0af985311c59ee0de708.ctex::
+Diluted Burn Potion.png::CompressedTexture2D/CompressedTexture2D::9177022418182796309::1753944479::1753952172::1::::<><><>0<>0<>ededf78e657e2919958a43d8f0e2d159<>res://.godot/imported/Diluted Burn Potion.png-5e1708266fee55e98816a609772307a0.ctex::
+Potent Burn Potion.png::CompressedTexture2D/CompressedTexture2D::6455714382468324973::1753944479::1753952172::1::::<><><>0<>0<>3fdfe9a7a990c41b397d2a55865b57e6<>res://.godot/imported/Potent Burn Potion.png-320524dbaaec8dfafa977e1adffb39df.ctex::
+::res://Art/Items/Corrosive/::1753952172
+Corrosion Potion.png::CompressedTexture2D/CompressedTexture2D::7581780588861315091::1753944479::1753952172::1::::<><><>0<>0<>db5fa9caf725ce1bb541021be329e36b<>res://.godot/imported/Corrosion Potion.png-ef32095d6e827c582865b31cdd1d1c0d.ctex::
+Diluted Corrosion Potion.png::CompressedTexture2D/CompressedTexture2D::652939768247765994::1753944479::1753952172::1::::<><><>0<>0<>f9088fc8b1a6d2be2f00cb2836f57e6a<>res://.godot/imported/Diluted Corrosion Potion.png-3ea7f8cc3ed6a7a018b41783bfb9a5c2.ctex::
+Potent Corrosion Potion.png::CompressedTexture2D/CompressedTexture2D::2501847764044313495::1753944479::1753952172::1::::<><><>0<>0<>9f0406daecf0fa77d9810fbb775712f2<>res://.godot/imported/Potent Corrosion Potion.png-bb996c3a8a29113010baadb4750b7cda.ctex::
+::res://Art/Items/Electric/::1753952172
+Diluted Electric Potion.png::CompressedTexture2D/CompressedTexture2D::3897975776968356870::1753944479::1753952172::1::::<><><>0<>0<>331515e23c82292fbf3a3a16b7abb53d<>res://.godot/imported/Diluted Electric Potion.png-ca03b875072ff6c47827eea4c30676bd.ctex::
+Electric Potion.png::CompressedTexture2D/CompressedTexture2D::2815295145781448867::1753944479::1753952172::1::::<><><>0<>0<>d208547dd7d3284391925748b73cd3da<>res://.godot/imported/Electric Potion.png-f391e6a2582804a1accd4e7655301e2b.ctex::
+Potent Electric Potion.png::CompressedTexture2D/CompressedTexture2D::6741439907912245277::1753944479::1753952172::1::::<><><>0<>0<>c6fd6ac0559b6bcfaa6406d51d278151<>res://.godot/imported/Potent Electric Potion.png-b382cc3122c192293a95c8e4f355d626.ctex::
+::res://Art/Items/Fire/::1753952172
+Diluted Fire Potion.png::CompressedTexture2D/CompressedTexture2D::4832294406801017479::1753944479::1753952172::1::::<><><>0<>0<>54c345f88715e95930dae76720a37abc<>res://.godot/imported/Diluted Fire Potion.png-acb6854048edcd4445a9d609e82f61d1.ctex::
+Fire Potion.png::CompressedTexture2D/CompressedTexture2D::3176568653265656692::1753944479::1753952172::1::::<><><>0<>0<>0c69b2157c0a446a45e788692b1c354f<>res://.godot/imported/Fire Potion.png-1e64591c37b4d7a61696fc765bf9507c.ctex::
+Potent Fire Potion.png::CompressedTexture2D/CompressedTexture2D::5956812744149123468::1753944479::1753952172::1::::<><><>0<>0<>424057bf46292e71064dd0976c87fe28<>res://.godot/imported/Potent Fire Potion.png-0bb53e4ebd0a259545963f5fa1d276f0.ctex::
+::res://Art/Items/Freeze/::1753952172
+Diluted Freeze Potion.png::CompressedTexture2D/CompressedTexture2D::7019739203829924461::1753944479::1753952172::1::::<><><>0<>0<>96727825e06ddfa49a74f1fb1b1a2c72<>res://.godot/imported/Diluted Freeze Potion.png-99d413b80a50d0dd6282e44bc064bf0a.ctex::
+Freeze Potion.png::CompressedTexture2D/CompressedTexture2D::5582973165887974529::1753944479::1753952172::1::::<><><>0<>0<>540f9291da63d99f0192c5ce73bb884d<>res://.godot/imported/Freeze Potion.png-a7b5cd956c3f1a3cdf9891f80a4cafa5.ctex::
+Potent Freeze Potion.png::CompressedTexture2D/CompressedTexture2D::1070546945587202899::1753944479::1753952172::1::::<><><>0<>0<>9bbb0f322f99c1ffb791674108870eef<>res://.godot/imported/Potent Freeze Potion.png-a1ef8523d5bd389d75724906edf0f006.ctex::
+::res://Art/Items/Health/::1753952171
+Diluted Health Potion.png::CompressedTexture2D/CompressedTexture2D::2196618890482482397::1753944479::1753952171::1::::<><><>0<>0<>a433cffba49d097626235340d9455cbe<>res://.godot/imported/Diluted Health Potion.png-ed2bd6f363ae77e8e26788357f11eab8.ctex::
+Health Potion.png::CompressedTexture2D/CompressedTexture2D::4388173647320412652::1753944479::1753952171::1::::<><><>0<>0<>3edaff37b9edc4da0d52dc4edf99279b<>res://.godot/imported/Health Potion.png-5b5fb8dc77181e7aded0291f303766b8.ctex::
+Potent Health Potion.png::CompressedTexture2D/CompressedTexture2D::2807705149053298877::1753944479::1753952171::1::::<><><>0<>0<>43fd24994c424d7f649f496388c043ce<>res://.godot/imported/Potent Health Potion.png-94e75336f4e2c1323aada6c8d6e4da4c.ctex::
+::res://Art/Items/Ice/::1753952171
+Diluted Ice Potion.png::CompressedTexture2D/CompressedTexture2D::1867870472151841946::1753944479::1753952171::1::::<><><>0<>0<>0f7c6c1c8f40fcdd7b8ed769c7bfcda9<>res://.godot/imported/Diluted Ice Potion.png-ffcd674f2b858ceaec0f003a1db31dd2.ctex::
+Ice Potion.png::CompressedTexture2D/CompressedTexture2D::1105408487480707176::1753944479::1753952171::1::::<><><>0<>0<>61b4143bc4731a8dd10f8ed9ce0299b6<>res://.godot/imported/Ice Potion.png-7180a65467f82d776fb5f1c9aa007ded.ctex::
+Potent Ice Potion.png::CompressedTexture2D/CompressedTexture2D::2446753041296075597::1753944479::1753952171::1::::<><><>0<>0<>ccae38415988f90af87e94cdb6cd8b11<>res://.godot/imported/Potent Ice Potion.png-6371e23681f4e03f3ad4c65a9b965f3e.ctex::
+::res://Art/Items/Poison/::1753952171
+Diluted Poison Potion.png::CompressedTexture2D/CompressedTexture2D::8583660090892330057::1753944479::1753952171::1::::<><><>0<>0<>3e0374511f47890d7c36518ef39eafc0<>res://.godot/imported/Diluted Poison Potion.png-8d356a60b53ab4d2839253d56da952df.ctex::
+Poison Potion.png::CompressedTexture2D/CompressedTexture2D::3521209727610037118::1753944479::1753952171::1::::<><><>0<>0<>bd9d29faaf802b1058a2a9f7e3fe21aa<>res://.godot/imported/Poison Potion.png-ca98f6656455a4147dd4a9a249b1fb61.ctex::
+Potent Poison Potion.png::CompressedTexture2D/CompressedTexture2D::3813346904416460905::1753944479::1753952171::1::::<><><>0<>0<>c47208da28f21380ba4f4b0ad6709b54<>res://.godot/imported/Potent Poison Potion.png-ff05b298e7b93e80f86b1c6da7491c8e.ctex::
+::res://Art/Items/Poisoning/::1753952171
+Diluted Poisoning Potion.png::CompressedTexture2D/CompressedTexture2D::8068536833196478553::1753944479::1753952171::1::::<><><>0<>0<>d1ad7a61d97fcbe87ef1c3582b55631b<>res://.godot/imported/Diluted Poisoning Potion.png-4d6d4f89bc0a6087a40cf82d9c908580.ctex::
+Poisoning Potion.png::CompressedTexture2D/CompressedTexture2D::3395690727842089203::1753944479::1753952171::1::::<><><>0<>0<>a326832ad68570d8bb9c7fcb5c7688f6<>res://.godot/imported/Poisoning Potion.png-9b14c0e9807702b400a35a37080d3f56.ctex::
+Potent Poisoning Potion.png::CompressedTexture2D/CompressedTexture2D::71587340475398238::1753944479::1753952171::1::::<><><>0<>0<>d000a8cbd4d09e161235dde65d126058<>res://.godot/imported/Potent Poisoning Potion.png-000c742543d8a670159ce69febb5cb60.ctex::
+::res://Art/Items/Shield/::1753952171
+Diluted Shield Potion.png::CompressedTexture2D/CompressedTexture2D::6373917765046619547::1753944479::1753952171::1::::<><><>0<>0<>1c1a0d32e688d3375cc8a9b39007c5c1<>res://.godot/imported/Diluted Shield Potion.png-9deb9642d78c1b9cf872147c753ee87d.ctex::
+Potent Shield Potion.png::CompressedTexture2D/CompressedTexture2D::1048450103557224705::1753944479::1753952171::1::::<><><>0<>0<>5dc3d963bfba7b6a1f219445e2170ef9<>res://.godot/imported/Potent Shield Potion.png-f722e3e825724931d41ab5a98f7bec6d.ctex::
+Shield Potion.png::CompressedTexture2D/CompressedTexture2D::2452149079128020519::1753944479::1753952171::1::::<><><>0<>0<>406fffd9ac3b7de853816bfcc9506194<>res://.godot/imported/Shield Potion.png-86abb38dc91a65fc05718126a5d0ff14.ctex::
+::res://Art/Items/Slowness/::1753952171
+Diluted Slowness Potion.png::CompressedTexture2D/CompressedTexture2D::3005642848499161685::1753944479::1753952171::1::::<><><>0<>0<>ed21191ecf2046a22367b11447cb9591<>res://.godot/imported/Diluted Slowness Potion.png-a144b7c991809d45ea293680ec58daee.ctex::
+Potent Slowness Potion.png::CompressedTexture2D/CompressedTexture2D::8704257449736053884::1753944479::1753952171::1::::<><><>0<>0<>a6e6383541dae04cd8492a23d472c9d4<>res://.godot/imported/Potent Slowness Potion.png-9509a10b9422ad9044bc9b4282f04360.ctex::
+Slowness Potion.png::CompressedTexture2D/CompressedTexture2D::8751734300460813717::1753944479::1753952171::1::::<><><>0<>0<>f086f063b27bc76366851cdec275ac6b<>res://.godot/imported/Slowness Potion.png-f4562e6f0d22233bf25bb48e41162634.ctex::
+::res://Art/Items/Static/::1753952171
+Diluted Static Potion.png::CompressedTexture2D/CompressedTexture2D::4726956414624735919::1753944479::1753952171::1::::<><><>0<>0<>0f7f7fbaf1b1ddc746a6ddfac703a1ec<>res://.godot/imported/Diluted Static Potion.png-4b71bb8cd3c270da89269c43b9bc07d4.ctex::
+Potent Static Potion.png::CompressedTexture2D/CompressedTexture2D::5521968589072532137::1753944479::1753952171::1::::<><><>0<>0<>51faecc0ea1282cd83a739d8ac52cd5c<>res://.godot/imported/Potent Static Potion.png-e73eea39a84ccf97b2322528d10fd57b.ctex::
+Static Potion.png::CompressedTexture2D/CompressedTexture2D::4830954013479906652::1753944479::1753952171::1::::<><><>0<>0<>517ce76ef50537505bc42bd60a19c1b6<>res://.godot/imported/Static Potion.png-3fbbd22745a4624a549d28b90c360d75.ctex::
+::res://Art/Items/Strength/::1753952171
+Diluted Strength Potion.png::CompressedTexture2D/CompressedTexture2D::1197057747403362976::1753944479::1753952171::1::::<><><>0<>0<>28569581b4e21897229c99522b499584<>res://.godot/imported/Diluted Strength Potion.png-a983d289b2b46c4d23d9afdc5d3d0a07.ctex::
+Potent Strength Potion.png::CompressedTexture2D/CompressedTexture2D::5834930248682114536::1753944479::1753952171::1::::<><><>0<>0<>96bab41902e57c570df7f2148cf9a6b8<>res://.godot/imported/Potent Strength Potion.png-af34286d6a19888751dce00319a0c8e6.ctex::
+Strength Potion.png::CompressedTexture2D/CompressedTexture2D::5564951083024923399::1753944479::1753952171::1::::<><><>0<>0<>a88717962bd5b01de2ac16621f89ecb9<>res://.godot/imported/Strength Potion.png-1ee9957e4acc61a9108019ff276fd2ea.ctex::
+::res://Art/Items/Swiftness/::1753952171
+Diluted Swiftness Potion.png::CompressedTexture2D/CompressedTexture2D::403442593756726606::1753944479::1753952171::1::::<><><>0<>0<>8b7b777a3f8323f141cda7a48fbcb343<>res://.godot/imported/Diluted Swiftness Potion.png-3a10ee90b3b048a3d2e3971a95f234b6.ctex::
+Potent Swiftness Potion.png::CompressedTexture2D/CompressedTexture2D::6259822647827807601::1753944479::1753952171::1::::<><><>0<>0<>f5d499bd3ef0537f2a34ed379edaa923<>res://.godot/imported/Potent Swiftness Potion.png-8008035e9c510fe0113802aa2a015ffc.ctex::
+Swiftness Potion.png::CompressedTexture2D/CompressedTexture2D::5029533440968291129::1753944479::1753952171::1::::<><><>0<>0<>470295df0a269d0bdaef6ce98b59a95a<>res://.godot/imported/Swiftness Potion.png-8d6d66b1caf59c33a530757fda11bab4.ctex::
+::res://Art/Items/Vulnerability/::1753952171
+Diluted Vulnerability Potion.png::CompressedTexture2D/CompressedTexture2D::4596022430699966511::1753944479::1753952171::1::::<><><>0<>0<>ea73759b097443f65826db4ef796206d<>res://.godot/imported/Diluted Vulnerability Potion.png-051e7b4bc8a484621f5a8897240d2b7c.ctex::
+Potent Vulnerability Potion.png::CompressedTexture2D/CompressedTexture2D::2584276760638695370::1753944479::1753952171::1::::<><><>0<>0<>c7cc234737bbb4e76260c9686c243cdf<>res://.godot/imported/Potent Vulnerability Potion.png-763b8bbe09df0e96359137a6b0b44124.ctex::
+Vulnerability Potion.png::CompressedTexture2D/CompressedTexture2D::7625660455989122653::1753944479::1753952171::1::::<><><>0<>0<>abacf4febde2e31e559145d91eb41a5d<>res://.godot/imported/Vulnerability Potion.png-9660cb90598028791119a2ec78f1ce2f.ctex::
+::res://Art/Items/Weakness/::1753952171
+Diluted Weakness Potion.png::CompressedTexture2D/CompressedTexture2D::739752828803840718::1753944479::1753952171::1::::<><><>0<>0<>c6fcaeef1dd1d89036074c909029c4f3<>res://.godot/imported/Diluted Weakness Potion.png-8d52d576c63eacc6a9415c2449a63e52.ctex::
+Potent Weakness Potion.png::CompressedTexture2D/CompressedTexture2D::1168140463270916558::1753944479::1753952171::1::::<><><>0<>0<>0a75e4cf326e3b0c061b01ee31ddee7c<>res://.godot/imported/Potent Weakness Potion.png-9a4e323cb329b7439adfb5044e00ff2e.ctex::
+Weakness Potion.png::CompressedTexture2D/CompressedTexture2D::1083854990799692060::1753944479::1753952171::1::::<><><>0<>0<>527e1ed81a9cea7bf5cd686c220226dc<>res://.godot/imported/Weakness Potion.png-5296f11bd94f82deedb77da39140c058.ctex::
+::res://Art/Items/Wind/::1753952171
+Diluted Wind Potion.png::CompressedTexture2D/CompressedTexture2D::7411784855665520693::1753944479::1753952171::1::::<><><>0<>0<>cde9cbcf7f5607c7ef67292d436ce3cc<>res://.godot/imported/Diluted Wind Potion.png-7a580698799f602cb2ce50f9fdf0bfc7.ctex::
+Potent Wind Potion.png::CompressedTexture2D/CompressedTexture2D::6772101632483813039::1753944479::1753952171::1::::<><><>0<>0<>02b927230d614da7ce7faf0af5bde57e<>res://.godot/imported/Potent Wind Potion.png-3227eb9d12e40f776eeb2f548e8e923a.ctex::
+Wind Potion.png::CompressedTexture2D/CompressedTexture2D::3617638927499265133::1753944479::1753952171::1::::<><><>0<>0<>e2c43bf6bf1de5958ddd74d5d5f101b0<>res://.godot/imported/Wind Potion.png-7e8e0d0aa629827cca4df7ae25a1e70d.ctex::
+::res://Art/UI/::1753952171
+background.png::CompressedTexture2D/CompressedTexture2D::8914758076143089302::1753935073::1753952171::1::::<><><>0<>0<>b78a5a82cc8cf5fa86e7238063a0c1ae<>res://.godot/imported/background.png-9ae53d19f6fb584bc7f3e95588c20fc8.ctex::
+Battle.png::CompressedTexture2D/CompressedTexture2D::7860686197237209983::1753935073::1753952171::1::::<><><>0<>0<>2c384643caa33a74a08b043c809d0d96<>res://.godot/imported/Battle.png-04e1ed2c5d964409ee532ce53e9d0adb.ctex::
+down_arrow.png::CompressedTexture2D/CompressedTexture2D::7858457813280005184::1753935073::1753952171::1::::<><><>0<>0<>868fe0414a0716971ee00e48adec03f6<>res://.godot/imported/down_arrow.png-ff2205bfb51df80014079d184f1525fb.ctex::
+Encounter.png::CompressedTexture2D/CompressedTexture2D::2480890785518970061::1753935073::1753952171::1::::<><><>0<>0<>0cdb930387e9ffa4122843e356754548<>res://.godot/imported/Encounter.png-c68fe31f704aecd16a724d80bdc6cedd.ctex::
+Final Battle.png::CompressedTexture2D/CompressedTexture2D::8165388639993050095::1753935073::1753952171::1::::<><><>0<>0<>fd093c7fffe99161920b479d8472a4b6<>res://.godot/imported/Final Battle.png-e11ff655ac4852fdb507aff13d7b06cf.ctex::
+inventory_background.png::CompressedTexture2D/CompressedTexture2D::3865453852843842646::1753935073::1753952171::1::::<><><>0<>0<>ef063ac445d7e280bb784cc7c01f63f0<>res://.godot/imported/inventory_background.png-b946867381b98a628f17b561f22450a1.ctex::
+item_slot.png::CompressedTexture2D/CompressedTexture2D::2094984792137081685::1753935073::1753952171::1::::<><><>0<>0<>8ece77c5df3267154c2aa65de4bdcd84<>res://.godot/imported/item_slot.png-3b54e33d8606450863771074c64d80cf.ctex::
+Menu Button Highlighted.png::CompressedTexture2D/CompressedTexture2D::2794787670105098282::1753951998::1753952171::1::::<><><>0<>0<>7e5030d3470dcfc3706f063145ce8c62<>res://.godot/imported/Menu Button Highlighted.png-e44215f7c08c6331fff1dff7908b01cc.ctex::
+Menu Button.png::CompressedTexture2D/CompressedTexture2D::2366404708763079588::1753951998::1753952171::1::::<><><>0<>0<>6af20739f3b5cc05b3dacd6106108ba2<>res://.godot/imported/Menu Button.png-73189298b0d5733e85fbe3b261385996.ctex::
+next_button.png::CompressedTexture2D/CompressedTexture2D::926892477165199013::1753935073::1753952171::1::::<><><>0<>0<>5b831c0bd0197f8a4b3417079a4da0fc<>res://.godot/imported/next_button.png-da851fde5ed87b0793e9e38adf760442.ctex::
+pause_button.png::CompressedTexture2D/CompressedTexture2D::7624567772142469190::1753935073::1753952171::1::::<><><>0<>0<>4aa40a10381837ecaf9d05cdac920cd9<>res://.godot/imported/pause_button.png-f41a15a1a48611a4eb9f331d5f36c50d.ctex::
+playerStart.png::CompressedTexture2D/CompressedTexture2D::7276841454483482206::1753935073::1753952171::1::::<><><>0<>0<>f29cad6cf6ea497c70e0d5eefeb2f5a5<>res://.godot/imported/playerStart.png-53250b32f63950a23c56690064e01e0a.ctex::
+Random.png::CompressedTexture2D/CompressedTexture2D::5575382006117862841::1753935073::1753952171::1::::<><><>0<>0<>d1c66f83fefc453125be20dbd633dc0a<>res://.godot/imported/Random.png-151e184fe1587adb077005de623b89b9.ctex::
+run_button.png::CompressedTexture2D/CompressedTexture2D::5309318599542639056::1753935073::1753952171::1::::<><><>0<>0<>3ec614c60ab139780d666c6a2c29fbd2<>res://.godot/imported/run_button.png-f9bbfbbfbf6c6fccff0525c430af6443.ctex::
+stats_box.png::CompressedTexture2D/CompressedTexture2D::4077863268461485888::1753935073::1753952171::1::::<><><>0<>0<>605490088428d8e6e0050a690ff5c461<>res://.godot/imported/stats_box.png-f9331c87bd3e683eb863bdfd8747e92e.ctex::
+text_box.png::CompressedTexture2D/CompressedTexture2D::333094050911077353::1753935073::1753952171::1::::<><><>0<>0<>66a912707cb07f09a7aa5348bd702bdb<>res://.godot/imported/text_box.png-9507623ff4db2423fdae804c409c87f2.ctex::
+text_box_next.png::CompressedTexture2D/CompressedTexture2D::3365653202406685073::1753935073::1753952171::1::::<><><>0<>0<>38c8037b7eca6765a0351d29bcbefd62<>res://.godot/imported/text_box_next.png-284be74a6c121c25b61c47cfedab4962.ctex::
+text_box_next_blank.png::CompressedTexture2D/CompressedTexture2D::4883935338994375665::1753935073::1753952171::1::::<><><>0<>0<>e9b84e2d59b88e57de87f8cb8811a029<>res://.godot/imported/text_box_next_blank.png-fd631f3e334635a1cb23aa891894de60.ctex::
+up_button.png::CompressedTexture2D/CompressedTexture2D::8542775273120553515::1753935073::1753952171::1::::<><><>0<>0<>c20ee1b25b1a93e2e2715f0dedfb8cfc<>res://.godot/imported/up_button.png-c9489cc1e7c8a8844c598ed1fd6844df.ctex::
+::res://JSONS/::1753952791
+enemies.JSON::JSON/JSON::-1::1753951998::0::1::::<><><>0<>0<><>::
+events.JSON::JSON/JSON::-1::1753951993::0::1::::<><><>0<>0<><>::
+items.JSON::JSON/JSON::-1::1753951998::0::1::::<><><>0<>0<><>::
+map.JSON::JSON::-1::1753952791::0::1::::<><><>0<>0<><>::
+::res://Scenes/::1753952812
+Battle.tscn::PackedScene::3379514146984060196::1753952790::0::1::::<><><>0<>0<><>::uid://d0i6ia4013jp0::::res://Scripts/battle_manager.gd<>uid://lk3u43141ady::::res://Scenes/battle_hud.tscn
+battle_hud.tscn::PackedScene/PackedScene::794458416887287518::1753951998::0::1::::<><><>0<>0<><>::uid://cwtqdnra1go4t::::res://testTheme.tres<>uid://h31cliy5ink8::::res://Art/Atlas Textures/UI/run_button/run_button_pressed0.tres<>uid://bmcrva5mj2ilv::::res://Art/Atlas Textures/UI/run_button/run_button_normal.tres<>uid://5ksslj7ls40q::::res://Scenes/enemy_display.tscn<>uid://bqo13isbnspjk::::res://Scenes/player_hud.tscn<>uid://c28o8e3akqrll::::res://Scripts/run_button.gd<>uid://bqgn7m8p47ojy::::res://Art/Atlas Textures/UI/run_button/run_button_pressed1.tres<>uid://dlvnxqsw38u5i::::res://Art/Atlas Textures/UI/run_button/rune_button_hover.tres<>uid://bd4lrilbnposx::::res://Art/Atlas Textures/UI/run_button/run_button_pressed2.tres<>uid://b2virft0eo4aj::::res://Art/Atlas Textures/UI/run_button/run_button_pressed3.tres<>uid://v8ahow1mkmp::::res://Art/Atlas Textures/UI/run_button/run_button_pressed4.tres<>uid://cu0fkjf14dwk8::::res://Art/Atlas Textures/UI/run_button/run_button_pressed5.tres<>uid://cu61o7qwq24st::::res://Art/Atlas Textures/UI/run_button/run_button_pressed6.tres<>uid://dj0cl2trd7heo::::res://Art/Atlas Textures/UI/run_button/run_button_pressed7.tres<>uid://dsn2hw1nq2mgv::::res://Art/Atlas Textures/UI/run_button/run_button_pressed8.tres<>uid://cjihnq0p6fh6f::::res://Art/Atlas Textures/UI/run_button/run_button_pressed9.tres<>uid://c4juopga2vdla::::res://Art/Atlas Textures/UI/run_button/run_button_pressed10.tres<>uid://dxypds7nf0lel::::res://Art/Atlas Textures/UI/run_button/run_button_pressed11.tres<>uid://dkvff8rym2o8x::::res://Art/Atlas Textures/UI/run_button/run_button_pressed12.tres<>uid://2xuoym36h0w0::::res://Art/Atlas Textures/UI/run_button/run_button_pressed13.tres<>uid://diinnhx6qfjjx::::res://Art/Atlas Textures/UI/run_button/run_button_pressed14.tres<>uid://cd3hsyk01h270::::res://Art/Atlas Textures/UI/run_button/run_button_pressed15.tres<>uid://cynpmfmvi7r82::::res://Art/Atlas Textures/UI/run_button/run_button_pressed16.tres<>uid://433dga1o4twv::::res://Art/UI/item_slot.png<>uid://b8lpi8rnpiq5q::::res://Scenes/item_display.tscn
+encounter.tscn::PackedScene/PackedScene::336154546351210113::1753935073::0::1::::<><><>0<>0<><>::uid://bcgcbd6gqf82y::::res://Scripts/encounter.gd<>uid://lk3u43141ady::::res://Scenes/battle_hud.tscn
+enemy.tscn::PackedScene/PackedScene::5147811592271626264::1753935073::0::1::::<><><>0<>0<><>::uid://bwv0qsntxrsho::::res://Scripts/enemy.gd
+enemy_display.tscn::PackedScene::2127434729971120214::1753952790::0::1::::<><><>0<>0<><>::uid://cifvyjhru4qeq::::res://Scripts/enemy_display.gd
+inventory_item.tscn::PackedScene/PackedScene::3955045184545938764::1753935073::0::1::::<><><>0<>0<><>::uid://crwayajb36xqm::::res://Scripts/inventory_item.gd
+item_display.tscn::PackedScene/PackedScene::4726287480428832732::1753935073::0::1::::<><><>0<>0<><>::uid://dl3a4v8we6hvb::::res://Scripts/item_display.gd
+main_menu.tscn::PackedScene::3764180514828518335::1753952812::0::1::::<><><>0<>0<><>::uid://vehb0lo3hi3j::::res://PeaberryBase.ttf<>uid://vhmfwxx5v8ph::::res://Scripts/mainMenu.gd<>uid://dlo4f2fomvhtl::::res://Art/Atlas Textures/Items/Health/Normal/Normal_Health_Normal.tres<>uid://efpep7a7i4b3::::res://Art/Atlas Textures/Items/Acid/Diluted/Diluted_Acid_Normal.tres<>uid://cwjx2m518u7jd::::res://Art/Atlas Textures/Items/Shield/Potent/Potent_Shield_Normal.tres<>uid://c4swq1h3ks106::::res://Art/Atlas Textures/Items/Poison/Normal/Normal_Poison_Normal.tres<>uid://dyt1uidulj34t::::res://Art/Atlas Textures/Items/Fire/Potent/Potent_Fire_Normal.tres<>uid://8ykls3gb5dcu::::res://Art/UI/Menu Button.png<>uid://bf220k04360qo::::res://Art/UI/Menu Button Highlighted.png<>uid://c0iqxm04l5108::::res://m5x7.ttf
+map.tscn::PackedScene::4651548473785511650::1753952790::0::1::::<><><>0<>0<><>::uid://hd5j81hpibow::::res://Scripts/map.gd
+pause_button.tscn::PackedScene/PackedScene::2876597050441281731::1753935073::0::1::::<><><>0<>0<><>::uid://rhfxrylrdufb::::res://Art/Atlas Textures/UI/pause_button/pause_button_normal.tres<>uid://c4ki3pyn17pny::::res://Art/Atlas Textures/UI/pause_button/pause_button_pressed.tres<>uid://cesgp1bk2po5r::::res://Art/Atlas Textures/UI/pause_button/pause_button_hover.tres
+player_hud.tscn::PackedScene/PackedScene::3539972562556534776::1753935073::0::1::::<><><>0<>0<><>::uid://c0iqxm04l5108::::res://m5x7.ttf<>uid://bvowwc5ncwf3s::::res://Scripts/player.gd<>uid://e0mal755m8kr::::res://Art/UI/text_box.png<>uid://bvcppv87p0kbu::::res://Art/UI/inventory_background.png<>uid://ddxuujta7cc7q::::res://Art/Atlas Textures/UI/next_button/next_button_normal.tres<>uid://c58dyvxuj6e3::::res://Art/Atlas Textures/UI/next_button/hover_button_pressed.tres<>uid://433dga1o4twv::::res://Art/UI/item_slot.png<>uid://cvf4sng342o1d::::res://Art/Atlas Textures/UI/up_arrow/up_arrow_normal.tres<>uid://dv1688cie4wmw::::res://Art/Atlas Textures/UI/next_button/next_button_hover.tres<>uid://bn7l205lejkpd::::res://Art/UI/text_box_next.png<>uid://wxnyy3mnkgh7::::res://Scripts/text_box_button.gd<>uid://cbt2x36a1008d::::res://Art/UI/text_box_next_blank.png<>uid://obay0hijq51s::::res://Art/Atlas Textures/UI/next_button/next_button_disabled.tres<>uid://ddicqt5327ahk::::res://Art/Atlas Textures/UI/up_arrow/up_arrow_pressed.tres<>uid://bkkgqh80wpc1y::::res://Scripts/main_text_box.gd<>uid://00ofmcos6uj8::::res://Art/Atlas Textures/UI/up_arrow/up_arrow_hover.tres<>uid://ms7fvbuk8brm::::res://Art/Atlas Textures/UI/down_arrow/down_arrow_normal.tres<>uid://bydl2u7uvbiu7::::res://Art/UI/stats_box.png<>uid://d1gr0v0gp8iw4::::res://Art/Atlas Textures/UI/down_arrow/down_arrow_pressed.tres<>uid://cbjevcsoxkncv::::res://Art/Atlas Textures/UI/down_arrow/down_arrow_hover.tres<>uid://ciupvtcdnq3xa::::res://Scripts/stats_info.gd<>uid://b8lpi8rnpiq5q::::res://Scenes/item_display.tscn<>uid://d2hie4bvuw5n4::::res://Art/Atlas Textures/UI/up_arrow/up_arrows_disabled.tres<>uid://d15qve8s6syt1::::res://Scripts/up_inventory_button.gd<>uid://dkpumvhe2ywbw::::res://Scripts/down_inventory_button.gd<>uid://b8a0b2ak1e7cw::::res://Art/Atlas Textures/UI/down_arrow/down_arrow_disabled.tres
+::res://Scripts/::1753952773
+battle_manager.gd::GDScript/GDScript::8932394723160660379::1753952068::0::1::::<>Node2D<><>0<>0<><>::
+down_inventory_button.gd::GDScript/GDScript::7893353037175487168::1753935073::0::1::::<>TextureButton<><>0<>0<><>::
+drag_manager.gd::GDScript/GDScript::8321440655131998132::1753935073::0::1::::<>Node<><>0<>0<><>::
+encounter.gd::GDScript/GDScript::2539308063026179162::1753943977::0::1::::<>Node2D<><>0<>0<><>::
+enemy.gd::GDScript/GDScript::3975474640484166748::1753935073::0::1::::<>Control<><>0<>0<><>::
+enemy_display.gd::GDScript/GDScript::5345992405486642912::1753935073::0::1::::<>TextureRect<><>0<>0<><>::
+general_functions.gd::GDScript/GDScript::2822739802607943739::1753935073::0::1::::<>Node<><>0<>0<><>::
+inventory_item.gd::GDScript/GDScript::6011510892863123360::1753935073::0::1::::<>Control<><>0<>0<><>::
+item_display.gd::GDScript/GDScript::7989194851209625759::1753944479::0::1::::ItemDisplay<>TextureRect<><>0<>0<><>::
+locationButton.gd::GDScript/GDScript::1860054420139888967::1753935073::0::1::::<>Node<><>0<>0<><>::
+mainMenu.gd::GDScript::1489155085689994161::1753952773::0::1::::<>Node<><>0<>0<><>::
+main_text_box.gd::GDScript/GDScript::3109346192080974284::1753935073::0::1::::<>RichTextLabel<><>0<>0<><>::
+map.gd::GDScript/GDScript::499354394430422662::1753952384::0::1::::<>Control<><>0<>0<><>::
+player.gd::GDScript/GDScript::3890662901940425294::1753951998::0::1::::<>Control<><>0<>0<><>::
+run_button.gd::GDScript/GDScript::6736973833956577637::1753944479::0::1::::<>TextureButton<><>0<>0<><>::
+stats_info.gd::GDScript/GDScript::5376588929322758702::1753935073::0::1::::<>PanelContainer<><>0<>0<><>::
+text_box_button.gd::GDScript/GDScript::1592468732717693638::1753935073::0::1::::<>TextureButton<><>0<>0<><>::
+up_inventory_button.gd::GDScript/GDScript::9047112553778150912::1753935073::0::1::::<>TextureButton<><>0<>0<><>::
