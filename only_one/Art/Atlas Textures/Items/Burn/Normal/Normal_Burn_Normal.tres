@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://csxpnxvlxxn4b"]
+
+[ext_resource type="Texture2D" uid="uid://byf4iralin3fj" path="res://Art/Items/Burn/Burn Potion.png" id="1_42vt5"]
+
+[resource]
+atlas = ExtResource("1_42vt5")
+region = Rect2(0, 0, 32, 0)

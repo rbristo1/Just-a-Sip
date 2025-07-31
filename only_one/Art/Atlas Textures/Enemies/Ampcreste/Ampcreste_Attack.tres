@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://m536y1n654vh"]
+
+[ext_resource type="Texture2D" uid="uid://dyrf36etq4sj" path="res://Art/Enemies/Ampcreste.png" id="1_q0kld"]
+
+[resource]
+atlas = ExtResource("1_q0kld")
+region = Rect2(192, 0, 96, 0)

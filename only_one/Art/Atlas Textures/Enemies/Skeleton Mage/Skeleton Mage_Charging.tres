@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bf0disav2s3di"]
+
+[ext_resource type="Texture2D" uid="uid://b7v4lthnpa3mi" path="res://Art/Enemies/Skeleton Mage.png" id="1_74sfo"]
+
+[resource]
+atlas = ExtResource("1_74sfo")
+region = Rect2(96, 0, 96, 0)

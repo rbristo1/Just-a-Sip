@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://idrfr2xknheo"]
+
+[ext_resource type="Texture2D" uid="uid://dccdeywh0rb3b" path="res://Art/Enemies/Necrodrake Arm (Right).png" id="1_2hpok"]
+
+[resource]
+atlas = ExtResource("1_2hpok")
+region = Rect2(96, 0, 96, 0)

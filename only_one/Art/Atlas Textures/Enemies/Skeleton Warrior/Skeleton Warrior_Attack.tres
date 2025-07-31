@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://4ynhghin3k0f"]
+
+[ext_resource type="Texture2D" uid="uid://cfu53042hhwfh" path="res://Art/Enemies/Skeleton Warrior.png" id="1_2vvs2"]
+
+[resource]
+atlas = ExtResource("1_2vvs2")
+region = Rect2(192, 0, 96, 0)

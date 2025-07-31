@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://suhiq4jbt7ft"]
+
+[ext_resource type="Texture2D" uid="uid://cw2tq2p50bqyt" path="res://Art/Items/Shield/Diluted Shield Potion.png" id="1_7vxor"]
+
+[resource]
+atlas = ExtResource("1_7vxor")
+region = Rect2(0, 0, 32, 0)

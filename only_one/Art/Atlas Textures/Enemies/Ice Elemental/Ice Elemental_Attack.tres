@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cwjffg4cbjx8p"]
+
+[ext_resource type="Texture2D" uid="uid://c02jc2asvfjw7" path="res://Art/Enemies/Ice Elemental.png" id="1_abia1"]
+
+[resource]
+atlas = ExtResource("1_abia1")
+region = Rect2(192, 0, 96, 0)

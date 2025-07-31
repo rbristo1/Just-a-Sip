@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c4jhkdfwveesc"]
+
+[ext_resource type="Texture2D" uid="uid://bulhjb60s8sxl" path="res://Art/Items/Poison/Potent Poison Potion.png" id="1_jesyn"]
+
+[resource]
+atlas = ExtResource("1_jesyn")
+region = Rect2(32, 0, 32, 0)

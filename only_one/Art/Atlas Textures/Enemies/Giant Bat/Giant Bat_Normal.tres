@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bf0rjiqfiaf22"]
+
+[ext_resource type="Texture2D" uid="uid://cmk7m0feusubj" path="res://Art/Enemies/Giant Bat.png" id="1_lpp15"]
+
+[resource]
+atlas = ExtResource("1_lpp15")
+region = Rect2(0, 0, 96, 0)

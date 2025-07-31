@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dxk3pj5frd6ye"]
+
+[ext_resource type="Texture2D" uid="uid://cpjugqw2io6l6" path="res://Art/Enemies/Dionydra.png" id="1_7hcny"]
+
+[resource]
+atlas = ExtResource("1_7hcny")
+region = Rect2(192, 0, 96, 0)

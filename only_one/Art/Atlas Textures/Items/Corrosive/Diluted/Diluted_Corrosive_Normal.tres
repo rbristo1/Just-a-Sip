@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dee8tcc86evdt"]
+
+[ext_resource type="Texture2D" uid="uid://jkj2758c4yc5" path="res://Art/Items/Corrosive/Diluted Corrosion Potion.png" id="1_dh033"]
+
+[resource]
+atlas = ExtResource("1_dh033")
+region = Rect2(0, 0, 32, 0)

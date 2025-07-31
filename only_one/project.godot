@@ -40,6 +40,7 @@ window/default_font_antialiasing=1
 "Battle Manager"=""
 "Player Stats Display"=""
 "Text Box Button"=""
+"Run Button"=""
 
 [gui]
 

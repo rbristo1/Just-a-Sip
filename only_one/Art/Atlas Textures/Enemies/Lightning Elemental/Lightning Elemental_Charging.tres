@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://gaq5jmvw1i6f"]
+
+[ext_resource type="Texture2D" uid="uid://ulmmxlwh2gy6" path="res://Art/Enemies/Lightning Elemental.png" id="1_vc1vu"]
+
+[resource]
+atlas = ExtResource("1_vc1vu")
+region = Rect2(96, 0, 96, 0)

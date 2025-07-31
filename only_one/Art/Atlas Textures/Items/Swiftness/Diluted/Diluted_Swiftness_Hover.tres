@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://drs61ddttqt31"]
+
+[ext_resource type="Texture2D" uid="uid://f0ov1rgcg7dy" path="res://Art/Items/Swiftness/Diluted Swiftness Potion.png" id="1_hsyb8"]
+
+[resource]
+atlas = ExtResource("1_hsyb8")
+region = Rect2(32, 0, 32, 0)

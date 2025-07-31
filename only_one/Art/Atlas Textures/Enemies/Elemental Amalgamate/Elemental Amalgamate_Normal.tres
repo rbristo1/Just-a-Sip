@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bq1r4ena5lmmn"]
+
+[ext_resource type="Texture2D" uid="uid://bmt3fr3f3wykq" path="res://Art/Enemies/Elemental Amalgamate.png" id="1_vefhm"]
+
+[resource]
+atlas = ExtResource("1_vefhm")
+region = Rect2(0, 0, 96, 0)
