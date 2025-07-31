@@ -360,6 +360,9 @@ func _ready() ->void:
 	
 	if playerPosX == float(mapLength)-1.0:
 		area += 1
+		if area == 3:
+			#TODO add correct path
+			get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
 		adjList = []
 		widths = []
 		events = []

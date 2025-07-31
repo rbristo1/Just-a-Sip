@@ -32,7 +32,7 @@ var enemyDefenseModifiers: Array = [1, 1, 1]
 var enemyDefenseModifierTurns: Array = [0, 0, 0]
 var enemySpeedModifiers: Array = [1, 1, 1]
 var enemySpeedModifierTurns: Array = [0, 0, 0]
-
+var canMultiattack: Array = [0,0,0]
 # These are all variables pertaining to the item attack slots
 var attackItemsExist: Array = [false, false, false]
 
@@ -59,12 +59,36 @@ var enemyAreas: Array
 var enemyBosses: Array
 @export var mapFile = "res://JSONS/map.JSON"
 @export var ITEM_POWER_MULT: int = 5
-
-
+var playerPosX
+var playerPosY
 @export var enemiesFile = "res://JSONS/enemies.JSON"
-
+var events
 # TODO - remove this. This is for testing only
 func _ready() -> void:
+	if not FileAccess.file_exists(mapFile):
+		area = 0
+	else:
+		var save_file = FileAccess.open(mapFile, FileAccess.READ)
+		while save_file.get_position() < save_file.get_length():
+			var json_string = save_file.get_line()
+			var json = JSON.new()
+			var parse_result = json.parse(json_string)
+			if not parse_result == OK:
+				print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+				continue
+			var node_data = json.data
+			for i in node_data.keys():
+				if (i == "area"):
+					set(i, int(node_data[i]))
+				if (i == "playerPosX"):
+					set(i, int(node_data[i]))
+				if (i == "playerPosY"):
+					set(i, int(node_data[i]))
+				if (i == "events"):
+					set(i, node_data[i])
+	if (events[playerPosY][playerPosX] == 4):
+		bossBattle = true
+		print("ran")
 	loadEnemyAreaList()
 	
 	for i in enemies.size():
@@ -91,8 +115,7 @@ func _ready() -> void:
 	for i in eDisplays.size(): # enemies MUST be added to the scene tree, as that is when _ready() calls
 		eDisplays[i].add_child(enemies[i])
 	
-	initialize(0, false) # This is here for testing only. Normally this will be
-						# called by whatever triggers the battle
+	beginBattle()
 
 func getEnemySlot(find: Control, arrName: String) -> int:
 	var arr = get(arrName)
@@ -115,11 +138,6 @@ func loadEnemyAreaList() -> void:
 			for i in node_data.keys():
 				if(i == "enemyAreas" or i == "enemyBosses"):
 					set(i, node_data[i])
-
-func initialize(Area: int, Boss: bool) -> void:
-	area = Area
-	bossBattle = Boss
-	beginBattle()
 
 func beginBattle() -> void:
 	# First thing that needs to happen is the number of enemies and type of enemies
@@ -149,7 +167,7 @@ func beginBattle() -> void:
 			if (speedCounters[i] >= speedThreshold):
 				enemiesAttacking[i] = true
 				eDisplays[i].changeActiveTexture(1)
-				if (speedCounters[i] >= speedThreshold * 2 and enemies[i].canMultiattack == false):
+				if (speedCounters[i] >= speedThreshold * 2 and bossBattle):
 					speedCounters[i] = (speedThreshold * 2) - 1 # Prevent multiattack
 		# Now the player can take their turn
 		tBox.queueText(player.playerName + "'s turn!")

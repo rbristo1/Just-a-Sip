@@ -8,7 +8,7 @@ extends Control
 @export var attack = 10
 @export var speed = 10
 @export var defense = 10
-@export var inventoryid: Array # This is ONLY USED FOR SAVING. This is not used for storing items in game
+var inventoryid: Array# This is ONLY USED FOR SAVING. This is not used for storing items in game
 
 @export var INVENTORY_ITEM_DISPLAYS: Array
 @export var ITEM_INVENTORY_CAPACITY = 32
@@ -78,7 +78,6 @@ var enemyAreas: Array
 
 
 func _ready() -> void:
-	
 	createEvents()
 	
 	INVENTORY_ITEM_DISPLAYS = get_tree().get_nodes_in_group("Inventory Item Displays")
@@ -92,15 +91,25 @@ func _ready() -> void:
 	for i in itemInventory.size(): 
 		var instance = itemScene.instantiate()
 		itemInventory[i] = instance
-	
+	loaditems()
 	builditemJSON()
 	buildEnemyJSON()
 	#giveFreeItems()
 	#TODO remove createSave and builditemJSON at completion
 	#savePlayer()
 	#createSave()
-	loadPlayer()
-	loaditems()
+	if FileAccess.file_exists(playerFile):
+		loadPlayer()
+	else:
+			addItemToInventory(ItemTypes.D_HEALING)
+			addItemToInventory(ItemTypes.D_BLAST)
+			addItemToInventory(ItemTypes.D_FIRE)
+			addItemToInventory(ItemTypes.D_ICE)
+			addItemToInventory(ItemTypes.D_ELECTRIC)
+			addItemToInventory(ItemTypes.D_WIND)
+			addItemToInventory(ItemTypes.D_POISON)
+			addItemToInventory(ItemTypes.D_ACID)
+	
 	
 	#TEST
 	#statLog()
@@ -114,6 +123,26 @@ func createEvents() -> void:
 	temp.append("You stumble across a shelf lined with various flasks, now yours for the taking.")
 	events.append(temp)
 	temp = []
+	temp.append("Nestled beneath the moss you find a satchel, brimming with glass bottles pulsing faintly.")
+	events.append(temp)
+	temp = []
+	temp.append("You hear a soft clink, and spot some potions tucked beneath old bones.")
+	events.append(temp)
+	temp = []
+	temp.append("The remnants of an alchemist’s workstation lie scattered across the floor.")
+	temp.append("A few potions remain still vibrant, still volatile.")
+	events.append(temp)
+	temp = []
+	temp.append("A skeletal hand juts from a collapsed tunnel wall, clutching a pouch.")
+	temp.append("Inside, multiple vials rattle together.")
+	events.append(temp)
+	temp = []
+	temp.append("You hear a soft clink, and spot a potion tucked beneath old bones.")
+	events.append(temp)
+	temp = []
+	temp.append("A ritual circle stains the floor in dried ink and ash.")
+	temp.append("Scattered around its edges are several potions, seeming to have been placed deliberately...")
+	events.append(temp)
 	var save_dict = {
 		"events": events
 	}
@@ -1130,11 +1159,11 @@ func savePlayer() -> void:
 		inventoryid.append(itemInventory[i].itemID)
 		
 	var save_dict = {
-		"maxhp" : maxHP,
-		"hp" : HP,
-		"spd" : speed,
-		"def": defense,
-		"atk": attack,
+		"maxHP" : maxHP,
+		"HP" : HP,
+		"speed" : speed,
+		"defense": defense,
+		"attack": attack,
 		"inventoryid": inventoryid,
 		"itemInventoryNum": itemInventoryNum,
 	}
@@ -1157,6 +1186,10 @@ func loadPlayer() -> void:
 				continue
 			var node_data = json.data
 			for i in node_data.keys():
+				if i == "maxhp":
+					maxHP
+				if (i == "itemInventoryNum"):
+					continue
 				set(i, node_data[i])
 	for i in inventoryid.size():
 		if inventoryid[i] != -1:
@@ -1190,8 +1223,8 @@ func addItemToInventory(id: int) -> void:
 	
 	# Deferred to ensure the item exists completely before messing with its attributes
 	if (itemInventoryNum != 32):
-		itemInventory[itemInventoryNum].initialize(id, itemInventoryNum, iName, iEffect, iPower, iImage, iHImage, iArea)
-		#itemInventoryNum += 1
+		itemInventory[int(itemInventoryNum)].initialize(id, itemInventoryNum, iName, iEffect, iPower, iImage, iHImage, iArea)
+		itemInventoryNum += 1
 		shiftInventoryLeft(0)
 		updateInventoryDisplay(-1, -1)
 
