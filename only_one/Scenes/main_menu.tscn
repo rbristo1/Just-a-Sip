@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://btvnrdu32ubop"]
+[gd_scene load_steps=11 format=3 uid="uid://btvnrdu32ubop"]
 
 [ext_resource type="FontFile" uid="uid://vehb0lo3hi3j" path="res://PeaberryBase.ttf" id="1_8qtwp"]
+[ext_resource type="Script" uid="uid://vhmfwxx5v8ph" path="res://Scripts/mainMenu.gd" id="1_16hvj"]
 [ext_resource type="Texture2D" uid="uid://dlo4f2fomvhtl" path="res://Art/Atlas Textures/Items/Health/Normal/Normal_Health_Normal.tres" id="2_dy7ct"]
 [ext_resource type="Texture2D" uid="uid://efpep7a7i4b3" path="res://Art/Atlas Textures/Items/Acid/Diluted/Diluted_Acid_Normal.tres" id="3_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://cwjx2m518u7jd" path="res://Art/Atlas Textures/Items/Shield/Potent/Potent_Shield_Normal.tres" id="4_0k4wn"]
@@ -17,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_16hvj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -140,3 +142,5 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(96, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/TextureButton" to="." method="_on_texture_button_pressed"]
