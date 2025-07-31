@@ -75,8 +75,6 @@ var enemyAreas: Array
 @export var mapFile = "res://JSONS/map.JSON"
 
 
-
-
 func _ready() -> void:
 	createEvents()
 	
@@ -112,8 +110,6 @@ func _ready() -> void:
 	
 	
 	#TEST
-	#statLog()
-	#giveFreeItems()
 
 var events: Array = []
 @export var eventsFile = "res://JSONS/events.JSON"
@@ -149,8 +145,6 @@ func createEvents() -> void:
 	var saveFile = FileAccess.open(eventsFile, FileAccess.WRITE)
 	var json_string = JSON.stringify(save_dict)
 	saveFile.store_line(json_string)
-
-
 
 # A comprehensive list of all types of items are in this function
 func builditemJSON() -> void:
@@ -1350,7 +1344,7 @@ func statLog() -> void:
 
 func giveFreeItems() -> void:
 	for i in 16:
-		addItemToInventory(randi() % 15)
+		addItemToInventory(randi() % 23)
 		
 func takeDamage(amount: int) -> void:
 		HP -= amount
@@ -1361,13 +1355,40 @@ func heal(amount: int) -> void:
 		HP = maxHP
 
 func spawnRandomAreaItem(area: int, iDisplay: ItemDisplay) -> void:
-	var itemPool: Array =[]
+	var itemPool: Array = []
 	for i in itemArea.size():
 		for j in itemArea[i].size():
 			if (itemArea[i][j] == area):
 				itemPool.append(i)
 	
-	var iID = itemPool[randi_range(0, itemPool.size() - 1)]
+	var poolHealing: Array= []
+	var poolDamage: Array = []
+	var poolStatus: Array = []
+	var poolStats: Array = []
+	
+	for i in itemPool.size():
+		if (itemPool[i].itemID <= 2):
+			poolHealing.append(itemPool[i])
+		elif (itemPool[i].itemID >= 3 and itemPool[i].itemID <= 23):
+			poolDamage.append(itemPool[i])
+		elif (itemPool[i].itemID >= 24 and itemPool[i].itemID <= 41):
+			poolStatus.append(itemPool[i])
+		elif (itemPool[i].itemID >= 42 and itemPool[i].itemID <= 56):
+			poolStatus.append(itemPool[i])
+	
+	var choosePool = randf()
+	var pool
+	
+	if (choosePool <= 0.7):
+		pool = poolDamage
+	elif (choosePool > 0.7 and choosePool <= 0.8):
+		pool = poolHealing
+	elif (choosePool > 0.8 and choosePool <= 0.9):
+		pool = poolStatus
+	elif (choosePool > 0.9):
+		pool = poolStatus
+	
+	var iID = pool[randi_range(0, pool.size() - 1)]
 	iDisplay.link(itemIDs[iID], itemNames[iID], itemEffect[iID], itemPower[iID],
 	load(itemImage[iID]), load(itemHImage[iID]), itemArea[iID])
 	

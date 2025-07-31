@@ -1,6 +1,5 @@
-[gd_scene load_steps=36 format=3 uid="uid://lk3u43141ady"]
+[gd_scene load_steps=35 format=3 uid="uid://lk3u43141ady"]
 
-[ext_resource type="PackedScene" uid="uid://bg8per6ea7hkt" path="res://Scenes/pause_button.tscn" id="1_w5k1x"]
 [ext_resource type="Theme" uid="uid://cwtqdnra1go4t" path="res://testTheme.tres" id="1_xebxw"]
 [ext_resource type="Texture2D" uid="uid://h31cliy5ink8" path="res://Art/Atlas Textures/UI/run_button/run_button_pressed0.tres" id="3_ps4wy"]
 [ext_resource type="Texture2D" uid="uid://bmcrva5mj2ilv" path="res://Art/Atlas Textures/UI/run_button/run_button_normal.tres" id="3_w80bc"]
@@ -186,10 +185,19 @@ show_percentage = false
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
 
-[node name="PauseButton" parent="BHudMainBox/EnemyInfoRow" instance=ExtResource("1_w5k1x")]
+[node name="RunButton" type="TextureButton" parent="BHudMainBox/EnemyInfoRow" groups=["Run Button"]]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+texture_normal = ExtResource("3_w80bc")
+texture_pressed = SubResource("AnimatedTexture_w80bc")
+texture_hover = ExtResource("5_gn6mn")
+stretch_mode = 5
+script = ExtResource("5_024dg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BHudMainBox/EnemyInfoRow/RunButton"]
+libraries = {
+&"": SubResource("AnimationLibrary_ngp3r")
+}
 
 [node name="EInfoSpacing5" type="VSeparator" parent="BHudMainBox/EnemyInfoRow"]
 custom_minimum_size = Vector2(16, 0)
@@ -231,20 +239,6 @@ layout_mode = 2
 [node name="HSeparator" type="HSeparator" parent="BHudMainBox/EnemyImageRow/VBoxContainer"]
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
-
-[node name="RunButton" type="TextureButton" parent="BHudMainBox/EnemyImageRow/VBoxContainer" groups=["Run Button"]]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-texture_normal = ExtResource("3_w80bc")
-texture_pressed = SubResource("AnimatedTexture_w80bc")
-texture_hover = ExtResource("5_gn6mn")
-stretch_mode = 5
-script = ExtResource("5_024dg")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton"]
-libraries = {
-&"": SubResource("AnimationLibrary_ngp3r")
-}
 
 [node name="MainSpacing2" type="HSeparator" parent="BHudMainBox"]
 custom_minimum_size = Vector2(0, 16)
@@ -302,5 +296,5 @@ layout_mode = 2
 [node name="PlayerHud" parent="BHudMainBox" instance=ExtResource("4_ps4wy")]
 layout_mode = 2
 
-[connection signal="button_down" from="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton" to="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton" method="_on_button_down"]
-[connection signal="button_up" from="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton" to="BHudMainBox/EnemyImageRow/VBoxContainer/RunButton" method="_on_button_up"]
+[connection signal="button_down" from="BHudMainBox/EnemyInfoRow/RunButton" to="BHudMainBox/EnemyInfoRow/RunButton" method="_on_button_down"]
+[connection signal="button_up" from="BHudMainBox/EnemyInfoRow/RunButton" to="BHudMainBox/EnemyInfoRow/RunButton" method="_on_button_up"]

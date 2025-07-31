@@ -1,8 +1,8 @@
-res://Scenes/battle_hud.tscn
-res://Scripts/item_display.gd
+res://Scenes/player_hud.tscn
 res://Scenes/Battle.tscn
 res://Scenes/map.tscn
+res://Scenes/battle_hud.tscn
 res://Scripts/player.gd
-res://Scripts/down_inventory_button.gd
-res://Scenes/player_hud.tscn
 res://Scripts/battle_manager.gd
+res://Art/Atlas Textures/Items/Shield/Potent/Potent_Shield_Normal.tres
+res://main_menu.tscn
