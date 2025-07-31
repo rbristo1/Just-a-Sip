@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ce4o2o0p0vo"]
+
+[ext_resource type="Texture2D" uid="uid://bo0i8cnlfuk5t" path="res://Art/Enemies/Kobold.png" id="1_o5lso"]
+
+[resource]
+atlas = ExtResource("1_o5lso")
+region = Rect2(96, 0, 96, 0)

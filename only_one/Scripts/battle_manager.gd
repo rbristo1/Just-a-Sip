@@ -17,6 +17,7 @@ var player # Will link to the player_hud
 var nextButton # Will link to the 'next' button
 var tBox
 var playerStatsDisplay
+var runButton
 
 # These are all arrays pertaining to the enemies
 var enemyIDs: Array = [-1, -1, -1]
@@ -57,6 +58,8 @@ var numEnemies
 var enemyAreas: Array
 var enemyBosses: Array
 
+@export var ITEM_POWER_MULT: int = 5
+
 
 @export var enemiesFile = "res://JSONS/enemies.JSON"
 
@@ -77,6 +80,8 @@ func _ready() -> void:
 	tBox = get_tree().get_first_node_in_group("Main Text Box")
 	nextButton = get_tree().get_first_node_in_group("Next Button")
 	playerStatsDisplay = get_tree().get_first_node_in_group("Player Stats Display")
+	runButton = get_tree().get_first_node_in_group("Run Button")
+	runButton.run.connect(onRunComplete)
 	
 	tBox.textProgressed.connect(onTextProgressed)
 	for i in iAttackSlots.size():
@@ -180,7 +185,6 @@ func beginBattle() -> void:
 			if (enemyIDs[i] != -1 and enemiesAttacking[i] == true):
 				while (speedCounters[i] >= speedThreshold):
 					await enemyTurn(i)
-		print(battleEnded)
 	# At this point here, the battle should be over, so we can award stats and
 	# items to the player for them to take. Once the player hits the next button,
 	# the battle will be over and the scene will be closed.
@@ -194,25 +198,45 @@ func generateEnemies():
 	# Next we need to determine the pool of enemies we can pick from based 
 	# on the area
 	var enemyPool: Array
-	for i in enemyAreas.size():
-		for j in enemyAreas[i].size():
-			if (enemyAreas[i][j] == area and enemyBosses[i] == bossBattle):
-				enemyPool.append(i)
+	if !bossBattle:
+		for i in enemyAreas.size():
+			for j in enemyAreas[i].size():
+				if (enemyAreas[i][j] == area and enemyBosses[i] != true):
+					enemyPool.append(i)
+		
+		# Now we need to figure out where enemies are displayed based on the
+		# number of enemies
+		if (numEnemies == 1): # Center
+			disableUnusedEnemyObjects(0)
+			createEnemy(1, randi_range(0, enemyPool.size() - 1))
+			disableUnusedEnemyObjects(2)
+		if (numEnemies == 2): # Left and Right
+			createEnemy(0, randi_range(0, enemyPool.size() - 1))
+			disableUnusedEnemyObjects(1)
+			createEnemy(2, randi_range(0, enemyPool.size() - 1))
+		if (numEnemies == 3): # All three
+			createEnemy(0, randi_range(0, enemyPool.size() - 1))
+			createEnemy(1, randi_range(0, enemyPool.size() - 1))
+			createEnemy(2, randi_range(0, enemyPool.size() - 1))
 	
-	# Now we need to figure out where enemies are displayed based on the
-	# number of enemies
-	if (numEnemies == 1): # Center
-		disableUnusedEnemyObjects(0)
-		createEnemy(1, randi_range(0, enemyPool.size() - 1))
-		disableUnusedEnemyObjects(2)
-	if (numEnemies == 2): # Left and Right
-		createEnemy(0, randi_range(0, enemyPool.size() - 1))
-		disableUnusedEnemyObjects(1)
-		createEnemy(2, randi_range(0, enemyPool.size() - 1))
-	if (numEnemies == 3): # All three
-		createEnemy(0, randi_range(0, enemyPool.size() - 1))
-		createEnemy(1, randi_range(0, enemyPool.size() - 1))
-		createEnemy(2, randi_range(0, enemyPool.size() - 1))
+	if (bossBattle):
+		if (area == 0):
+			disableUnusedEnemyObjects(0)
+			createEnemy(1, 4)
+			disableUnusedEnemyObjects(2)
+		if (area == 1):
+			disableUnusedEnemyObjects(0)
+			createEnemy(1, 8)
+			disableUnusedEnemyObjects(2)
+		if (area == 2):
+			disableUnusedEnemyObjects(0)
+			createEnemy(1, 13)
+			disableUnusedEnemyObjects(2)
+		if (area == 3):
+			createEnemy(0, 17)
+			createEnemy(0, 16)
+			createEnemy(0, 18)
+
 
 func getRandomEnemyNum() -> int:
 	# I may try to implement a more complex system depending on the are
@@ -479,8 +503,6 @@ func endBattle():
 		
 		nextButton.disabled = false
 		await nextButton.button_up
-		# TODO: Exit scene to map
-		print("Exit scene to map")
 		player.savePlayer()
 		get_tree().change_scene_to_file("res://Scenes/map.tscn")
 
@@ -530,7 +552,7 @@ func resolveItemEffects(item: Control, enemy: Control, enemySlot: int):
 	
 func damageCalc(ATK: int, DEF: int, ATKModifier: float, DEFModifier: float,
 				attackEffectModifier: float, attackPower:int) -> int:
-	var damage = (((ATK * ATKModifier) * attackPower) / ((DEF * DEFModifier * 2) + 1)) * attackEffectModifier
+	var damage = (((ATK * ATKModifier) * attackPower * ITEM_POWER_MULT) / ((DEF * DEFModifier * 2) + 1)) * attackEffectModifier
 	damage = max(1, floori(damage))
 	return damage
 
@@ -546,9 +568,9 @@ func applyItemStatus(item: Control, enemy: Control, enemySlot: int, minimalItemB
 	elif (minimalItemBonus == 1):
 		MID = 0
 	
-	if (item.itemPower <= 5):
+	if (item.itemPower == 1):
 		statusPower = 1
-	elif (item.itemPower <= 10):
+	elif (item.itemPower == 2):
 		statusPower = 2
 	else:
 		statusPower = 3
@@ -774,3 +796,31 @@ func calculateEnemyTypeModifiers(enemy: Control, type: int) -> float:
 
 func onTextProgressed():
 	playerStatsDisplay.updateStats()
+
+func onRunComplete():
+	if (player.itemInventoryNum > 2 and not bossBattle):
+		tBox.queueText(player.playerName + " ran away!")
+		# Remove two random items from the inventory
+		var item1 = randi_range(0, player.itemInventoryNum - 1)
+		var item1Name = player.itemInventory[item1].itemName
+		var item2 = randi_range(0, player.itemInventoryNum - 1)
+		var item2Name = player.itemInventory[item2].itemName
+		player.removeItemFromInventory(item1, 0)
+		player.removeItemFromInventory(item2, 0)
+		tBox.queueText(player.playerName + " dropped " + item1Name + " and " + item2Name + "!")
+		tBox.queueText("SIGNAL_CLICKED_THROUGH")
+		tBox.tempTextDisabled = true
+		await tBox.clickedThroughText
+		tBox.tempTextDisabled = false
+		player.savePlayer()
+		get_tree().change_scene_to_file("res://Scenes/map.tscn")
+	else:
+		if (bossBattle):
+			tBox.showTempText(player.playerName + " can't run away!\n(Can't run during a boss fight!)")
+			await tBox.textProgressed
+			tBox.stopShowingTempText()
+		else:
+			tBox.showTempText(player.playerName + " can't run away!\n(Need more items to run away!)")
+			await tBox.textProgressed
+			tBox.stopShowingTempText()
+		

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ckud56n3kg5a4"]
+
+[ext_resource type="Texture2D" uid="uid://wjk1ckrash2l" path="res://Art/Items/Acid/Diluted Acid Potion.png" id="1_6vhci"]
+
+[resource]
+atlas = ExtResource("1_6vhci")
+region = Rect2(32, 0, 32, 0)

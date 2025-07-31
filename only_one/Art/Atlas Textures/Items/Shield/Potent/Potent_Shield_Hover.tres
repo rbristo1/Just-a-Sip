@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://lk2r55fivp46"]
+
+[ext_resource type="Texture2D" uid="uid://o64247jctvrt" path="res://Art/Items/Shield/Potent Shield Potion.png" id="1_vgoa7"]
+
+[resource]
+atlas = ExtResource("1_vgoa7")
+region = Rect2(32, 0, 32, 0)

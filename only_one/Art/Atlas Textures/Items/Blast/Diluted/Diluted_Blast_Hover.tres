@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bqmgmy4a2xvo2"]
+
+[ext_resource type="Texture2D" uid="uid://b5ef3efivvj3t" path="res://Art/Items/Blast/Diluted Blast Potion.png" id="1_s226f"]
+
+[resource]
+atlas = ExtResource("1_s226f")
+region = Rect2(32, 0, 32, 0)

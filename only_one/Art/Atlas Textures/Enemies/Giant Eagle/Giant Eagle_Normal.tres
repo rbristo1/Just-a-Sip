@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dl788k4rhfqa"]
+
+[ext_resource type="Texture2D" uid="uid://di8dfoxqa3cth" path="res://Art/Enemies/Giant Eagle.png" id="1_o74yf"]
+
+[resource]
+atlas = ExtResource("1_o74yf")
+region = Rect2(0, 0, 96, 0)

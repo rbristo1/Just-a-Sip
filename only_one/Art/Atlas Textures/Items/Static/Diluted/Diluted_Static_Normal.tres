@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dy6vofxijhgra"]
+
+[ext_resource type="Texture2D" uid="uid://b8l1jtplg8ldv" path="res://Art/Items/Static/Diluted Static Potion.png" id="1_dxkvj"]
+
+[resource]
+atlas = ExtResource("1_dxkvj")
+region = Rect2(0, 0, 32, 0)

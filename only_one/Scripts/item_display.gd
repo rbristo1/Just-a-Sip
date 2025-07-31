@@ -150,6 +150,9 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 		if (INVENTORY):
 			pHud.findAndAddToInventory(data, INVENTORY_NUM, false)
 	statsDisplay.updateStats()
+	pHud.shiftInventoryLeft(-1)
+	for i in pHud.itemInventory:
+		print(i.itemID)
 
 func _has_point(point: Vector2) -> bool:
 	if (disabled == false):

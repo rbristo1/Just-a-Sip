@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://crg3uhllpgosx"]
+
+[ext_resource type="Texture2D" uid="uid://pit0tcfkgnx8" path="res://Art/Items/Freeze/Potent Freeze Potion.png" id="1_mnumo"]
+
+[resource]
+atlas = ExtResource("1_mnumo")
+region = Rect2(32, 0, 32, 0)

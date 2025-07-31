@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bcm0ldp0rcn4i"]
+
+[ext_resource type="Texture2D" uid="uid://ppa6y7g5kpdk" path="res://Art/Items/Weakness/Weakness Potion.png" id="1_rortq"]
+
+[resource]
+atlas = ExtResource("1_rortq")
+region = Rect2(32, 0, 32, 0)

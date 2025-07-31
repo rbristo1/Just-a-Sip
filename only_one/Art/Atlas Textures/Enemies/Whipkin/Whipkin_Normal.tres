@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dhufp8iv6puso"]
+
+[ext_resource type="Texture2D" uid="uid://c3kqhxnpltp2e" path="res://Art/Enemies/Whipkin.png" id="1_0xetf"]
+
+[resource]
+atlas = ExtResource("1_0xetf")
+region = Rect2(0, 0, 96, 0)

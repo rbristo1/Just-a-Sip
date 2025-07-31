@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ccmho7niglfwg"]
+
+[ext_resource type="Texture2D" uid="uid://ba4hwu4xgpm2p" path="res://Art/Items/Ice/Potent Ice Potion.png" id="1_qmloc"]
+
+[resource]
+atlas = ExtResource("1_qmloc")
+region = Rect2(0, 0, 32, 0)

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c3cqth881tbdh"]
+
+[ext_resource type="Texture2D" uid="uid://ddulap3mplnm8" path="res://Art/Items/Wind/Diluted Wind Potion.png" id="1_02mwi"]
+
+[resource]
+atlas = ExtResource("1_02mwi")
+region = Rect2(0, 0, 32, 0)

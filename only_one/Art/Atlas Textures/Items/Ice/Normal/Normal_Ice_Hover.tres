@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dwfixfimtnx3h"]
+
+[ext_resource type="Texture2D" uid="uid://p0p6fhy1pkse" path="res://Art/Items/Ice/Ice Potion.png" id="1_0enww"]
+
+[resource]
+atlas = ExtResource("1_0enww")
+region = Rect2(32, 0, 32, 0)

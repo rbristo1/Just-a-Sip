@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c7nu0tigr1i6m"]
+
+[ext_resource type="Texture2D" uid="uid://bs5gekv8floe2" path="res://Art/Enemies/Noxious Shroom.png" id="1_nvwa8"]
+
+[resource]
+atlas = ExtResource("1_nvwa8")
+region = Rect2(0, 0, 96, 0)

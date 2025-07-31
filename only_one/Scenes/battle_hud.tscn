@@ -71,6 +71,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("3_ps4wy"), ExtResource("5_akdr0"), ExtResource("7_hw3xs"), ExtResource("8_ejxwv"), ExtResource("9_786vc"), ExtResource("10_xebxw"), ExtResource("11_hvdyc"), ExtResource("12_2q6hh"), ExtResource("13_42y4d"), ExtResource("14_6pt0n"), ExtResource("15_qbuxk"), ExtResource("16_vsgm6"), ExtResource("17_hkd4t"), ExtResource("18_13nug"), ExtResource("19_pnkev"), ExtResource("20_qgn8v"), ExtResource("21_f0dkq")]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"runComplete"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ngp3r"]
 _data = {
@@ -90,7 +104,7 @@ region_rect = Rect2(0, 0, 16, 16)
 texture = ExtResource("24_xebxw")
 region_rect = Rect2(0, 0, 16, 16)
 
-[node name="BattleHud" type="Control" groups=["Inventory Item Displays"]]
+[node name="BattleHud" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -320.0
@@ -218,7 +232,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
-[node name="RunButton" type="TextureButton" parent="BHudMainBox/EnemyImageRow/VBoxContainer"]
+[node name="RunButton" type="TextureButton" parent="BHudMainBox/EnemyImageRow/VBoxContainer" groups=["Run Button"]]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture_normal = ExtResource("3_w80bc")

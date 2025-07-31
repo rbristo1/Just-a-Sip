@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://btnibrg62xtsl"]
+
+[ext_resource type="Texture2D" uid="uid://dwan334axweam" path="res://Art/Items/Slowness/Potent Slowness Potion.png" id="1_wunll"]
+
+[resource]
+atlas = ExtResource("1_wunll")
+region = Rect2(0, 0, 32, 0)

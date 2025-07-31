@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://e0q5qv07ph66"]
+
+[ext_resource type="Texture2D" uid="uid://c3busbc0jo7lh" path="res://Art/Items/Electric/Potent Electric Potion.png" id="1_h1j6g"]
+
+[resource]
+atlas = ExtResource("1_h1j6g")
+region = Rect2(32, 0, 32, 0)

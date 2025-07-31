@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cw17mjp3cs07v"]
+
+[ext_resource type="Texture2D" uid="uid://duj8vlrr6e3g4" path="res://Art/Items/Poison/Diluted Poison Potion.png" id="1_48ipc"]
+
+[resource]
+atlas = ExtResource("1_48ipc")
+region = Rect2(32, 0, 32, 0)

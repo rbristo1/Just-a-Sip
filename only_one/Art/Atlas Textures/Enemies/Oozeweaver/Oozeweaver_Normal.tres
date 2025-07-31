@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dxfymtf03xkk2"]
+
+[ext_resource type="Texture2D" uid="uid://c4442eqafbe1h" path="res://Art/Enemies/Oozeweaver.png" id="1_oqo5g"]
+
+[resource]
+atlas = ExtResource("1_oqo5g")
+region = Rect2(0, 0, 96, 0)
