@@ -1,1 +1,2 @@
-# only-one-game-jam
+# Just a Sip
+rougelike deckbuilding RPG
