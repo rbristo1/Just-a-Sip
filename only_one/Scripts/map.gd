@@ -362,7 +362,7 @@ func _ready() ->void:
 		area += 1
 		if area == 3:
 			#TODO add correct path
-			get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
+			get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 		adjList = []
 		widths = []
 		events = []
