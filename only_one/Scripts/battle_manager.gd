@@ -91,8 +91,7 @@ func _ready() -> void:
 	for i in eDisplays.size(): # enemies MUST be added to the scene tree, as that is when _ready() calls
 		eDisplays[i].add_child(enemies[i])
 	
-	initialize(0, false) # This is here for testing only. Normally this will be
-						# called by whatever triggers the battle
+	beginBattle()
 
 func getEnemySlot(find: Control, arrName: String) -> int:
 	var arr = get(arrName)
@@ -116,10 +115,6 @@ func loadEnemyAreaList() -> void:
 				if(i == "enemyAreas" or i == "enemyBosses"):
 					set(i, node_data[i])
 
-func initialize(Area: int, Boss: bool) -> void:
-	area = Area
-	bossBattle = Boss
-	beginBattle()
 
 func beginBattle() -> void:
 	# First thing that needs to happen is the number of enemies and type of enemies

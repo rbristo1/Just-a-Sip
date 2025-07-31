@@ -1,6 +1,6 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cwjx2m518u7jd"]
 
-[ext_resource type="Texture2D" uid="uid://ba63si38w6e6b" path="res://Art/Items/Shield/Shield Potion.png" id="1_4i547"]
+[ext_resource type="Texture2D" uid="uid://o64247jctvrt" path="res://Art/Items/Shield/Potent Shield Potion.png" id="1_4i547"]
 
 [resource]
 atlas = ExtResource("1_4i547")

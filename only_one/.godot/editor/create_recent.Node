@@ -1,1 +1,9 @@
+Label
+TextureButton
+VSeparator
+HBoxContainer
+VBoxContainer
+TextureRect
+HSeparator
+ColorRect
 AnimationPlayer
